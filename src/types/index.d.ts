@@ -28,3 +28,11 @@ export interface ISpecialtyTabs {
 export interface ISpecialtyContent {
   data: SpecialtyData[]
 }
+export interface IUseCarousel {
+  length: number
+}
+export interface IExperienceData {
+  company: string
+  image: string
+  url?: string
+}

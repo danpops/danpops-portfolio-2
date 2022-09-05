@@ -3,7 +3,7 @@ import { HeaderContainer, HeroHeader5, HeroMasthead } from './styles'
 import { Divider, Header1 } from '../../components/Text'
 import { PrimaryButton } from '../../components/Buttons'
 import { colors } from '../../design'
-import { hero } from '../../data/uiText'
+import { hero } from '../../data/text'
 
 function Hero (): JSX.Element {
   return (

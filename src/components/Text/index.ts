@@ -34,7 +34,7 @@ export const Header5 = styled.h1`
     font-size: 1.5rem;
   }
 `
-export const ParagraphText = styled.p`
+export const Text = styled.p`
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: 300;

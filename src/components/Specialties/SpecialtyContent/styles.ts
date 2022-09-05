@@ -32,12 +32,12 @@ export const SpecialtiesImage = styled.div`
   background-image: ${({ src }: { src: string }) => `url(${src})`};
   background-size: cover;
   background-position: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3.4rem;
+  height: 3.4rem;
 `
 export const SpecialtiesItemLabel = styled.p`
-  font-weight: 500;
-  margin-top: 1.2rem;
+  font-weight: 200;
+  margin-top: 1.3rem;
   margin-bottom: 0;
   color: ${colors.dark};
 `

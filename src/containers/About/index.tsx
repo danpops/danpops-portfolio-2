@@ -1,8 +1,8 @@
 import me from '../../assets/images/me.jpeg'
 import { colors } from '../../design'
 import { ImageCircle } from './styles'
-import { Divider, Header3, ParagraphText } from '../../components/Text'
-import { about } from '../../data/uiText'
+import { Divider, Header3, Text } from '../../components/Text'
+import { about } from '../../data/text'
 import { Section, Container } from '../../components/Layout/styles'
 
 function About (): JSX.Element {
@@ -12,7 +12,7 @@ function About (): JSX.Element {
         <ImageCircle src={me} />
         <Header3 color={colors.light}>{about.heading}</Header3>
         <Divider color={colors.light} />
-        <ParagraphText>{about.content}</ParagraphText>
+        <Text>{about.content}</Text>
       </Container>
     </Section>
   )

@@ -15,3 +15,6 @@ export const about = {
 export const specialties = {
   heading: 'what are my specialties?'
 }
+export const experience = {
+  heading: "companies i've worked with"
+}

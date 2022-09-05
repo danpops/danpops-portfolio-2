@@ -1,4 +1,4 @@
-import { About, Hero, Specialties } from './containers'
+import { About, Hero, Specialties, Experience, Projects } from './containers'
 import Layout from './components/Layout'
 import GlobalStyle from './design/global'
 
@@ -9,6 +9,8 @@ function App (): JSX.Element {
       <Hero />
       <About />
       <Specialties />
+      <Experience />
+      <Projects />
     </Layout>
   )
 }
