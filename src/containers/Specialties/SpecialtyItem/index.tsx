@@ -1,9 +1,9 @@
-import { SpecialtiesImage, SpecialtiesItem, SpecialtiesItemLabel } from './styles'
-
-interface ISpecialtyItem {
-  image: string
-  name: string
-}
+import { ISpecialtyItem } from '../../../types'
+import {
+  SpecialtiesImage,
+  SpecialtiesItem,
+  SpecialtiesItemLabel
+} from './styles'
 
 function SpecialtyItem ({ image, name }: ISpecialtyItem): JSX.Element {
   return (

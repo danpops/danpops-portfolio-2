@@ -1,17 +1,7 @@
-import { MouseEventHandler } from 'react'
+import { ISpecialtyTab } from '../../../types'
 import { SpecialtiesTabItem, SpecialtiesButton } from './styles'
 
-interface ISpecialtyTab {
-  active: boolean
-  onClick: MouseEventHandler<HTMLButtonElement>
-  label: string
-}
-
-function SpecialtyTab ({
-  active,
-  onClick,
-  label
-}: ISpecialtyTab): JSX.Element {
+function SpecialtyTab ({ active, onClick, label }: ISpecialtyTab): JSX.Element {
   return (
     <SpecialtiesTabItem>
       <SpecialtiesButton active={active} onClick={onClick}>
