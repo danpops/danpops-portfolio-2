@@ -1,19 +1,20 @@
-import me from '../../assets/me.jpeg'
+import me from '../../assets/images/me.jpeg'
 import colors from '../../design/colors'
-import { AboutSection, AboutContainer, ImageCircle } from './styles'
+import { ImageCircle } from './styles'
 import { Divider, Header3, ParagraphText } from '../../components/Text'
 import { about } from '../../data/uiText'
+import { Section, Container } from '../../components/Layout/styles'
 
 function About (): JSX.Element {
   return (
-    <AboutSection>
-      <AboutContainer>
+    <Section bgColor={colors.primary}>
+      <Container>
         <ImageCircle src={me} />
-        <Header3 color={colors.white}>{about.heading}</Header3>
-        <Divider color={colors.white} />
+        <Header3 color={colors.light}>{about.heading}</Header3>
+        <Divider color={colors.light} />
         <ParagraphText>{about.content}</ParagraphText>
-      </AboutContainer>
-    </AboutSection>
+      </Container>
+    </Section>
   )
 }
 

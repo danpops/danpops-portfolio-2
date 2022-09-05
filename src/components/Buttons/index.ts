@@ -10,6 +10,6 @@ export const PrimaryButton = styled.button`
   font-size: 0.85rem;
   padding: 1.25rem 2.25rem;
   cursor: pointer;
-  color: ${colors.white};
+  color: ${colors.light};
   background-color: ${colors.primary};
 `

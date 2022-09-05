@@ -38,5 +38,5 @@ export const ParagraphText = styled.p`
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: 300;
-  color: ${colors.white};
+  color: ${colors.light};
 `
