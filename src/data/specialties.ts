@@ -1,19 +1,19 @@
-import appium from '../icons/appium.png'
-import cloudformation from '../icons/cloudformation.png'
-import github from '../icons/github.png'
-import graphql from '../icons/graphql.png'
-import java from '../icons/java.png'
-import javascript from '../icons/javascript.png'
-import jest from '../icons/jest.png'
-import native from '../icons/reactnative.png'
-import neo4j from '../icons/neo4j.png'
-import nodejs from '../icons/nodejs.png'
-import python from '../icons/python.png'
-import reactjs from '../icons/reactjs.png'
-import redux from '../icons/redux.png'
-import serverless from '../icons/serverless.png'
-import swm from '../icons/swm.png'
-import typescript from '../icons/typescript.png'
+import appium from '../assets/icons/appium.png'
+import cloudformation from '../assets/icons/cloudformation.png'
+import github from '../assets/icons/github.png'
+import graphql from '../assets/icons/graphql.png'
+import java from '../assets/icons/java.png'
+import javascript from '../assets/icons/javascript.png'
+import jest from '../assets/icons/jest.png'
+import native from '../assets/icons/reactnative.png'
+import neo4j from '../assets/icons/neo4j.png'
+import nodejs from '../assets/icons/nodejs.png'
+import python from '../assets/icons/python.png'
+import reactjs from '../assets/icons/reactjs.png'
+import redux from '../assets/icons/redux.png'
+import serverless from '../assets/icons/serverless.png'
+import swm from '../assets/icons/swm.png'
+import typescript from '../assets/icons/typescript.png'
 
 const languages = [
   {
@@ -123,21 +123,21 @@ const more = [
   }
 ]
 
-export const specialties = [
-  {
+export const specialties = {
+  languages: {
     title: 'languages',
     data: languages
   },
-  {
+  frontend: {
     title: 'frontend',
     data: frontend
   },
-  {
+  backend: {
     title: 'backend',
     data: backend
   },
-  {
+  more: {
     title: 'more',
     data: more
   }
-]
+}

@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 import devices from '../../utils/devices'
 
+export const SpecialtiesSection = styled.div`
+  padding: 8rem 0rem;
+  background-color: ${({ bgColor }: { bgColor: string }) => bgColor};
+  width: 100%;
+  text-align: center;
+`
+
 export const SpecialtiesContainer = styled.div`
   display: grid;
   text-align: center;
@@ -21,7 +28,7 @@ export const SpecialtiesContainer = styled.div`
     grid-template-columns: 30rem auto;
     grid-template-areas: 'tabs content';
 
-    margin: 0 auto;
+    margin: 4.5rem auto;
     max-width: 65rem;
   }
 `
@@ -46,7 +53,6 @@ export const SpecialtiesTabs = styled.div`
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 `
-export const SpecialtiesTabItem = styled.div``
 
 export const SpecialtiesContent = styled.div`
   display: grid;
@@ -59,31 +65,4 @@ export const SpecialtiesContent = styled.div`
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
-`
-export const SpecialtiesItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 10rem;
-  width: 7rem;
-
-  @media ${devices.md} {
-    width: 9rem;
-  }
-`
-
-export const SpecialtiesImage = styled.div`
-  background-image: ${({ src }: { src: string }) => `url(${src})`};
-  background-size: cover;
-  background-position: center;
-  width: 80px;
-  height: 80px;
-`
-
-export const SpecialtiesSection = styled.div`
-  padding: 8rem 0rem;
-  background-color: ${({ bgColor }: { bgColor: string }) => bgColor};
-  width: 100%;
-  text-align: center;
 `
