@@ -11,7 +11,7 @@ export const Section = styled.section`
   text-align: center;
   width: 100%;
 `
-export const Container = styled.div`
+export const HeaderContainer = styled.div`
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;

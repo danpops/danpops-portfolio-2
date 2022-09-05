@@ -8,7 +8,7 @@ export const HeroMasthead = styled.header`
   width: 100%;
   height: 100vh;
 `
-export const HeaderContainer = styled.div`
+export const HeroContainer = styled.div`
   text-align: center;
 `
 

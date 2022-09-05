@@ -1,5 +1,5 @@
 import { colors } from '../../design'
-import { Container as HeaderContainer } from '../../components/Layout/styles'
+import { HeaderContainer } from '../../components/Layout/styles'
 import { Divider, Header3 } from '../../components/Text'
 import { SpecialtiesSection, SpecialtiesContainer } from './styles'
 import useSpecialties from '../../hooks/useSpecialties'
