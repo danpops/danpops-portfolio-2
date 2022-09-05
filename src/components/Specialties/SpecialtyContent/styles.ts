@@ -1,6 +1,19 @@
 import styled from 'styled-components'
-import colors from '../../../design/colors'
+import { colors } from '../../../design'
 import devices from '../../../utils/devices'
+
+export const SpecialtiesContentContainer = styled.div`
+  display: grid;
+  grid-area: content;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+
+  @media ${devices.lg} {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+`
 
 export const SpecialtiesItem = styled.div`
   display: flex;
@@ -26,5 +39,5 @@ export const SpecialtiesItemLabel = styled.p`
   font-weight: 500;
   margin-top: 1.2rem;
   margin-bottom: 0;
-  color: ${colors.dark}
+  color: ${colors.dark};
 `

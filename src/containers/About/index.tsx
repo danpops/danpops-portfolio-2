@@ -1,5 +1,5 @@
 import me from '../../assets/images/me.jpeg'
-import colors from '../../design/colors'
+import { colors } from '../../design'
 import { ImageCircle } from './styles'
 import { Divider, Header3, ParagraphText } from '../../components/Text'
 import { about } from '../../data/uiText'

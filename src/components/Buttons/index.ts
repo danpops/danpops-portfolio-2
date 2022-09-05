@@ -1,4 +1,4 @@
-import colors from '../../design/colors'
+import { colors } from '../../design'
 import styled from 'styled-components'
 
 export const PrimaryButton = styled.button`

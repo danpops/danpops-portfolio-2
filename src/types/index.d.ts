@@ -21,12 +21,10 @@ export interface IUseSpecialties {
   activeData: SpecialtyData[]
   setActiveSpecialty: (type: SpecialtiesType) => () => void
 }
-export interface ISpecialtyItem {
-  image: string
-  name: string
+export interface ISpecialtyTabs {
+  activeSpecialty: string
+  setActiveSpecialty: (type: SpecialtiesType) => () => void
 }
-export interface ISpecialtyTab {
-  active: boolean
-  onClick: MouseEventHandler<HTMLButtonElement>
-  label: string
+export interface ISpecialtyContent {
+  data: SpecialtyData[]
 }

@@ -12,3 +12,6 @@ export const about = {
   and java, provide me with the ability to deliver innovative ideas that
   assist the technological development of an organization.`
 }
+export const specialties = {
+  heading: 'what are my specialties?'
+}
