@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { ISection } from '../../types'
 import devices from '../../utils/devices'
 
 export const SpecialtiesSection = styled.div`
   padding: 8rem 0rem;
-  background-color: ${({ bgColor }: { bgColor: string }) => bgColor};
+  background-color: ${({ bgColor }: ISection) => bgColor};
   width: 100%;
   text-align: center;
 `

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { colors } from '../../design'
 import devices from '../../utils/devices'
 import { Link } from 'react-scroll'
+import { INavigationContainer } from '../../types'
 
 const navigationDefault = `
   background-color: ${colors.white};
@@ -22,7 +23,7 @@ export const NavigationContainer = styled.div`
   z-index: 99999;
 
   @media ${devices.lg} {
-    ${({ isTransparent }: { isTransparent: boolean }) =>
+    ${({ isTransparent }: INavigationContainer) =>
       !isTransparent ? navigationTransparent : navigationDefault};
   }
 `

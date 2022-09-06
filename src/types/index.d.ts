@@ -44,3 +44,15 @@ export interface INavigationMobile {
   expanded: boolean
   toggleNavbar: () => void
 }
+export interface ICompanyImage {
+  src: string
+}
+export interface ISection {
+  bgColor: string
+}
+export interface INavigationMobileContainer {
+  expanded: boolean
+}
+export interface INavigationContainer {
+  isTransparent: boolean
+}

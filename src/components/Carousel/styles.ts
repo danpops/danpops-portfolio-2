@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ICompanyImage } from '../../types'
 import { Text } from '../Text'
 
 export const CompanyContainer = styled.div`
@@ -10,7 +11,7 @@ export const CompanyContainer = styled.div`
 `
 
 export const CompanyImage = styled.div`
-  background-image: ${({ src }: { src: string }) => `url(${src})`};
+  background-image: ${({ src }: ICompanyImage) => `url(${src})`};
   background-size: cover;
   background-position: center;
   border-radius: 20%;

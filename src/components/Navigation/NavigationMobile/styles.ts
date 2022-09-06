@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { colors } from '../../../design'
+import { INavigationMobileContainer } from '../../../types'
 import devices from '../../../utils/devices'
 
 const expandedMenuStyle = `
@@ -21,7 +22,7 @@ export const NavigationMobileContainer = styled.div`
   background-color: ${colors.white};
   padding-left: 2rem;
   
-  ${({ expanded }: { expanded: boolean }) => expanded && expandedMenuStyle}
+  ${({ expanded }: INavigationMobileContainer) => expanded && expandedMenuStyle}
   
   @media ${devices.lg} {
     display: none;
