@@ -1,4 +1,4 @@
-import me from '../../assets/images/me.jpeg'
+import me from '../../assets/images/me.png'
 import { colors } from '../../design'
 import { ImageCircle } from './styles'
 import { Divider, Header3, Text } from '../../components/Text'
