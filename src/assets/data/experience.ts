@@ -5,8 +5,8 @@ import twokpaid from '../images/2kpaid.png'
 import { IExperienceData } from '../../types'
 
 export const experienceData: IExperienceData[] = [
-  { company: 'TribalScale', image: tribalscale },
-  { company: 'Gopuff', image: gopuff },
-  { company: '2kPAID', image: twokpaid },
-  { company: 'Freshouse', image: freshouse }
+  { company: 'TribalScale', image: tribalscale, url: 'https://tribalscale.com' },
+  { company: 'Gopuff', image: gopuff, url: 'https://gopuff.com' },
+  { company: '2kPAID', image: twokpaid, url: 'https://2kpaid.com' },
+  { company: 'Freshouse', image: freshouse, url: 'https://freshouse.ca' }
 ]

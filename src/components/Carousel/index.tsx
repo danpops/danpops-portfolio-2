@@ -11,10 +11,13 @@ function Carousel (): JSX.Element {
     exp: IExperienceData,
     index: number
   ): JSX.Element {
+    const { image, company, url } = exp
     return (
       <CompanyContainer key={index}>
-        <CompanyImage src={exp.image} />
-        <CompanyText>{exp.company}</CompanyText>
+        <CompanyImage src={image} />
+        <CompanyText target='_blank' rel='noopener noreferrer' href={url}>
+          {company}
+        </CompanyText>
       </CompanyContainer>
     )
   }

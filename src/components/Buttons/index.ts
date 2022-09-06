@@ -20,6 +20,7 @@ export const SecondaryButton = styled.a`
   text-decoration: none;
   border-radius: 10rem;
   border: none;
+  margin-top: 10rem;
   font-weight: 500;
   font-size: 0.85rem;
   padding: 1.25rem 2.25rem;

@@ -5,6 +5,8 @@ import { ContactOptionsContainer, LinkedInIcon, MailIcon } from './styles'
 import { contact } from '../../assets/data/text'
 import ContactOption from '../../components/ContactOption'
 
+const ICON_SIZE = 46
+
 function Contact (): JSX.Element {
   return (
     <Section id='contact' bgColor={colors.white}>
@@ -15,10 +17,10 @@ function Contact (): JSX.Element {
       </HeaderContainer>
       <ContactOptionsContainer>
         <ContactOption
-          icon={<LinkedInIcon size={46} />}
+          icon={<LinkedInIcon size={ICON_SIZE} />}
           href={contact.linkedin}
         />
-        <ContactOption icon={<MailIcon size={46} />} href={contact.email} />
+        <ContactOption icon={<MailIcon size={ICON_SIZE} />} href={contact.email} />
       </ContactOptionsContainer>
     </Section>
   )
