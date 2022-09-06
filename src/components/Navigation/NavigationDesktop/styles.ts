@@ -9,7 +9,7 @@ export const NavigationDesktopMenu = styled.div`
     display: flex;
   }
 `
-export const NavigationMenuItem = styled.a`
+export const NavigationMenuItem = styled.div`
   font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
