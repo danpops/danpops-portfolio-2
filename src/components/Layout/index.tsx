@@ -1,5 +1,5 @@
 import { LayoutProps } from '../../types'
-// import Footer from '../Footer'
+import Footer from '../Footer'
 import Navigation from '../Navigation'
 
 function Layout ({ children }: LayoutProps): JSX.Element {
@@ -7,7 +7,7 @@ function Layout ({ children }: LayoutProps): JSX.Element {
     <>
       <Navigation />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

@@ -7,8 +7,13 @@ import {
 } from './styles'
 
 function SpecialtyContent ({ data }: ISpecialtyContent): JSX.Element {
-  const renderContent = data.map(({ name, image }, index) => (
-    <SpecialtiesItem key={index}>
+  const renderContent = data.map(({ name, image, href, alt }, index) => (
+    <SpecialtiesItem
+      key={index}
+      href={href}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
       <SpecialtiesImage src={image} />
       <SpecialtiesItemLabel>{name}</SpecialtiesItemLabel>
     </SpecialtiesItem>

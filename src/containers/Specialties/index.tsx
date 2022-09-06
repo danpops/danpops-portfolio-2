@@ -4,13 +4,13 @@ import { Divider, Header3 } from '../../components/Text'
 import { SpecialtiesSection, SpecialtiesContainer } from './styles'
 import useSpecialties from '../../hooks/useSpecialties'
 import { SpecialtyTabs, SpecialtyContent } from '../../components/Specialties'
-import { specialties } from '../../data/text'
+import { specialties } from '../../assets/data/text'
 
 function Specialties (): JSX.Element {
   const { activeSpecialty, activeData, setActiveSpecialty } = useSpecialties()
 
   return (
-    <SpecialtiesSection bgColor={colors.light}>
+    <SpecialtiesSection bgColor={colors.white}>
       <HeaderContainer>
         <Header3 color={colors.dark}>{specialties.heading}</Header3>
         <Divider color={colors.primary} />

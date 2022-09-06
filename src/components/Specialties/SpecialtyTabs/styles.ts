@@ -6,7 +6,7 @@ import { PrimaryButton } from '../../Buttons'
 export const SpecialtiesTabsContainer = styled.div`
   display: grid;
   grid-area: tabs;
-  grid-template-columns: repeat(2, minmax(8.5rem, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
   grid-gap: 0.5rem;
   margin-bottom: 2rem;
@@ -19,17 +19,17 @@ export const SpecialtiesTabsContainer = styled.div`
 
   @media ${devices.lg} {
     align-items: center;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(9rem, 1fr));
+    grid-template-rows: repeat(2, minmax(5rem, 1fr));
   }
 `
 
 const activeButton = `
   background-color: ${colors.primary};
-  color: ${colors.light};
+  color: ${colors.white};
 `
 const inactiveButton = `
-  background-color: ${colors.light};
+  background-color: ${colors.white};
   color: ${colors.dark};
 `
 
@@ -40,4 +40,9 @@ export const SpecialtiesButton = styled(PrimaryButton)`
 
   ${({ active }: { active: boolean }) =>
     active ? activeButton : inactiveButton}
+
+  &:hover {
+    background-color: ${colors.primary};
+    color: ${colors.white};
+  }
 `

@@ -1,6 +1,6 @@
 import Slider from 'react-slick'
 import { useCarousel } from '../../hooks/useCarousel'
-import { experienceData } from '../../data/experience'
+import { experienceData } from '../../assets/data/experience'
 import { CompanyContainer, CompanyImage, CompanyText } from './styles'
 import { IExperienceData } from '../../types'
 

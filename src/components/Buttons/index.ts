@@ -10,6 +10,20 @@ export const PrimaryButton = styled.button`
   font-size: 0.85rem;
   padding: 1.25rem 2.25rem;
   cursor: pointer;
-  color: ${colors.light};
+  color: ${colors.white};
   background-color: ${colors.primary};
+`
+
+export const SecondaryButton = styled.a`
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  text-transform: lowercase !important;
+  text-decoration: none;
+  border-radius: 10rem;
+  border: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 1.25rem 2.25rem;
+  cursor: pointer;
+  color: ${colors.dark};
+  background-color: ${colors.white};
 `

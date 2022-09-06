@@ -7,7 +7,7 @@ export const Divider = styled.hr`
   border-width: 0.1rem;
   border-color: ${({ color }) => color};
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 `
 export const Header1 = styled.h1`
   font-weight: 500;
@@ -38,5 +38,5 @@ export const Text = styled.p`
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: 300;
-  color: ${colors.light};
+  color: ${({ color = colors.white }) => color};
 `

@@ -14,8 +14,8 @@ export const CompanyImage = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: 20%;
-  width: 8rem;
-  height: 8rem;
+  width: 6.3rem;
+  height: 6.3rem;
   margin: 0 auto;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 `

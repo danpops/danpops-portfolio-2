@@ -3,7 +3,8 @@ import { HeroContainer, HeroHeader5, HeroMasthead } from './styles'
 import { Divider, Header1 } from '../../components/Text'
 import { PrimaryButton } from '../../components/Buttons'
 import { colors } from '../../design'
-import { hero } from '../../data/text'
+import { hero } from '../../assets/data/text'
+import { Link } from 'react-scroll'
 
 function Hero (): JSX.Element {
   return (
@@ -14,7 +15,9 @@ function Hero (): JSX.Element {
         <Header1>{hero.heading2}</Header1>
         <Divider color={colors.primary} />
         <HeroHeader5>{hero.heading3}</HeroHeader5>
-        <PrimaryButton>{hero.buttonText}</PrimaryButton>
+        <Link to='about' smooth duration={500}>
+          <PrimaryButton>{hero.buttonText}</PrimaryButton>
+        </Link>
       </HeroContainer>
     </HeroMasthead>
   )

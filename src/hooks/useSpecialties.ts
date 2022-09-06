@@ -1,5 +1,5 @@
 import { useReducer } from 'react'
-import { specialties } from '../data/specialties'
+import { specialties } from '../assets/data/specialties'
 import { SpecialtyState, SpecialtiesAction, IUseSpecialties } from '../types'
 
 export enum SpecialtiesActionKind {
