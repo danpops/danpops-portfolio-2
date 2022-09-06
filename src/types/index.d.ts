@@ -40,3 +40,7 @@ export interface IContactOption {
   icon: JSX.Element
   href: string
 }
+export interface INavigationMobile {
+  expanded: boolean
+  toggleNavbar: () => void
+}

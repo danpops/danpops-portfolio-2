@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../design'
-import { MdMenu } from 'react-icons/md'
 import devices from '../../utils/devices'
+import { Link } from 'react-scroll'
 
 const navigationDefault = `
   background-color: ${colors.white};
@@ -15,7 +15,7 @@ const navigationTransparent = `
 export const NavigationContainer = styled.div`
   position: fixed;
   box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
-  background: ${colors.white};
+  background: ${colors.white} !important;
   color: ${colors.black};
   top: 0;
   width: 100%;
@@ -43,7 +43,7 @@ export const NavigationContent = styled.div`
   }
 `
 
-export const NavigationBrand = styled.a`
+export const NavigationBrand = styled(Link)`
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -60,8 +60,12 @@ export const NavigationBrand = styled.a`
   }
 `
 
-export const NavigationToggle = styled(MdMenu)`
+export const NavigationToggle = styled.div`
   display: inline-block;
+  cursor: pointer;
+  float: right;
+  padding: auto 2rem;
+  position: relative;
 
   @media ${devices.lg} {
     display: none;

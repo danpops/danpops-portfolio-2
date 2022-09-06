@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 interface IUseNavigation {
   expanded: boolean
   isTransparent: boolean
-  toggleNav: TToggleNav
+  setExpanded: Dispatch<SetStateAction<boolean>>
+  toggleNavbar: () => void
 }
-
-type TToggleNav = (value: React.SetStateAction<boolean>) => void
 
 const useNavigation = (): IUseNavigation => {
   const [isTransparent, setTransparent] = useState(false)
   const [expanded, setExpanded] = useState(false)
 
-  const toggleNav: TToggleNav = () => setExpanded(!expanded)
+  const toggleNavbar = (): void => setExpanded(!expanded)
 
   useEffect(() => {
     const onScroll = (): void => {
@@ -25,7 +24,8 @@ const useNavigation = (): IUseNavigation => {
   return {
     expanded,
     isTransparent,
-    toggleNav
+    setExpanded,
+    toggleNavbar
   }
 }
 
