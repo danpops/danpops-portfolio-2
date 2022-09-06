@@ -42,5 +42,5 @@ export const SpecialtiesItemLabel = styled.p`
   font-weight: 500;
   margin-top: 1.3rem;
   margin-bottom: 0;
-  color: ${colors.dark};
+  color: ${colors.black};
 `

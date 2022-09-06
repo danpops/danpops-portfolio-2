@@ -24,6 +24,6 @@ export const SecondaryButton = styled.a`
   font-size: 0.85rem;
   padding: 1.25rem 2.25rem;
   cursor: pointer;
-  color: ${colors.dark};
+  color: ${colors.black};
   background-color: ${colors.white};
 `

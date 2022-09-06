@@ -8,7 +8,7 @@ import { Link } from 'react-scroll'
 
 function Hero (): JSX.Element {
   return (
-    <HeroMasthead>
+    <HeroMasthead id='hero'>
       <ParticlesBg num={60} type='cobweb' color={colors.primary} bg />
       <HeroContainer>
         <Header1>{hero.heading1}</Header1>

@@ -7,7 +7,7 @@ import { experience } from '../../assets/data/text'
 
 function Experience (): JSX.Element {
   return (
-    <Section bgColor={colors.dark}>
+    <Section id='experience' bgColor={colors.primary}>
       <HeaderContainer>
         <Header3 color={colors.white}>{experience.heading}</Header3>
         <Divider color={colors.white} />

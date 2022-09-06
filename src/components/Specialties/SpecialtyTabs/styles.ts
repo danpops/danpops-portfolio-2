@@ -30,7 +30,7 @@ const activeButton = `
 `
 const inactiveButton = `
   background-color: ${colors.white};
-  color: ${colors.dark};
+  color: ${colors.black};
 `
 
 export const SpecialtiesTabItem = styled.div``

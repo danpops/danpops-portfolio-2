@@ -7,7 +7,7 @@ import { github } from '../../assets/data/text'
 
 function Github (): JSX.Element {
   return (
-    <Section bgColor={colors.primary}>
+    <Section id='github' bgColor={colors.dark}>
       <HeaderContainer>
         <GithubIcon size={90} />
         <Header3 color={colors.white}>{github.heading}</Header3>

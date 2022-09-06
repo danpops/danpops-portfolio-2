@@ -7,11 +7,11 @@ import ContactOption from '../../components/ContactOption'
 
 function Contact (): JSX.Element {
   return (
-    <Section bgColor={colors.white}>
+    <Section id='contact' bgColor={colors.white}>
       <HeaderContainer>
-        <Header3 color={colors.dark}>{contact.heading}</Header3>
+        <Header3 color={colors.black}>{contact.heading}</Header3>
         <Divider color={colors.primary} />
-        <Text color={colors.dark}>{contact.content}</Text>
+        <Text color={colors.black}>{contact.content}</Text>
       </HeaderContainer>
       <ContactOptionsContainer>
         <ContactOption

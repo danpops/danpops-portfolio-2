@@ -10,9 +10,9 @@ function Specialties (): JSX.Element {
   const { activeSpecialty, activeData, setActiveSpecialty } = useSpecialties()
 
   return (
-    <SpecialtiesSection bgColor={colors.white}>
+    <SpecialtiesSection id='specialties' bgColor={colors.white}>
       <HeaderContainer>
-        <Header3 color={colors.dark}>{specialties.heading}</Header3>
+        <Header3 color={colors.black}>{specialties.heading}</Header3>
         <Divider color={colors.primary} />
       </HeaderContainer>
       <SpecialtiesContainer>
