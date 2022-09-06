@@ -36,3 +36,7 @@ export interface IExperienceData {
   image: string
   url?: string
 }
+export interface IContactOption {
+  icon: JSX.Element
+  href: string
+}

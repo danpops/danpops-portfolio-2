@@ -3,12 +3,7 @@ import { HeaderContainer, Section } from '../../components/Layout/styles'
 import { Divider, Header3, Text } from '../../components/Text'
 import { ContactOptionsContainer, LinkedInIcon, MailIcon } from './styles'
 import { contact } from '../../assets/data/text'
-import styled from 'styled-components'
-
-const ContactOption = styled.a`
-  text-decoration: none;
-  cursor: pointer;
-`
+import ContactOption from '../../components/ContactOption'
 
 function Contact (): JSX.Element {
   return (
@@ -20,19 +15,10 @@ function Contact (): JSX.Element {
       </HeaderContainer>
       <ContactOptionsContainer>
         <ContactOption
-          target='_blank'
-          rel='noopener noreferrer'
+          icon={<LinkedInIcon size={46} />}
           href={contact.linkedin}
-        >
-          <LinkedInIcon size={46} />
-        </ContactOption>
-        <ContactOption
-          target='_blank'
-          rel='noopener noreferrer'
-          href={contact.email}
-        >
-          <MailIcon size={48} />
-        </ContactOption>
+        />
+        <ContactOption icon={<MailIcon size={46} />} href={contact.email} />
       </ContactOptionsContainer>
     </Section>
   )

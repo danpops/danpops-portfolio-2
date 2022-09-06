@@ -18,6 +18,11 @@ export const specialties = {
 export const experience = {
   heading: "companies i've worked with"
 }
+export const github = {
+  heading: 'check out my work on github!',
+  buttonText: 'danpops/github',
+  url: 'https://github.com/danpops'
+}
 export const contact = {
   heading: "let's get in touch!",
   content: `although i'm not currently looking for any new opportunities, i'm open

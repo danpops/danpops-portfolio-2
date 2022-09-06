@@ -3,20 +3,21 @@ import { Divider, Header3 } from '../../components/Text'
 import { Section, HeaderContainer } from '../../components/Layout/styles'
 import { SecondaryButton } from '../../components/Buttons'
 import { GithubIcon } from './styles'
+import { github } from '../../assets/data/text'
 
 function Github (): JSX.Element {
   return (
     <Section bgColor={colors.primary}>
       <HeaderContainer>
         <GithubIcon size={90} />
-        <Header3 color={colors.white}>check out my work on github!</Header3>
+        <Header3 color={colors.white}>{github.heading}</Header3>
         <Divider color={colors.white} />
         <SecondaryButton
           target='_blank'
           rel='noopener noreferrer'
-          href='https://github.com/danpops'
+          href={github.url}
         >
-          danpops/github
+          {github.buttonText}
         </SecondaryButton>
       </HeaderContainer>
     </Section>
