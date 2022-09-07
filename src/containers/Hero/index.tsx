@@ -9,7 +9,7 @@ import { Divider, Header1 } from '../../components/Text'
 import { hero } from '../../assets/data/text'
 import { Link } from 'react-scroll'
 import useTheme from '../../hooks/useTheme'
-import AnimatedButton from '../../components/Buttons'
+import CustomButton from '../../components/Buttons'
 
 function Hero (): JSX.Element {
   const { theme } = useTheme()
@@ -24,7 +24,7 @@ function Hero (): JSX.Element {
         <Divider color={theme.primary} />
         <HeroHeader5 color={theme.tertiary}>{hero.heading3}</HeroHeader5>
         <Link to='about' smooth duration={500}>
-          <AnimatedButton
+          <CustomButton
             label={hero.buttonText}
             color={theme.light}
             bgColor={theme.primary}

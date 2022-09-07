@@ -1,12 +1,15 @@
+import { animated } from 'react-spring'
 import styled from 'styled-components'
-import { ICompanyImage } from '../../types'
+import { ICompanyImage } from '../../../types'
 
-export const CompanyContainer = styled.div`
+export const CompanyContainer = styled(animated.a)`
   width: 10rem;
   height: 10rem;
+  margin: 1.4rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 `
 
 export const CompanyImage = styled.div`

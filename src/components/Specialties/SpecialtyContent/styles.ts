@@ -1,3 +1,4 @@
+import { animated } from 'react-spring'
 import styled from 'styled-components'
 import devices from '../../../utils/devices'
 
@@ -15,31 +16,36 @@ export const SpecialtiesContentContainer = styled.div`
   }
 `
 
-export const SpecialtiesItem = styled.a`
+export const SpecialtyItemContainer = styled.a`
   display: flex;
   flex-direction: column;
   text-decoration: none;
   align-items: center;
   justify-content: center;
-  height: 10rem;
-  width: 10rem;
+  text-align: center;
+  height: 8rem;
+  width: 8rem;
   cursor: pointer;
-
-  @media ${devices.lg} {
-    height: 8rem;
-  }
 `
 
-export const SpecialtiesImage = styled.div`
-  background-image: ${({ src }: { src: string }) => `url(${src})`};
-  background-size: cover;
-  background-position: center;
-  width: 3.4rem;
-  height: 3.4rem;
+export const SpecialtyItemContent = styled(animated.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+export const SpecialtiesImage = styled.img`
+  width: 4rem;
+  height: 4rem;
 `
 export const SpecialtiesItemLabel = styled.p`
   font-weight: 500;
-  margin-top: 1.3rem;
+  margin-top: 0.8rem;
   margin-bottom: 0;
   color: ${({ color }) => color};
+
+  @media ${devices.md} {
+    margin-top: 1rem;
+  }
 `

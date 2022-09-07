@@ -1,58 +1,27 @@
+import { CgDarkMode } from 'react-icons/cg'
 import styled from 'styled-components'
-import { INavigationExpand } from '../../../types'
+import devices from '../../../utils/devices'
 
-const closeNavStyle = `
-  path:nth-child(1) {
-    stroke-dasharray 60 207;
-    stroke-dashoffset 0;
-  }
+export const ToggleContainer = styled.div`
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  float: right;
+  padding: auto 2rem;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
 
-  path:nth-child(2) {
-    stroke-dasharray 60 60;
-    stroke-dashoffset 0;
-  }
-
-  path:nth-child(3) {
-    stroke-dasharray 60 207;
-    stroke-dashoffset 0;
-  }
-`
-const expandedNavStyle = `
-  path:nth-child(1) {
-    stroke-dasharray 90 207;
-    stroke-dashoffset -134;
-  }
-
-  path:nth-child(2) {
-    stroke-dasharray 1 60;
-    stroke-dashoffset -30;
-  }
-
-  path:nth-child(3) {
-    stroke-dasharray 90 207;
-    stroke-dashoffset -134;
+  @media ${devices.lg} {
+    display: none;
   }
 `
 
-export const NavigationWrapper = styled.div`
+export const DarkModeToggleMobile = styled(CgDarkMode)`
   display: block;
-  margin-top: 0.2rem;
-  ${({ expanded }: INavigationExpand) =>
-    expanded ? expandedNavStyle : closeNavStyle}
-`
-interface IStroke {
-  stroke: string
-}
+  margin-right: 0.5rem;
 
-export const NavigationSVG = styled.svg`
-  width: 3rem;
-  height: 3rem;
-`
-
-export const BarPath = styled.path`
-  fill: none;
-  stroke-width: 7;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  ${(props: IStroke) => `stroke: ${props.stroke};`}
+  @media ${devices.lg} {
+    display: none;
+  }
 `

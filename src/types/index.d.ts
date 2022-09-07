@@ -63,3 +63,37 @@ export interface INavigationContainer {
   bgColor: string
   color: string
 }
+export interface INavigationItem {
+  item: string
+  hoverColor: string
+  color: string
+  onClick?: () => void
+}
+export interface ICustomButton {
+  label: string
+  color: string
+  bgColor: string
+}
+export interface ICarouselItem {
+  exp: IExperienceData
+}
+export interface INavigationBrand {
+  clickHero: () => void
+}
+export interface INavigationToggle {
+  toggleNavbar: () => void
+  expanded: boolean
+}
+export interface IStroke {
+  stroke: string
+}
+export interface ISpecialtyItem {
+  name: string
+  href: string
+  image: string
+}
+export interface IBoopAnimationReturn {
+  onMouseEnter: () => void
+  onMouseLeave: () => void
+  style: any
+}

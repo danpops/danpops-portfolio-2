@@ -5,6 +5,6 @@ export const GithubIcon = styled(FaGithub)`
   color: ${({ color }) => color};
 `
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.a`
   margin-top 3rem;
 `

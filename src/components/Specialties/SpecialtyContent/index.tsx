@@ -1,25 +1,37 @@
+import useBoopAnimation from '../../../hooks/useBoopAnimation'
 import useTheme from '../../../hooks/useTheme'
-import { ISpecialtyContent } from '../../../types'
+import { ISpecialtyContent, ISpecialtyItem } from '../../../types'
 import {
   SpecialtiesContentContainer,
   SpecialtiesImage,
-  SpecialtiesItem,
-  SpecialtiesItemLabel
+  SpecialtyItemContainer,
+  SpecialtiesItemLabel,
+  SpecialtyItemContent
 } from './styles'
 
-function SpecialtyContent ({ data }: ISpecialtyContent): JSX.Element {
+function SpecialtyItem ({ name, href, image }: ISpecialtyItem): JSX.Element {
+  const animatedProps = useBoopAnimation()
   const { theme } = useTheme()
-  const renderContent = data.map(({ name, image, href, alt }, index) => (
-    <SpecialtiesItem
-      key={index}
+  return (
+    <SpecialtyItemContainer
       href={href}
       target='_blank'
       rel='noopener noreferrer'
     >
-      <SpecialtiesImage src={image} />
-      <SpecialtiesItemLabel color={theme.tertiary}>{name}</SpecialtiesItemLabel>
-    </SpecialtiesItem>
-  ))
+      <SpecialtyItemContent {...animatedProps}>
+        <SpecialtiesImage alt={name} src={image} />
+        <SpecialtiesItemLabel color={theme.tertiary}>
+          {name}
+        </SpecialtiesItemLabel>
+      </SpecialtyItemContent>
+    </SpecialtyItemContainer>
+  )
+}
+
+function SpecialtyContent ({ data }: ISpecialtyContent): JSX.Element {
+  const renderContent = data.map(({ name, image, href, alt }, index) => {
+    return <SpecialtyItem key={index} name={name} image={image} href={href} />
+  })
 
   return (
     <SpecialtiesContentContainer>{renderContent}</SpecialtiesContentContainer>

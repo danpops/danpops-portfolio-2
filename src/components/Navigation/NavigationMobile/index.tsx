@@ -1,11 +1,8 @@
 import { navigationItems } from '../../../assets/data/navigation'
 import useTheme from '../../../hooks/useTheme'
 import { INavigationMobile } from '../../../types'
-import {
-  NavigationMobileContainer,
-  NavigationLink,
-  NavigationMobileItem
-} from './styles'
+import NavigationItem from './NavigationItem'
+import { NavigationMobileContainer } from './styles'
 
 function NavigationMobile ({
   expanded,
@@ -14,17 +11,13 @@ function NavigationMobile ({
   const { theme } = useTheme()
   function composeNavigationItems (item: string, index: number): JSX.Element {
     return (
-      <NavigationLink
+      <NavigationItem
         key={index}
-        to={item}
+        item={item}
+        color={theme.tertiary}
+        hoverColor={theme.primary}
         onClick={toggleNavbar}
-        smooth
-        duration={500}
-      >
-        <NavigationMobileItem color={theme.tertiary} hoverColor={theme.primary}>
-          {item}
-        </NavigationMobileItem>
-      </NavigationLink>
+      />
     )
   }
 

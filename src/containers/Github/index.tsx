@@ -1,6 +1,6 @@
 import { Divider, Header3 } from '../../components/Text'
 import { Section, HeaderContainer } from '../../components/Layout/styles'
-import AnimatedButton from '../../components/Buttons'
+import CustomButton from '../../components/Buttons'
 import { ButtonContainer, GithubIcon } from './styles'
 import { github } from '../../assets/data/text'
 import useTheme from '../../hooks/useTheme'
@@ -15,13 +15,14 @@ function Github (): JSX.Element {
         <GithubIcon size={GITHUB_ICON_SIZE} color={theme.tertiary} />
         <Header3 color={theme.tertiary}>{github.heading}</Header3>
         <Divider color={theme.tertiary} />
-        <ButtonContainer>
-          <AnimatedButton
+        <ButtonContainer
+          target='_blank'
+          rel='noopener noreferrer'
+          href={github.url}
+        >
+          <CustomButton
             color={theme.secondary}
             bgColor={theme.tertiary}
-            // target='_blank'
-            // rel='noopener noreferrer'
-            // href={github.url}
             label={github.buttonText}
           />
         </ButtonContainer>
