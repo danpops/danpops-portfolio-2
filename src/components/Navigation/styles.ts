@@ -55,6 +55,7 @@ export const NavigationBrand = styled(Link)`
   font-weight: 700;
   color: ${colors.black};
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     color: ${colors.primary};
@@ -66,6 +67,7 @@ export const NavigationToggle = styled.div`
   cursor: pointer;
   float: right;
   padding: auto 2rem;
+  -webkit-tap-highlight-color: transparent;
   position: relative;
 
   @media ${devices.lg} {
