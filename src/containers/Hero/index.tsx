@@ -14,7 +14,7 @@ import useTheme from '../../hooks/useTheme'
 function Hero (): JSX.Element {
   const { theme } = useTheme()
   return (
-    <HeroMasthead id='hero'>
+    <HeroMasthead bgColor={theme.secondary} id='hero'>
       <ParticleContainer bgColor={theme.secondary}>
         <ParticlesBg num={60} type='cobweb' color={theme.primary} />
       </ParticleContainer>
