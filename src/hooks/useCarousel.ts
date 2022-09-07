@@ -1,7 +1,7 @@
 import { Settings } from 'react-slick'
 import { breakpoints } from '../utils/devices'
 
-const responsiveBreakpoints = [
+export const responsiveBreakpoints = [
   {
     breakpoint: breakpoints.lg,
     settings: {
