@@ -2,7 +2,7 @@ import { Link } from 'react-scroll'
 import styled from 'styled-components'
 import { INavigationMobileContainer } from '../../../types'
 import devices from '../../../utils/devices'
-import { IHoverColor } from '../../Buttons'
+import { IHoverColor } from '../../Buttons/styles'
 
 const expandedMenuStyle = `
   display: block;

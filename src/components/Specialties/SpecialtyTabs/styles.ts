@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import devices from '../../../utils/devices'
-import { IThemeStyle, PrimaryButton } from '../../Buttons'
+import { IThemeStyle, PrimaryButton } from '../../Buttons/styles'
 
 export const SpecialtiesTabsContainer = styled.div`
   display: grid;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import devices from '../../../utils/devices'
-import { IHoverColor } from '../../Buttons'
+import { IHoverColor } from '../../Buttons/styles'
 
 export const NavigationDesktopMenu = styled.div`
   display: none;

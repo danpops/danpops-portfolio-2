@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import devices from '../../utils/devices'
 import { INavigationContainer } from '../../types'
-import { IHoverColor } from '../Buttons'
+import { IHoverColor } from '../Buttons/styles'
 
 const navigationDefault = `
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);

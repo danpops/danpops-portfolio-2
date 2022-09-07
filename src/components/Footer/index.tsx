@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import useTheme from '../../hooks/useTheme'
 import devices from '../../utils/devices'
-import { IBackgroundColor, IColor } from '../Buttons'
+import { IBackgroundColor, IColor } from '../Buttons/styles'
 
 const FooterContainer = styled.footer`
   diplay: flex;
