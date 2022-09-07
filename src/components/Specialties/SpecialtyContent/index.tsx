@@ -1,3 +1,4 @@
+import useTheme from '../../../hooks/useTheme'
 import { ISpecialtyContent } from '../../../types'
 import {
   SpecialtiesContentContainer,
@@ -7,6 +8,7 @@ import {
 } from './styles'
 
 function SpecialtyContent ({ data }: ISpecialtyContent): JSX.Element {
+  const { theme } = useTheme()
   const renderContent = data.map(({ name, image, href, alt }, index) => (
     <SpecialtiesItem
       key={index}
@@ -15,7 +17,7 @@ function SpecialtyContent ({ data }: ISpecialtyContent): JSX.Element {
       rel='noopener noreferrer'
     >
       <SpecialtiesImage src={image} />
-      <SpecialtiesItemLabel>{name}</SpecialtiesItemLabel>
+      <SpecialtiesItemLabel color={theme.tertiary}>{name}</SpecialtiesItemLabel>
     </SpecialtiesItem>
   ))
 

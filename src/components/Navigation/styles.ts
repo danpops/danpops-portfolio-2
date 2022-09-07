@@ -1,31 +1,32 @@
 import styled from 'styled-components'
-import { colors } from '../../design'
 import devices from '../../utils/devices'
-import { Link } from 'react-scroll'
 import { INavigationContainer } from '../../types'
+import { IHoverColor } from '../Buttons'
 
 const navigationDefault = `
-  background-color: ${colors.white};
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 `
 const navigationTransparent = `
-  background-color: transparent;
-  box-shadow: none;
+  @media ${devices.lg} {
+    background-color: transparent;
+    box-shadow: none;
+  }
 `
 
 export const NavigationContainer = styled.div`
   position: fixed;
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
-  background: ${colors.white} !important;
-  color: ${colors.dark};
   top: 0;
   width: 100%;
   z-index: 99999;
 
-  @media ${devices.lg} {
-    ${({ isTransparent }: INavigationContainer) =>
-      !isTransparent ? navigationTransparent : navigationDefault};
-  }
+  ${({ isTransparent, bgColor, color }: INavigationContainer) =>
+    `
+      background-color: ${bgColor};
+      @media ${devices.lg} {
+        color: ${color};
+        ${isTransparent ? navigationDefault : navigationTransparent}
+      }
+    `}
 `
 
 export const NavigationContent = styled.div`
@@ -44,22 +45,29 @@ export const NavigationContent = styled.div`
   }
 `
 
-export const NavigationBrand = styled(Link)`
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+export const NavigationBrand = styled.div`
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
   font-weight: 700;
-  color: ${colors.dark};
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+  margin-right: 0.7rem;
 
+  ${(props: IHoverColor) => `
+  color: ${props.color};
   &:hover {
-    color: ${colors.primary};
+    color: ${props.hoverColor};
   }
+  `}
+`
+export const NavigationBrandContainer = styled.div`
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
 `
 
 export const ToggleContainer = styled.div`

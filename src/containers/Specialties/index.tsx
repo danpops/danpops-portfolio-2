@@ -1,19 +1,20 @@
-import { colors } from '../../design'
 import { HeaderContainer } from '../../components/Layout/styles'
 import { Divider, Header3 } from '../../components/Text'
 import { SpecialtiesSection, SpecialtiesContainer } from './styles'
 import useSpecialties from '../../hooks/useSpecialties'
 import { SpecialtyTabs, SpecialtyContent } from '../../components/Specialties'
 import { specialties } from '../../assets/data/text'
+import useTheme from '../../hooks/useTheme'
 
 function Specialties (): JSX.Element {
   const { activeSpecialty, activeData, setActiveSpecialty } = useSpecialties()
+  const { theme } = useTheme()
 
   return (
-    <SpecialtiesSection id='specialties' bgColor={colors.white}>
+    <SpecialtiesSection id='specialties' bgColor={theme.shadow}>
       <HeaderContainer>
-        <Header3 color={colors.black}>{specialties.heading}</Header3>
-        <Divider color={colors.primary} />
+        <Header3 color={theme.gray}>{specialties.heading}</Header3>
+        <Divider color={theme.primary} />
       </HeaderContainer>
       <SpecialtiesContainer>
         <SpecialtyTabs

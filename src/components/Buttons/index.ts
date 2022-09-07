@@ -1,5 +1,19 @@
-import { colors } from '../../design'
 import styled from 'styled-components'
+
+export interface IThemeStyle {
+  color: string
+  bgColor: string
+}
+export interface IColor {
+  color: string
+}
+export interface IHoverColor {
+  color: string
+  hoverColor: string
+}
+export interface IBackgroundColor {
+  bgColor: string
+}
 
 export const PrimaryButton = styled.button`
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
@@ -10,8 +24,10 @@ export const PrimaryButton = styled.button`
   font-size: 0.85rem;
   padding: 1.25rem 2.25rem;
   cursor: pointer;
-  color: ${colors.white};
-  background-color: ${colors.primary};
+  ${(props: IThemeStyle) => `
+    color: ${props.color};
+    background-color: ${props.bgColor};
+  `}
 `
 
 export const SecondaryButton = styled.a`
@@ -25,6 +41,8 @@ export const SecondaryButton = styled.a`
   font-size: 0.85rem;
   padding: 1.25rem 2.25rem;
   cursor: pointer;
-  color: ${colors.black};
-  background-color: ${colors.white};
+  ${(props: IThemeStyle) => `
+    color: ${props.color};
+    background-color: ${props.bgColor};
+  `}
 `

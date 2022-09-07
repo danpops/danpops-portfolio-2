@@ -1,4 +1,5 @@
 import { SpecialtiesType, specialtyTabs } from '../../../hooks/useSpecialties'
+import useTheme from '../../../hooks/useTheme'
 import { ISpecialtyTabs } from '../../../types'
 import {
   SpecialtiesTabsContainer,
@@ -10,6 +11,7 @@ function SpecialtyTabs ({
   activeSpecialty,
   setActiveSpecialty
 }: ISpecialtyTabs): JSX.Element {
+  const { theme } = useTheme()
   function composeTabItems (
     specialty: SpecialtiesType,
     index: number
@@ -19,6 +21,10 @@ function SpecialtyTabs ({
     return (
       <SpecialtiesTabItem key={index}>
         <SpecialtiesButton
+          activeBg={theme.primary}
+          activeColor={theme.secondary}
+          bgColor={theme.secondary}
+          color={theme.tertiary}
           active={active}
           onClick={setActiveSpecialty(specialty)}
         >

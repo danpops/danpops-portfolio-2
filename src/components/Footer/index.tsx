@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { colors } from '../../design'
+import useTheme from '../../hooks/useTheme'
+import { IBackgroundColor, IColor } from '../Buttons'
 
 const FooterContainer = styled.footer`
   diplay: flex;
@@ -7,22 +8,27 @@ const FooterContainer = styled.footer`
   justify-content: center;
   position: relative;
   padding: 1.4rem 0rem;
-  background-color: ${colors.light};
+  ${(props: IBackgroundColor) => `
+    background-color: ${props.bgColor};
+  `}
   text-align: center;
   width: 100%;
 `
 
 const FooterText = styled.h5`
   text-align: center;
-  color: ${colors.gray};
+  ${(props: IColor) => `
+    color: ${props.color};
+  `}
   font-weight: 400;
 `
 
 function Footer (): JSX.Element {
+  const { theme } = useTheme()
   const year = new Date().getFullYear()
   return (
-    <FooterContainer>
-      <FooterText>© {year} - danpops.ca</FooterText>
+    <FooterContainer bgColor={theme.secondary}>
+      <FooterText color={theme.tertiary}>© {year} - danpops.ca</FooterText>
     </FooterContainer>
   )
 }

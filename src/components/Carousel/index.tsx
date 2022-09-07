@@ -3,9 +3,11 @@ import { useCarousel } from '../../hooks/useCarousel'
 import { experienceData } from '../../assets/data/experience'
 import { CompanyContainer, CompanyImage, CompanyText } from './styles'
 import { IExperienceData } from '../../types'
+import useTheme from '../../hooks/useTheme'
 
 function Carousel (): JSX.Element {
   const { settings } = useCarousel({ length: experienceData.length })
+  const { theme } = useTheme()
 
   function composeCarouselItems (
     exp: IExperienceData,
@@ -15,7 +17,7 @@ function Carousel (): JSX.Element {
     return (
       <CompanyContainer key={index}>
         <CompanyImage src={image} />
-        <CompanyText target='_blank' rel='noopener noreferrer' href={url}>
+        <CompanyText color={theme.secondary} target='_blank' rel='noopener noreferrer' href={url}>
           {company}
         </CompanyText>
       </CompanyContainer>

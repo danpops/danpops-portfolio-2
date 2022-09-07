@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from '../../../design'
 import devices from '../../../utils/devices'
 
 export const SpecialtiesContentContainer = styled.div`
@@ -42,5 +41,5 @@ export const SpecialtiesItemLabel = styled.p`
   font-weight: 500;
   margin-top: 1.3rem;
   margin-bottom: 0;
-  color: ${colors.black};
+  color: ${({ color }) => color};
 `

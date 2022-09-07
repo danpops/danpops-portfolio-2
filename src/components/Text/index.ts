@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from '../../design'
 import devices from '../../utils/devices'
 
 export const Divider = styled.hr`
@@ -13,6 +12,7 @@ export const Header1 = styled.h1`
   font-weight: 500;
   line-height: 1.2;
   font-size: 2rem;
+  color: ${({ color }) => color};
 
   @media ${devices.md} {
     font-size: 2.5rem;
@@ -29,6 +29,7 @@ export const Header3 = styled.h1`
 export const Header5 = styled.h1`
   font-size: 1.25rem;
   font-weight: 500;
+  color: ${({ color }) => color};
 
   @media ${devices.md} {
     font-size: 1.5rem;
@@ -39,5 +40,5 @@ export const Text = styled.p`
   line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.02rem;
-  color: ${({ color = colors.white }) => color};
+  color: ${({ color }) => color};
 `

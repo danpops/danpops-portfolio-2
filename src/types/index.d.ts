@@ -52,7 +52,13 @@ export interface ISection {
 }
 export interface INavigationMobileContainer {
   expanded: boolean
+  bgColor: string
+}
+export interface INavigationExpand {
+  expanded: boolean
 }
 export interface INavigationContainer {
   isTransparent: boolean
+  bgColor: string
+  color: string
 }

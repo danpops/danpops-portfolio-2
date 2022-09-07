@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { colors } from '../../../design'
 import devices from '../../../utils/devices'
+import { IHoverColor } from '../../Buttons'
 
 export const NavigationDesktopMenu = styled.div`
   display: none;
@@ -13,11 +13,12 @@ export const NavigationMenuItem = styled.div`
   font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
-  color: ${colors.dark};
   padding: 0 1rem;
   cursor: pointer;
-
+  ${(props: IHoverColor) => `
+  color: ${props.color};
   &:hover {
-    color: ${colors.primary};
+    color: ${props.hoverColor};
   }
+`}
 `

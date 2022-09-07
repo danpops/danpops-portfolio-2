@@ -1,14 +1,13 @@
 import styled from 'styled-components'
-import { colors } from '../../design'
 import { FaLinkedin } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 
 export const LinkedInIcon = styled(FaLinkedin)`
-  color: ${colors.gray};
+  color: ${({ color }) => color};
   margin: 1.8rem;
 `
 export const MailIcon = styled(IoMdMail)`
-  color: ${colors.gray};
+  color: ${({ color }) => color};
   margin: 1.8rem;
 `
 

@@ -1,4 +1,5 @@
 import { navigationItems } from '../../../assets/data/navigation'
+import useTheme from '../../../hooks/useTheme'
 import { INavigationMobile } from '../../../types'
 import {
   NavigationMobileContainer,
@@ -10,6 +11,7 @@ function NavigationMobile ({
   expanded,
   toggleNavbar
 }: INavigationMobile): JSX.Element {
+  const { theme } = useTheme()
   function composeNavigationItems (item: string, index: number): JSX.Element {
     return (
       <NavigationLink
@@ -19,13 +21,15 @@ function NavigationMobile ({
         smooth
         duration={500}
       >
-        <NavigationMobileItem>{item}</NavigationMobileItem>
+        <NavigationMobileItem color={theme.tertiary} hoverColor={theme.primary}>
+          {item}
+        </NavigationMobileItem>
       </NavigationLink>
     )
   }
 
   return (
-    <NavigationMobileContainer expanded={expanded}>
+    <NavigationMobileContainer bgColor={theme.secondary} expanded={expanded}>
       {navigationItems.map(composeNavigationItems)}
     </NavigationMobileContainer>
   )

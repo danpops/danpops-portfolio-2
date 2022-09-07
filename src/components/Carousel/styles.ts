@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from '../../design'
 import { ICompanyImage } from '../../types'
 
 export const CompanyContainer = styled.div`
@@ -29,5 +28,5 @@ export const CompanyText = styled.a`
   font-weight: 400;
   letter-spacing: 0.02rem;
   text-decoration: none;
-  color: ${colors.white}
+  color: ${({ color }) => color};
 `

@@ -1,8 +1,8 @@
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
-import { colors } from '../../../design'
 import { INavigationMobileContainer } from '../../../types'
 import devices from '../../../utils/devices'
+import { IHoverColor } from '../../Buttons'
 
 const expandedMenuStyle = `
   display: block;
@@ -12,7 +12,6 @@ const expandedMenuStyle = `
 `
 
 export const NavigationMobileContainer = styled.div`
-  background: ${colors.white};
   -webkit-tap-highlight-color: transparent;
   clear:both;
   width:100%;
@@ -20,8 +19,10 @@ export const NavigationMobileContainer = styled.div`
   overflow: hidden;
   transition: all .5s ease;
   opacity: 0;
-  
-  ${({ expanded }: INavigationMobileContainer) => expanded && expandedMenuStyle}
+
+  ${({ expanded, bgColor }: INavigationMobileContainer) => `
+    background-color: ${bgColor};
+  ${expanded ? expandedMenuStyle : ''}`}
   
   @media ${devices.lg} {
     display: none;
@@ -29,16 +30,18 @@ export const NavigationMobileContainer = styled.div`
 `
 
 export const NavigationMobileItem = styled.div`
-  color: ${colors.dark};
   padding: 1rem 0.8rem;
   font-size: 16px;
   display: block;
   margin-left: 2rem;
   font-weight: 700;
 
-  &:hover {
-    color: ${colors.primary};
-  }
+  ${(props: IHoverColor) => `
+    color: ${props.color};
+    &:hover {
+      color: ${props.hoverColor};
+    }
+  `}
 `
 
 export const NavigationLink = styled(Link)`

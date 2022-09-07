@@ -1,4 +1,11 @@
-import { About, Hero, Specialties, Experience, Github, Contact } from './containers'
+import {
+  About,
+  Hero,
+  Specialties,
+  Experience,
+  Github,
+  Contact
+} from './containers'
 import Layout from './components/Layout'
 import GlobalStyle from './design/global'
 

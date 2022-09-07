@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../../design'
-import { INavigationMobileContainer } from '../../../types'
+import { INavigationExpand } from '../../../types'
 
 const closeNavStyle = `
   path:nth-child(1) {
@@ -38,9 +37,12 @@ const expandedNavStyle = `
 export const NavigationWrapper = styled.div`
   display: block;
   margin-top: 0.2rem;
-  ${({ expanded }: INavigationMobileContainer) =>
+  ${({ expanded }: INavigationExpand) =>
     expanded ? expandedNavStyle : closeNavStyle}
 `
+interface IStroke {
+  stroke: string
+}
 
 export const NavigationSVG = styled.svg`
   width: 3rem;
@@ -49,8 +51,8 @@ export const NavigationSVG = styled.svg`
 
 export const BarPath = styled.path`
   fill: none;
-  stroke: ${colors.dark};
   stroke-width: 7;
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${(props: IStroke) => `stroke: ${props.stroke};`}
 `
