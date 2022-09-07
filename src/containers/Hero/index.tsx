@@ -24,7 +24,7 @@ function Hero (): JSX.Element {
         <Divider color={theme.primary} />
         <HeroHeader5 color={theme.tertiary}>{hero.heading3}</HeroHeader5>
         <Link to='about' smooth duration={500}>
-          <PrimaryButton color={theme.secondary} bgColor={theme.primary}>
+          <PrimaryButton color={theme.light} bgColor={theme.primary}>
             {hero.buttonText}
           </PrimaryButton>
         </Link>

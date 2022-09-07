@@ -22,12 +22,12 @@ export const Section = styled.section`
 `
 export const HeaderContainer = styled.div`
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 
   @media ${devices.md} {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 6.5rem;
+    padding-right: 6.5rem;
   }
 
   @media ${devices.lg} {

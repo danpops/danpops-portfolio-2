@@ -7,6 +7,8 @@ export interface IColors {
   tertiary: string
   shadow: string
   gray: string
+  light: string
+  dark: string
 }
 
 export interface IColorsState {

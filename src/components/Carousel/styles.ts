@@ -22,7 +22,7 @@ export const CompanyImage = styled.div`
 
 export const CompanyText = styled.a`
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   line-height: 1.5rem;
   font-weight: 400;

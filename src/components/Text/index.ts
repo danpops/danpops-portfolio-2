@@ -36,9 +36,18 @@ export const Header5 = styled.h1`
   }
 `
 export const Text = styled.p`
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.02rem;
   color: ${({ color }) => color};
+
+  @media ${devices.md} {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  @media ${devices.lg} {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 `

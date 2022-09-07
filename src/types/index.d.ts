@@ -56,6 +56,7 @@ export interface INavigationMobileContainer {
 }
 export interface INavigationExpand {
   expanded: boolean
+  onClick?: () => void
 }
 export interface INavigationContainer {
   isTransparent: boolean

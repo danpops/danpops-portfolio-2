@@ -22,7 +22,7 @@ function SpecialtyTabs ({
       <SpecialtiesTabItem key={index}>
         <SpecialtiesButton
           activeBg={theme.primary}
-          activeColor={theme.secondary}
+          activeColor={theme.light}
           bgColor={theme.secondary}
           color={theme.tertiary}
           active={active}

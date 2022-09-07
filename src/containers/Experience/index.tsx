@@ -10,8 +10,8 @@ function Experience (): JSX.Element {
   return (
     <Section id='experience' bgColor={theme.primary}>
       <HeaderContainer>
-        <Header3 color={theme.secondary}>{experience.heading}</Header3>
-        <Divider color={theme.secondary} />
+        <Header3 color={theme.light}>{experience.heading}</Header3>
+        <Divider color={theme.light} />
       </HeaderContainer>
       <CarouselContainer>
         <Carousel />

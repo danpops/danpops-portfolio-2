@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import useTheme from '../../hooks/useTheme'
+import devices from '../../utils/devices'
 import { IBackgroundColor, IColor } from '../Buttons'
 
 const FooterContainer = styled.footer`
@@ -7,12 +8,21 @@ const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 1.4rem 0rem;
-  ${(props: IBackgroundColor) => `
-    background-color: ${props.bgColor};
-  `}
   text-align: center;
   width: 100%;
+  padding: 0.6rem 0rem;
+  
+  ${(props: IBackgroundColor) => `
+  background-color: ${props.bgColor};
+  `}
+  
+  @media ${devices.md} {
+    padding: 0.8rem 0rem;
+  }
+  
+  @media ${devices.lg} {
+    padding: 1.2rem 0rem;
+  }
 `
 
 const FooterText = styled.h5`

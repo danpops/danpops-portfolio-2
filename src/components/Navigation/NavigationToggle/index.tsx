@@ -3,10 +3,10 @@ import useTheme from '../../../hooks/useTheme'
 import { INavigationExpand } from '../../../types'
 import { BarPath, NavigationSVG, NavigationWrapper } from './styles'
 
-function NavigationToggle ({ expanded }: INavigationExpand): JSX.Element {
+function NavigationToggle ({ expanded, onClick }: INavigationExpand): JSX.Element {
   const { theme } = useTheme()
   return (
-    <NavigationWrapper expanded={expanded}>
+    <NavigationWrapper onClick={onClick} expanded={expanded}>
       <NavigationSVG viewBox='0 0 100 100'>
         <BarPath
           stroke={theme.tertiary}

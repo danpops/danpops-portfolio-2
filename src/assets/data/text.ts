@@ -6,17 +6,19 @@ export const hero = {
 }
 export const about = {
   heading: 'who am i?',
-  content: `i'm an agile software engineer at TribalScale. my proficient
-  communication and conflict resolution skills, along with experience in
-  a variety of programming languages that include javascript, python,
-  and java, provide me with the ability to deliver innovative ideas that
-  assist the technological development of an organization.`
+  content: `i'm a software engineer based in toronto, with experience working 
+  on consumer level applications using frameworks such as react and react 
+  native. i'm passionate about writing clean and concise code and test 
+  driven development using tools such as jest and appium. furthermore, i have 
+  experience building backend applications using the serverless framework and have 
+  recently worked with gopuff, leading the implementation of integration
+  tests using appium on react native.`
 }
 export const specialties = {
   heading: 'what are my specialties?'
 }
 export const experience = {
-  heading: "companies i've worked with"
+  heading: 'who have i worked with?'
 }
 export const github = {
   heading: 'check out my work on github!',

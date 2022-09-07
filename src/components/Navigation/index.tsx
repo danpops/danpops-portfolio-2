@@ -12,6 +12,24 @@ import NavigationToggle from './NavigationToggle'
 import useTheme from '../../hooks/useTheme'
 import { MdOutlineDarkMode } from 'react-icons/md'
 import { Link } from 'react-scroll'
+import styled from 'styled-components'
+import devices from '../../utils/devices'
+
+const DarkModeToggleDesktop = styled(MdOutlineDarkMode)`
+  display: none;
+
+  @media ${devices.lg} {
+    display: block;
+  }
+`
+const DarkModeToggleMobile = styled(MdOutlineDarkMode)`
+  display: block;
+  margin-right: 0.5rem;
+
+  @media ${devices.lg} {
+    display: none;
+  }
+`
 
 function Navigation (): JSX.Element {
   const { isTransparent, clickHero, expanded, toggleNavbar } = useNavigation()
@@ -33,14 +51,19 @@ function Navigation (): JSX.Element {
                 danpops_
               </NavigationBrand>
             </Link>
-            <MdOutlineDarkMode
+            <DarkModeToggleDesktop
               size={25}
               color={theme.tertiary}
               onClick={toggleColors}
             />
           </NavigationBrandContainer>
-          <ToggleContainer onClick={toggleNavbar}>
-            <NavigationToggle expanded={expanded} />
+          <ToggleContainer>
+            <DarkModeToggleMobile
+              size={35}
+              color={theme.tertiary}
+              onClick={toggleColors}
+            />
+            <NavigationToggle onClick={toggleNavbar} expanded={expanded} />
           </ToggleContainer>
           <NavigationDesktop />
         </NavigationContent>

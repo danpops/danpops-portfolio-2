@@ -11,9 +11,9 @@ function About (): JSX.Element {
     <Section id='about' bgColor={theme.primary}>
       <HeaderContainer>
         <ImageCircle src={me} />
-        <Header3 color={theme.secondary}>{about.heading}</Header3>
-        <Divider color={theme.secondary} />
-        <Text color={theme.secondary}>{about.content}</Text>
+        <Header3 color={theme.light}>{about.heading}</Header3>
+        <Divider color={theme.light} />
+        <Text color={theme.light}>{about.content}</Text>
       </HeaderContainer>
     </Section>
   )

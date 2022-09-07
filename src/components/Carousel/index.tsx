@@ -17,7 +17,7 @@ function Carousel (): JSX.Element {
     return (
       <CompanyContainer key={index}>
         <CompanyImage src={image} />
-        <CompanyText color={theme.secondary} target='_blank' rel='noopener noreferrer' href={url}>
+        <CompanyText color={theme.light} target='_blank' rel='noopener noreferrer' href={url}>
           {company}
         </CompanyText>
       </CompanyContainer>

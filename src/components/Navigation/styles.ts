@@ -71,8 +71,10 @@ export const NavigationBrandContainer = styled.div`
 `
 
 export const ToggleContainer = styled.div`
-  display: inline-block;
+  display: flex;
   cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
   float: right;
   padding: auto 2rem;
   -webkit-tap-highlight-color: transparent;
