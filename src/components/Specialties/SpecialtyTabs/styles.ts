@@ -40,7 +40,7 @@ export interface ISpecialtyProps {
 
 export const SpecialtiesButton = styled(PrimaryButton)`
   width: 8rem;
-
+  transition: background-color .5s ease-out;
   ${({ activeBg, active, activeColor, bgColor, color }: ISpecialtyProps) => {
     const activeStyle = { bgColor: activeBg, color: activeColor }
     const defaultStyle = { bgColor, color }
