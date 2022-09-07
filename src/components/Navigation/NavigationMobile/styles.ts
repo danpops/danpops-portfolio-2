@@ -30,7 +30,7 @@ export const NavigationMobileContainer = styled.div`
 
 export const NavigationMobileItem = styled.div`
   color: ${colors.dark};
-  padding: 1rem 1.2rem;
+  padding: 1rem 0.8rem;
   font-size: 16px;
   display: block;
   margin-left: 2rem;

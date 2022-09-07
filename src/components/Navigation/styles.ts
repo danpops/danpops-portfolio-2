@@ -17,7 +17,7 @@ export const NavigationContainer = styled.div`
   position: fixed;
   box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
   background: ${colors.white} !important;
-  color: ${colors.black};
+  color: ${colors.dark};
   top: 0;
   width: 100%;
   z-index: 99999;
@@ -32,10 +32,10 @@ export const NavigationContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
+  padding-top: 0.34rem;
+  padding-bottom: 0.34rem;
 
   @media ${devices.lg} {
     max-width: 960px;
@@ -53,7 +53,7 @@ export const NavigationBrand = styled(Link)`
   line-height: inherit;
   white-space: nowrap;
   font-weight: 700;
-  color: ${colors.black};
+  color: ${colors.dark};
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 
@@ -62,7 +62,7 @@ export const NavigationBrand = styled(Link)`
   }
 `
 
-export const NavigationToggle = styled.div`
+export const ToggleContainer = styled.div`
   display: inline-block;
   cursor: pointer;
   float: right;

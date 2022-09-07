@@ -5,6 +5,7 @@ interface IUseNavigation {
   isTransparent: boolean
   setExpanded: Dispatch<SetStateAction<boolean>>
   toggleNavbar: () => void
+  clickHero: () => void
 }
 
 const useNavigation = (): IUseNavigation => {
@@ -12,6 +13,7 @@ const useNavigation = (): IUseNavigation => {
   const [expanded, setExpanded] = useState(false)
 
   const toggleNavbar = (): void => setExpanded(!expanded)
+  const clickHero = (): void => setExpanded(false)
 
   useEffect(() => {
     const onScroll = (): void => {
@@ -23,6 +25,7 @@ const useNavigation = (): IUseNavigation => {
 
   return {
     expanded,
+    clickHero,
     isTransparent,
     setExpanded,
     toggleNavbar

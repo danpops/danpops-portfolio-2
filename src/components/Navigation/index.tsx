@@ -4,25 +4,24 @@ import {
   NavigationContainer,
   NavigationContent,
   NavigationBrand,
-  NavigationToggle
+  ToggleContainer
 } from './styles'
 import NavigationMobile from './NavigationMobile'
-
-import { MdMenu } from 'react-icons/md'
+import NavigationToggle from './NavigationToggle'
 
 function Navigation (): JSX.Element {
-  const { isTransparent, expanded, toggleNavbar } = useNavigation()
+  const { isTransparent, clickHero, expanded, toggleNavbar } = useNavigation()
 
   return (
     <>
       <NavigationContainer isTransparent={isTransparent}>
         <NavigationContent>
-          <NavigationBrand to='hero' smooth duration={500}>
+          <NavigationBrand to='hero' smooth duration={500} onClick={clickHero}>
             danpops_
           </NavigationBrand>
-          <NavigationToggle onClick={toggleNavbar}>
-            <MdMenu size={42} />
-          </NavigationToggle>
+          <ToggleContainer onClick={toggleNavbar}>
+            <NavigationToggle expanded={expanded} />
+          </ToggleContainer>
           <NavigationDesktop />
         </NavigationContent>
         <NavigationMobile toggleNavbar={toggleNavbar} expanded={expanded} />

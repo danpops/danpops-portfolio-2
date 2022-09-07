@@ -13,7 +13,7 @@ export const NavigationMenuItem = styled.div`
   font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
-  color: ${colors.black};
+  color: ${colors.dark};
   padding: 0 1rem;
   cursor: pointer;
 
