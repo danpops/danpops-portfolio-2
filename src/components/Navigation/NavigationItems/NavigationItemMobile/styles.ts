@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
-import { IHoverColor } from '../../../Buttons/styles'
+import { IHoverColor } from '../../../../types'
 
 export const NavigationMobileItem = styled.div`
   padding: 1rem 0.8rem;

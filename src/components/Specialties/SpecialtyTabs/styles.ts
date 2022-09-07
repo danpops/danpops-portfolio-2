@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import devices from '../../../utils/devices'
-import { IThemeStyle, PrimaryButton } from '../../Buttons/styles'
+import { IThemeStyle } from '../../../types'
+import { PrimaryButton } from '../../Buttons/styles'
 
 export const SpecialtiesTabsContainer = styled.div`
   display: grid;
@@ -40,7 +41,7 @@ export interface ISpecialtyProps {
 
 export const SpecialtiesButton = styled(PrimaryButton)`
   width: 8rem;
-  transition: background-color .5s ease-out;
+  transition: background-color 0.5s ease-out;
   ${({ activeBg, active, activeColor, bgColor, color }: ISpecialtyProps) => {
     const activeStyle = { bgColor: activeBg, color: activeColor }
     const defaultStyle = { bgColor, color }

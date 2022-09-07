@@ -1,20 +1,6 @@
 import { animated } from 'react-spring'
 import styled from 'styled-components'
-
-export interface IThemeStyle {
-  color: string
-  bgColor: string
-}
-export interface IColor {
-  color: string
-}
-export interface IHoverColor {
-  color: string
-  hoverColor: string
-}
-export interface IBackgroundColor {
-  bgColor: string
-}
+import { IThemeStyle } from '../../types'
 
 export const PrimaryButton = styled(animated.button)`
   box-shadow: 0 0.125rem 0.25rem #00000055 !important;

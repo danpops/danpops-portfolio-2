@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useSpring } from 'react-spring'
-import { IBoopAnimationReturn } from '../types'
+import { ISpringAnimationItems } from '../../types'
 
-const useBoopAnimation = (): IBoopAnimationReturn => {
+const useBoopAnimation = (): ISpringAnimationItems => {
   const [isBooped, setIsBooped] = useState(false)
   const style: any = useSpring({
     display: 'inline-block',

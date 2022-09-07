@@ -3,7 +3,7 @@ import useTheme from '../../../../hooks/useTheme'
 import { INavigationExpand } from '../../../../types'
 import { BarPath, NavigationSVG, NavigationWrapper } from './styles'
 
-function NavigationMenuButton ({
+function NavigationMenuToggle ({
   expanded,
   onClick
 }: INavigationExpand): JSX.Element {
@@ -43,4 +43,4 @@ function NavigationMenuButton ({
   )
 }
 
-export default NavigationMenuButton
+export default NavigationMenuToggle

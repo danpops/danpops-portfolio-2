@@ -1,7 +1,7 @@
 import { INavigationItem } from '../../../../types'
 import { NavigationLink, NavigationMobileItem } from './styles'
 
-function NavigationItem ({
+function NavigationItemMobile ({
   item,
   hoverColor,
   color,
@@ -16,4 +16,4 @@ function NavigationItem ({
   )
 }
 
-export default NavigationItem
+export default NavigationItemMobile

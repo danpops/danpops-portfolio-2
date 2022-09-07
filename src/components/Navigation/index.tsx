@@ -1,7 +1,6 @@
 import useNavigation from '../../hooks/useNavigation'
-import NavigationDesktop from './NavigationDesktop'
 import { NavigationContainer, NavigationContent } from './styles'
-import NavigationMobile from './NavigationMobile'
+import { NavigationMenuDesktop, NavigationMenuMobile } from './NavigationMenu'
 import useTheme from '../../hooks/useTheme'
 import NavigationBrand from './NavigationBrand'
 import NavigationToggle from './NavigationToggle'
@@ -18,9 +17,9 @@ function Navigation (): JSX.Element {
       <NavigationContent>
         <NavigationBrand clickHero={clickHero} />
         <NavigationToggle toggleNavbar={toggleNavbar} expanded={expanded} />
-        <NavigationDesktop />
+        <NavigationMenuDesktop />
       </NavigationContent>
-      <NavigationMobile toggleNavbar={toggleNavbar} expanded={expanded} />
+      <NavigationMenuMobile toggleNavbar={toggleNavbar} expanded={expanded} />
     </NavigationContainer>
   )
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { INavigationMobileContainer } from '../../../types'
-import devices from '../../../utils/devices'
+import { INavigationMobileContainer } from '../../../../types'
+import devices from '../../../../utils/devices'
 
 const expandedMenuStyle = `
   display: block;

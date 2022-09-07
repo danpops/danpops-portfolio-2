@@ -1,9 +1,9 @@
-import { navigationItems } from '../../../assets/data/navigation'
-import useTheme from '../../../hooks/useTheme'
-import NavigationItem from './NavigationItem'
+import { navigationItems } from '../../../../assets/data/navigation'
+import useTheme from '../../../../hooks/useTheme'
+import NavigationItem from '../../NavigationItems/NavigationItemDesktop'
 import { NavigationDesktopMenu } from './styles'
 
-function NavigationDesktop (): JSX.Element {
+function NavigationMenuDesktop (): JSX.Element {
   const { theme } = useTheme()
   function composeNavigationItems (item: string, index: number): JSX.Element {
     return (
@@ -23,4 +23,4 @@ function NavigationDesktop (): JSX.Element {
   )
 }
 
-export default NavigationDesktop
+export default NavigationMenuDesktop

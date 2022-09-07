@@ -1,4 +1,4 @@
-import useBoopAnimation from '../../hooks/useBoopAnimation'
+import useBoopAnimation from '../../hooks/animations/useBoopAnimation'
 import { ICustomButton } from '../../types'
 import { PrimaryButton } from './styles'
 

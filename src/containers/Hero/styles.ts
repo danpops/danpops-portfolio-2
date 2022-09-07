@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { IBackgroundColor } from '../../components/Buttons/styles'
+import { IBackgroundColor } from '../../types'
 import { Header5 } from '../../components/Text'
 
 export const HeroMasthead = styled.header`

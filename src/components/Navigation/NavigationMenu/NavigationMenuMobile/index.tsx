@@ -1,10 +1,10 @@
-import { navigationItems } from '../../../assets/data/navigation'
-import useTheme from '../../../hooks/useTheme'
-import { INavigationMobile } from '../../../types'
-import NavigationItem from './NavigationItem'
+import { navigationItems } from '../../../../assets/data/navigation'
+import useTheme from '../../../../hooks/useTheme'
+import { INavigationMobile } from '../../../../types'
+import NavigationItem from '../../NavigationItems/NavigationItemMobile'
 import { NavigationMobileContainer } from './styles'
 
-function NavigationMobile ({
+function NavigationMenuMobile ({
   expanded,
   toggleNavbar
 }: INavigationMobile): JSX.Element {
@@ -28,4 +28,4 @@ function NavigationMobile ({
   )
 }
 
-export default NavigationMobile
+export default NavigationMenuMobile

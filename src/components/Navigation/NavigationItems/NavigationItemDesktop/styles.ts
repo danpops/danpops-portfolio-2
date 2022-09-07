@@ -1,6 +1,6 @@
 import { animated } from 'react-spring'
 import styled from 'styled-components'
-import { IHoverColor } from '../../../Buttons/styles'
+import { IHoverColor } from '../../../../types'
 
 export const NavigationLink = styled(animated.div)`
   font-weight: 700;

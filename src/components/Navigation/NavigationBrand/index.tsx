@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll'
-import useBoopAnimation from '../../../hooks/useBoopAnimation'
+import useBoopAnimation from '../../../hooks/animations/useBoopAnimation'
+import useDarkToggleAnimation from '../../../hooks/animations/useDarkToggleAnimation'
 import useTheme from '../../../hooks/useTheme'
 import { INavigationBrand } from '../../../types'
 import {
@@ -11,21 +12,21 @@ import {
 
 function NavigationBrand ({ clickHero }: INavigationBrand): JSX.Element {
   const { theme, toggleColors } = useTheme()
-  const animatedBrandProps = useBoopAnimation()
-  const animatedDarkToggleProps = useBoopAnimation()
+  const boopAnimation = useBoopAnimation()
+  const darkToggleAnimation = useDarkToggleAnimation()
 
   return (
     <NavigationBrandContainer>
       <Link to='hero' smooth duration={500} onClick={clickHero}>
         <NavigationBrandLogo
-          {...animatedBrandProps}
+          {...boopAnimation}
           color={theme.tertiary}
           hoverColor={theme.primary}
         >
           danpops_
         </NavigationBrandLogo>
       </Link>
-      <DarkModeToggleDesktopContainer {...animatedDarkToggleProps}>
+      <DarkModeToggleDesktopContainer {...darkToggleAnimation}>
         <DarkModeToggleDesktop
           size={25}
           color={theme.tertiary}

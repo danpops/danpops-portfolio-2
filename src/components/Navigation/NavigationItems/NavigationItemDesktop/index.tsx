@@ -1,9 +1,9 @@
 import { Link } from 'react-scroll'
-import useBoopAnimation from '../../../../hooks/useBoopAnimation'
+import useBoopAnimation from '../../../../hooks/animations/useBoopAnimation'
 import { INavigationItem } from '../../../../types'
 import { NavigationLink } from './styles'
 
-function NavigationItem ({
+function NavigationItemDesktop ({
   item,
   hoverColor,
   color
@@ -18,4 +18,4 @@ function NavigationItem ({
   )
 }
 
-export default NavigationItem
+export default NavigationItemDesktop

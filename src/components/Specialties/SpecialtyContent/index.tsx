@@ -1,4 +1,4 @@
-import useBoopAnimation from '../../../hooks/useBoopAnimation'
+import useBoopAnimation from '../../../hooks/animations/useBoopAnimation'
 import useTheme from '../../../hooks/useTheme'
 import { ISpecialtyContent, ISpecialtyItem } from '../../../types'
 import {

@@ -1,6 +1,6 @@
 import { CompanyContainer, CompanyImage, CompanyText } from './styles'
 import useTheme from '../../../hooks/useTheme'
-import useBoopAnimation from '../../../hooks/useBoopAnimation'
+import useBoopAnimation from '../../../hooks/animations/useBoopAnimation'
 import { ICarouselItem } from '../../../types'
 
 function CarouselItem ({ exp }: ICarouselItem): JSX.Element {

@@ -37,6 +37,7 @@ const expandedNavStyle = `
 export const NavigationWrapper = styled.div`
   display: block;
   margin-top: 0.2rem;
+  margin-left: 0.8rem;
   ${({ expanded }: INavigationExpand) =>
     expanded ? expandedNavStyle : closeNavStyle}
 `
