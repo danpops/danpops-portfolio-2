@@ -7,10 +7,18 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 8rem 0rem;
   background-color: ${({ bgColor }: ISection) => bgColor};
   text-align: center;
   width: 100%;
+  padding: 5.6rem 0rem;
+  
+  @media ${devices.md} {
+    padding: 8rem 0rem;
+  }
+
+  @media ${devices.lg} {
+    padding: 8rem 0rem;
+  }
 `
 export const HeaderContainer = styled.div`
   margin: 0 auto;

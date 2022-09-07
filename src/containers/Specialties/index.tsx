@@ -11,9 +11,9 @@ function Specialties (): JSX.Element {
   const { theme } = useTheme()
 
   return (
-    <SpecialtiesSection id='specialties' bgColor={theme.shadow}>
+    <SpecialtiesSection id='specialties' bgColor={theme.secondary}>
       <HeaderContainer>
-        <Header3 color={theme.gray}>{specialties.heading}</Header3>
+        <Header3 color={theme.tertiary}>{specialties.heading}</Header3>
         <Divider color={theme.primary} />
       </HeaderContainer>
       <SpecialtiesContainer>

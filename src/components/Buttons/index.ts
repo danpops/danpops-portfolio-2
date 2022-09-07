@@ -16,7 +16,7 @@ export interface IBackgroundColor {
 }
 
 export const PrimaryButton = styled.button`
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: 0 0.125rem 0.25rem #00000055 !important;
   text-transform: lowercase !important;
   border-radius: 10rem;
   border: none;
@@ -31,7 +31,7 @@ export const PrimaryButton = styled.button`
 `
 
 export const SecondaryButton = styled.a`
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: 0 0.195rem 0.25rem #11000055 !important;
   text-transform: lowercase !important;
   text-decoration: none;
   border-radius: 10rem;

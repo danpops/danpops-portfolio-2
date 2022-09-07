@@ -15,5 +15,5 @@ export const ContactOptionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.3rem 0;
+  padding-top: 2.3rem;
 `
