@@ -1,32 +1,14 @@
-import { useReducer } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { specialties } from '../assets/data/specialties'
-import { SpecialtyState, SpecialtiesAction, IUseSpecialties } from '../types'
+import { toggleSpecialty } from '../redux/specialtiesSlice'
+import { RootState } from '../redux/store'
+import { IUseSpecialties } from '../types'
 
-export enum SpecialtiesActionKind {
-  SET_SPECIALTY_CATEGORY = 'SET_SPECIALTY_CATEGORY'
-}
 export enum SpecialtiesType {
   frontend = 'frontend',
   backend = 'backend',
   languages = 'languages',
   more = 'more'
-}
-
-const initialSpecialtyState: SpecialtyState = {
-  title: specialties.languages.title,
-  data: specialties.languages.data
-}
-
-const specialtiesReducer = (
-  state: SpecialtyState,
-  action: SpecialtiesAction
-): SpecialtyState => {
-  switch (action.type) {
-    case SpecialtiesActionKind.SET_SPECIALTY_CATEGORY:
-      return { ...state, title: action.title, data: action.data }
-    default:
-      return { ...state }
-  }
 }
 
 export const specialtyTabs = [
@@ -37,23 +19,15 @@ export const specialtyTabs = [
 ]
 
 const useSpecialties = (): IUseSpecialties => {
-  const [state, dispatch] = useReducer(
-    specialtiesReducer,
-    initialSpecialtyState
-  )
+  const { title, data } = useSelector((state: RootState) => state.specialties)
+  const dispatch = useDispatch()
 
-  const setActiveSpecialty = (type: SpecialtiesType): (() => void) => {
-    return () =>
-      dispatch({
-        title: specialties[type].title,
-        type: SpecialtiesActionKind.SET_SPECIALTY_CATEGORY,
-        data: specialties[type].data
-      })
-  }
+  const setActiveSpecialty = (type: SpecialtiesType) => () =>
+    dispatch(toggleSpecialty({ ...specialties[type] }))
 
   return {
-    activeSpecialty: state.title,
-    activeData: state.data,
+    activeSpecialty: title,
+    activeData: data,
     setActiveSpecialty
   }
 }

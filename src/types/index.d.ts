@@ -92,8 +92,22 @@ export interface ISpecialtyItem {
   href: string
   image: string
 }
-export interface IBoopAnimationReturn {
-  onMouseEnter: () => void
-  onMouseLeave: () => void
+export interface ISpringAnimationItems {
+  onMouseEnter?: () => void
+  onMouseLeave?: () => void
   style: any
+}
+export interface IThemeStyle {
+  color: string
+  bgColor: string
+}
+export interface IColor {
+  color: string
+}
+export interface IHoverColor {
+  color: string
+  hoverColor: string
+}
+export interface IBackgroundColor {
+  bgColor: string
 }
