@@ -1,7 +1,7 @@
 import { describe, expect } from '@jest/globals'
 import { renderHook, act } from '@testing-library/react'
 import { specialties } from '../../assets/data/specialties'
-import useSpecialties from '../useSpecialties'
+import useSpecialties, { SpecialtiesType } from '../useSpecialties'
 import { Provider } from 'react-redux'
 import { store } from '../../redux/store'
 
@@ -26,7 +26,7 @@ describe('useSpecialties', () => {
   it('should set backend specialty data', async () => {
     const { result } = renderHook(() => useSpecialties(), { wrapper: Wrapper })
 
-    act(() => result.current.setActiveSpecialty('backend')())
+    act(() => result.current.setActiveSpecialty(SpecialtiesType.backend)())
 
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
@@ -40,7 +40,7 @@ describe('useSpecialties', () => {
   it('should set frontend specialty data', async () => {
     const { result } = renderHook(() => useSpecialties(), { wrapper: Wrapper })
 
-    act(() => result.current.setActiveSpecialty('frontend')())
+    act(() => result.current.setActiveSpecialty(SpecialtiesType.frontend)())
 
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
@@ -54,7 +54,7 @@ describe('useSpecialties', () => {
   it('should set more specialty data', async () => {
     const { result } = renderHook(() => useSpecialties(), { wrapper: Wrapper })
 
-    act(() => result.current.setActiveSpecialty('more')())
+    act(() => result.current.setActiveSpecialty(SpecialtiesType.more)())
 
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
