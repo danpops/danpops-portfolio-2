@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSpring } from 'react-spring'
 import { ISpringAnimationItems } from '../../types'
-
+const TIMING = 800
 const useBoopAnimation = (): ISpringAnimationItems => {
   const [isBooped, setIsBooped] = useState(false)
   const style: any = useSpring({
@@ -20,9 +20,21 @@ const useBoopAnimation = (): ISpringAnimationItems => {
     }
   })
   const onMouseEnter = (): void => setIsBooped(true)
-  const onMouseLeave = (): void => setIsBooped(false)
 
-  return { onMouseEnter, onMouseLeave, style }
+  useEffect(() => {
+    if (!isBooped) {
+      return
+    }
+    const timeoutId = window.setTimeout(() => {
+      setIsBooped(false)
+    }, TIMING)
+
+    return () => {
+      window.clearTimeout(timeoutId)
+    }
+  }, [isBooped])
+
+  return { onMouseEnter, style }
 }
 
 export default useBoopAnimation

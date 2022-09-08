@@ -6,14 +6,13 @@ import { ICarouselItem } from '../../../types'
 function CarouselItem ({ exp }: ICarouselItem): JSX.Element {
   const { image, company, url } = exp
   const { theme } = useTheme()
-  const { onMouseEnter, onMouseLeave, style } = useBoopAnimation()
+  const { onMouseEnter, style } = useBoopAnimation()
 
   return (
     <CompanyContainer style={style}>
       <CompanyImage src={image} />
       <CompanyText
         onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
         target='_blank'
         rel='noopener noreferrer'
         href={url}
