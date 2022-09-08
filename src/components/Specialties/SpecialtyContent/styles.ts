@@ -11,7 +11,7 @@ export const SpecialtiesContentContainer = styled.div`
   align-items: center;
 
   @media ${devices.lg} {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(9rem, 1fr));
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 `
@@ -36,12 +36,13 @@ export const SpecialtyItemContent = styled(animated.div)`
 `
 
 export const SpecialtiesImage = styled.img`
-  width: 4rem;
-  height: 4rem;
+  width: 3.2rem;
+  height: 3.2rem;
 `
 export const SpecialtiesItemLabel = styled.p`
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 0;
   color: ${({ color }) => color};
 

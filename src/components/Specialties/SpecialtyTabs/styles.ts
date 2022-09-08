@@ -1,15 +1,16 @@
 import styled from 'styled-components'
 import devices from '../../../utils/devices'
-import { IThemeStyle } from '../../../types'
-import { PrimaryButton } from '../../Buttons/styles'
+import { ISpecialtyProps, IThemeStyle } from '../../../types'
+import { animated } from 'react-spring'
 
 export const SpecialtiesTabsContainer = styled.div`
   display: grid;
   grid-area: tabs;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   justify-items: center;
-  grid-gap: 0.5rem;
-  margin-bottom: 2rem;
+  grid-gap: 1rem;
+  margin-bottom: 4rem;
 
   @media ${devices.md} {
     margin-bottom: 0rem;
@@ -18,9 +19,10 @@ export const SpecialtiesTabsContainer = styled.div`
   }
 
   @media ${devices.lg} {
+    grid-gap: 0.5rem;
     align-items: center;
-    grid-template-columns: repeat(2, minmax(9rem, 1fr));
-    grid-template-rows: repeat(2, minmax(5rem, 1fr));
+    grid-template-columns: repeat(2, minmax(10rem, 1fr));
+    grid-template-rows: repeat(2, minmax(4rem, 1fr));
   }
 `
 
@@ -29,18 +31,16 @@ const getButtonStyle = (theme: IThemeStyle): string => `
   color: ${theme.color};
 `
 
-export const SpecialtiesTabItem = styled.div``
-
-export interface ISpecialtyProps {
-  active: boolean
-  activeBg: string
-  activeColor: string
-  color: string
-  bgColor: string
-}
-
-export const SpecialtiesButton = styled(PrimaryButton)`
+export const SpecialtyButton = styled(animated.button)`
+  /* box-shadow: 0 0.062rem 0.125rem #00000055 !important; */
+  text-transform: lowercase !important;
+  border-radius: 10rem;
+  border: none;
+  font-weight: 500;
+  font-size: 0.85rem;
   width: 8rem;
+  padding: 1.25rem 2.25rem;
+  cursor: pointer;
   transition: background-color 0.5s ease-out;
   ${({ activeBg, active, activeColor, bgColor, color }: ISpecialtyProps) => {
     const activeStyle = { bgColor: activeBg, color: activeColor }

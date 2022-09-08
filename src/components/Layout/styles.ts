@@ -3,7 +3,6 @@ import { ISection } from '../../types'
 import devices from '../../utils/devices'
 
 export const Section = styled.section`
-  diplay: flex;
   align-items: center;
   justify-content: center;
   position: relative;

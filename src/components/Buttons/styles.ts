@@ -7,7 +7,7 @@ export const PrimaryButton = styled(animated.button)`
   text-transform: lowercase !important;
   border-radius: 10rem;
   border: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.85rem;
   padding: 1.25rem 2.25rem;
   cursor: pointer;

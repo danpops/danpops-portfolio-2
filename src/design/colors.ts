@@ -1,5 +1,3 @@
-const PRIMARY_COLOR = '#41729f'
-
 const defaultColors = {
   light: '#f8f9fa',
   dark: '#343a40'
@@ -7,18 +5,18 @@ const defaultColors = {
 
 export const LIGHT_COLORS = {
   ...defaultColors,
-  primary: PRIMARY_COLOR,
+  primary: '#41729f',
   secondary: '#f8f9fa',
   tertiary: '#343a40',
   shadow: '#ebebeb',
-  gray: '#2d2d2d'
+  gray: '#212529'
 }
 
 export const DARK_COLORS = {
   ...defaultColors,
-  primary: PRIMARY_COLOR,
-  secondary: '#212529',
+  primary: '#27445C',
+  secondary: '#212121',
   tertiary: '#f8f9fa',
-  shadow: '#2d2d2d',
+  shadow: '#212529',
   gray: '#ebebeb'
 }

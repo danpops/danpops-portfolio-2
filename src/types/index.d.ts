@@ -1,3 +1,5 @@
+import { SpecialtiesType } from '../hooks/useSpecialties'
+
 export interface LayoutProps {
   children: JSX.Element | JSX.Element[]
 }
@@ -22,6 +24,11 @@ export interface IUseSpecialties {
   setActiveSpecialty: (type: SpecialtiesType) => () => void
 }
 export interface ISpecialtyTabs {
+  activeSpecialty: string
+  setActiveSpecialty: (type: SpecialtiesType) => () => void
+}
+export interface ISpecialtyTab {
+  specialty: SpecialtiesType
   activeSpecialty: string
   setActiveSpecialty: (type: SpecialtiesType) => () => void
 }
@@ -65,6 +72,7 @@ export interface INavigationContainer {
 }
 export interface INavigationItem {
   item: string
+  active?: boolean
   hoverColor: string
   color: string
   onClick?: () => void
@@ -107,7 +115,15 @@ export interface IColor {
 export interface IHoverColor {
   color: string
   hoverColor: string
+  active?: boolean
 }
 export interface IBackgroundColor {
+  bgColor: string
+}
+export interface ISpecialtyProps {
+  active: boolean
+  activeBg: string
+  activeColor: string
+  color: string
   bgColor: string
 }
