@@ -16,7 +16,7 @@ export const NavigationContainer = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99999;
+  z-index: 10;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 
   ${({ isTransparent, bgColor, color }: INavigationContainer) =>
