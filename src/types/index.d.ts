@@ -127,3 +127,10 @@ export interface ISpecialtyProps {
   color: string
   bgColor: string
 }
+export interface IScrollStyle {
+  width: string
+  background: string
+}
+export interface IUseScrollPosition {
+  progressBarStyle: IScrollStyle
+}
