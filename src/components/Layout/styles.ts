@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { ISection } from '../../types'
 import devices from '../../utils/devices'
 
+export const MetaTag = styled.meta``
+
+export const Main = styled.main``
+
 export const Section = styled.section`
   align-items: center;
   justify-content: center;
@@ -10,7 +14,7 @@ export const Section = styled.section`
   text-align: center;
   width: 100%;
   padding: 5.6rem 0rem;
-  
+
   @media ${devices.md} {
     padding: 8rem 0rem;
   }
