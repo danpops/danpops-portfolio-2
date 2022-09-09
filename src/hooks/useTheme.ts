@@ -8,17 +8,17 @@ export interface IToggleColors {
 }
 interface IUseTheme {
   theme: IColors
-  isDarkMode: boolean
+  isDarkTheme: boolean
   toggleColors: () => IToggleColors
 }
 
 const useTheme = (): IUseTheme => {
-  const { theme, isDarkMode } = useSelector((state: RootState) => state.theme)
+  const { theme, isDarkTheme } = useSelector((state: RootState) => state.theme)
   const dispatch = useDispatch()
 
   const toggleColors = (): IToggleColors => dispatch(toggleTheme())
 
-  return { theme, isDarkMode, toggleColors }
+  return { theme, isDarkTheme, toggleColors }
 }
 
 export default useTheme

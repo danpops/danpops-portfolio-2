@@ -7,8 +7,8 @@ const ProgressBarContainer = styled.div`
   top: 0;
   background-color: ${({ bgColor }: IBackgroundColor) => bgColor};
   left: 0;
-  height: 0.5rem;
-  width: 100vw;
+  height: 0.4rem;
+  width: 100%;
   z-index: 99;
 
   @media ${devices.lg} {
@@ -18,9 +18,12 @@ const ProgressBarContainer = styled.div`
 
 const ProgressBar = styled.div`
   position: fixed;
-  height: 0.5rem;
+  height: 0.4rem;
   z-index: 3;
-  transition: width 0.6s ease-out;
+  -webkit-transition: width ease;
+  -moz-transition: width ease;
+  -o-transition: width ease;
+  transition: width ease;
 `
 
 export { ProgressBarContainer, ProgressBar }

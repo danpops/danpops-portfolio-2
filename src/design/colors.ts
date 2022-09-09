@@ -3,7 +3,7 @@ const defaultColors = {
   dark: '#343a40'
 }
 
-export const LIGHT_COLORS = {
+export const LIGHT_THEME = {
   ...defaultColors,
   primary: '#41729f',
   secondary: '#f8f9fa',
@@ -12,7 +12,7 @@ export const LIGHT_COLORS = {
   gray: '#212529'
 }
 
-export const DARK_COLORS = {
+export const DARK_THEME = {
   ...defaultColors,
   primary: '#27445C',
   secondary: '#212121',

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { DARK_COLORS, LIGHT_COLORS } from '../design/colors'
+import { DARK_THEME, LIGHT_THEME } from '../design/colors'
 
 export interface IColors {
   primary: string
@@ -13,12 +13,12 @@ export interface IColors {
 
 export interface IColorsState {
   theme: IColors
-  isDarkMode: boolean
+  isDarkTheme: boolean
 }
 
 const initialState: IColorsState = {
-  theme: LIGHT_COLORS,
-  isDarkMode: false
+  theme: LIGHT_THEME,
+  isDarkTheme: false
 }
 
 export const themeSlice = createSlice({
@@ -26,8 +26,8 @@ export const themeSlice = createSlice({
   initialState,
   reducers: {
     toggleTheme: state => {
-      state.theme = state.isDarkMode ? LIGHT_COLORS : DARK_COLORS
-      state.isDarkMode = !state.isDarkMode
+      state.theme = state.isDarkTheme ? LIGHT_THEME : DARK_THEME
+      state.isDarkTheme = !state.isDarkTheme
     }
   }
 })

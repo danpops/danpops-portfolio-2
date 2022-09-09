@@ -3,11 +3,11 @@ import { ISpringAnimationItems } from '../../types'
 import useTheme from '../useTheme'
 
 const useDarkToggleAnimation = (): ISpringAnimationItems => {
-  const { isDarkMode } = useTheme()
+  const { isDarkTheme } = useTheme()
   const style: any = useSpring({
     display: 'inline-block',
     backfaceVisibility: 'hidden',
-    transform: isDarkMode
+    transform: isDarkTheme
       ? `rotate(0deg)
          scale(1)
          scaleX(-1)`

@@ -7,13 +7,13 @@ function getScrollPosition (): string {
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight
   const position = Math.floor((scrollPx / winHeightPx) * 100)
-  const scrolled = `${position}%`
+  const scrolled = `${position}vw`
 
   return scrolled
 }
 
 const useScrollPosition = (scrollColor: string): IUseScrollPosition => {
-  const [scrollPosition, setScrollPosition] = useState('0%')
+  const [scrollPosition, setScrollPosition] = useState('0vw')
 
   function handleScroll (): void {
     const scrolled = getScrollPosition()
