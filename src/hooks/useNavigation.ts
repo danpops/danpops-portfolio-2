@@ -5,7 +5,7 @@ import { getScrollPosition } from '../utils/getScrollPosition'
 const useNavigation = (scrollColor?: string): IUseNavigation => {
   const [isNavigationExpanded, setNavigationExpanded] = useState<boolean>(false)
   const [isHidden, setHidden] = useState<boolean>(false)
-  const [isTransparent, setTransparent] = useState<boolean>(false)
+  const [isTransparent, setTransparent] = useState<boolean>(true)
 
   const [scrollPosition, setScrollPosition] = useState<number>(0)
 

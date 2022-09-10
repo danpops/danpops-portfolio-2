@@ -10,8 +10,8 @@ export const NavigationContainer = styled.div`
   transition: opacity 0.01s ease-out;
   position: fixed;
   overflow: hidden;
-  ${({ bgColor, isTransparent }: INavigation) => `
-      background-color: ${bgColor};
+  ${({ bgColor, isTransparent, isExpanded }: INavigation) => `
+      background-color: ${isTransparent && !isExpanded ? 'transparent' : bgColor};
       box-shadow: ${
         isTransparent ? 'none' : '0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)'
       };
