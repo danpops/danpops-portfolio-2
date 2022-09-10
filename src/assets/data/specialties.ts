@@ -15,7 +15,7 @@ import serverless from '../icons/serverless.png'
 import swm from '../icons/swm.png'
 import typescript from '../icons/typescript.png'
 
-const languages = [
+const languagesData = [
   {
     image: javascript,
     alt: 'javascript icon',
@@ -42,7 +42,7 @@ const languages = [
   }
 ]
 
-const frontend = [
+const frontendData = [
   {
     image: reactjs,
     alt: 'reactjs icon',
@@ -69,7 +69,7 @@ const frontend = [
   }
 ]
 
-const backend = [
+const backendData = [
   {
     image: nodejs,
     alt: 'nodejs icon',
@@ -96,7 +96,7 @@ const backend = [
   }
 ]
 
-const more = [
+const moreData = [
   {
     image: jest,
     alt: 'jest icon',
@@ -123,21 +123,21 @@ const more = [
   }
 ]
 
-export const specialties = {
+export const specialtiesData = {
   languages: {
     title: 'languages',
-    data: languages
+    data: languagesData
   },
   frontend: {
     title: 'frontend',
-    data: frontend
+    data: frontendData
   },
   backend: {
     title: 'backend',
-    data: backend
+    data: backendData
   },
   more: {
     title: 'more',
-    data: more
+    data: moreData
   }
 }

@@ -1,6 +1,6 @@
 import Slider from 'react-slick'
 import { useCarousel } from '../../hooks/useCarousel'
-import { experienceData } from '../../assets/data/experience'
+import { experience } from '../../assets/data'
 import { IExperienceData } from '../../types'
 import CarouselItem from './CarouselItem'
 
@@ -15,7 +15,7 @@ function Carousel (): JSX.Element {
   }
 
   return (
-    <Slider {...settings}>{experienceData.map(composeCarouselItems)}</Slider>
+    <Slider {...settings}>{experience.data.map(composeCarouselItems)}</Slider>
   )
 }
 

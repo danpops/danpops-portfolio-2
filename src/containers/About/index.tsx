@@ -1,7 +1,7 @@
 import me from '../../assets/images/me.png'
 import { ImageCircle } from './styles'
 import { Divider, Header3, Text } from '../../components/Text'
-import { about } from '../../assets/data/text'
+import { about } from '../../assets/data'
 import { Section, HeaderContainer } from '../../components/Layout/styles'
 import useTheme from '../../hooks/useTheme'
 

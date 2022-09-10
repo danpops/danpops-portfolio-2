@@ -2,7 +2,7 @@ import { Divider, Header3 } from '../../components/Text'
 import { Section, HeaderContainer } from '../../components/Layout/styles'
 import CustomButton from '../../components/Buttons'
 import { ButtonContainer, GithubIcon } from './styles'
-import { github } from '../../assets/data/text'
+import { github } from '../../assets/data'
 import useTheme from '../../hooks/useTheme'
 
 const GITHUB_ICON_SIZE = 90

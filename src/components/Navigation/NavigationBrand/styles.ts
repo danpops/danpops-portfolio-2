@@ -9,7 +9,6 @@ export const DarkModeToggleDesktopContainer = styled(animated.div)`
 
   @media ${devices.lg} {
     display: block;
-    margin-left: 0.6rem;
   }
 `
 

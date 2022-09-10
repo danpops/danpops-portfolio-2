@@ -12,17 +12,6 @@ describe('useNavigation', () => {
     expect(actual).toEqual(expected)
   })
 
-  it('should set expanded value to true', async () => {
-    const { result } = renderHook(() => useNavigation())
-
-    act(() => result.current.setExpanded(true))
-
-    const actual = result.current.expanded
-    const expected = true
-
-    expect(actual).toEqual(expected)
-  })
-
   it('should update expanded when calling toggleNavbar', async () => {
     const { result } = renderHook(() => useNavigation())
 
@@ -37,7 +26,7 @@ describe('useNavigation', () => {
   it('should set expanded false when calling clickHero', async () => {
     const { result } = renderHook(() => useNavigation())
 
-    act(() => result.current.setExpanded(true))
+    act(() => result.current.toggleNavbar())
     expect(result.current.expanded).toBe(true)
 
     act(() => result.current.clickHero())

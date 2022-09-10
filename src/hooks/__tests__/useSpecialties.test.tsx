@@ -1,6 +1,6 @@
 import { describe, expect } from '@jest/globals'
 import { renderHook, act } from '@testing-library/react'
-import { specialties } from '../../assets/data/specialties'
+import { specialties } from '../../assets/data'
 import useSpecialties, { SpecialtiesType } from '../useSpecialties'
 import { Provider } from 'react-redux'
 import { store } from '../../redux/store'
@@ -17,8 +17,8 @@ describe('useSpecialties', () => {
 
     const actual = { activeSpecialty, activeData }
     const expected = {
-      activeSpecialty: specialties.languages.title,
-      activeData: specialties.languages.data
+      activeSpecialty: specialties.data.languages.title,
+      activeData: specialties.data.languages.data
     }
     expect(actual).toEqual(expected)
   })
@@ -31,8 +31,8 @@ describe('useSpecialties', () => {
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
     const expected = {
-      activeSpecialty: specialties.backend.title,
-      activeData: specialties.backend.data
+      activeSpecialty: specialties.data.backend.title,
+      activeData: specialties.data.backend.data
     }
     expect(actual).toEqual(expected)
   })
@@ -45,8 +45,8 @@ describe('useSpecialties', () => {
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
     const expected = {
-      activeSpecialty: specialties.frontend.title,
-      activeData: specialties.frontend.data
+      activeSpecialty: specialties.data.frontend.title,
+      activeData: specialties.data.frontend.data
     }
     expect(actual).toEqual(expected)
   })
@@ -59,8 +59,8 @@ describe('useSpecialties', () => {
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
     const expected = {
-      activeSpecialty: specialties.more.title,
-      activeData: specialties.more.data
+      activeSpecialty: specialties.data.more.title,
+      activeData: specialties.data.more.data
     }
     expect(actual).toEqual(expected)
   })

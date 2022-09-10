@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { IBackgroundColor } from '../../types'
-import devices from '../../utils/devices'
 
 const ProgressBarContainer = styled.div`
   position: fixed;
@@ -10,10 +9,6 @@ const ProgressBarContainer = styled.div`
   height: 0.4rem;
   width: 100%;
   z-index: 99;
-
-  @media ${devices.lg} {
-    display: none;
-  }
 `
 
 const ProgressBar = styled.div`

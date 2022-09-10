@@ -1,4 +1,4 @@
-import { navigationItems } from '../../../../assets/data/navigation'
+import { navigationItems } from '../../../../assets/data'
 import useTheme from '../../../../hooks/useTheme'
 import { INavigationMobile } from '../../../../types'
 import NavigationItem from '../../NavigationItems/NavigationItemMobile'

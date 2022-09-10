@@ -6,7 +6,7 @@ import {
   ParticleContainer
 } from './styles'
 import { Divider, Header1 } from '../../components/Text'
-import { hero } from '../../assets/data/text'
+import { hero } from '../../assets/data'
 import { Link } from 'react-scroll'
 import useTheme from '../../hooks/useTheme'
 import CustomButton from '../../components/Buttons'

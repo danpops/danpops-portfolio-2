@@ -1,7 +1,7 @@
 import { HeaderContainer, Section } from '../../components/Layout/styles'
 import { Divider, Header3, Text } from '../../components/Text'
 import { ContactOptionsContainer, LinkedInIcon, MailIcon } from './styles'
-import { contact } from '../../assets/data/text'
+import { contact } from '../../assets/data'
 import ContactOption from '../../components/ContactOption'
 import useTheme from '../../hooks/useTheme'
 

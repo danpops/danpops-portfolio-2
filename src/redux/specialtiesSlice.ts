@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { specialties } from '../assets/data/specialties'
+import { specialties } from '../assets/data'
 import { SpecialtyState } from '../types'
 
 const initialState: SpecialtyState = {
-  title: specialties.languages.title,
-  data: specialties.languages.data
+  title: specialties.data.languages.title,
+  data: specialties.data.languages.data
 }
 
 export const specialtiesSlice = createSlice({

@@ -12,12 +12,12 @@ const expandedMenuStyle = `
 
 export const NavigationMobileContainer = styled.div`
   -webkit-tap-highlight-color: transparent;
-  clear:both;
-  width:100%;
-  height:0px;
+  clear: both;
+  width: 100%;
+  height: 0;
   overflow: hidden;
   transition: all .5s ease;
-  opacity: 0;
+  opacity: 1;
 
   ${({ expanded, bgColor }: INavigationMobileContainer) => `
     background-color: ${bgColor};

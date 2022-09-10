@@ -1,5 +1,3 @@
-import { SpecialtiesType } from '../hooks/useSpecialties'
-
 export interface LayoutProps {
   children: JSX.Element | JSX.Element[]
 }
@@ -67,8 +65,12 @@ export interface INavigationExpand {
 }
 export interface INavigationContainer {
   isTransparent: boolean
+  isHidden: boolean
   bgColor: string
   color: string
+}
+export interface INavigationContent {
+  isHidden?: boolean
 }
 export interface INavigationItem {
   item: string
@@ -131,6 +133,12 @@ export interface IScrollStyle {
   width: string
   background: string
 }
-export interface IUseScrollPosition {
+export interface IUseNavigation {
   progressBarStyle: IScrollStyle
+  isHidden: boolean
+  isTransparent: boolean
+  expanded: boolean
+  clickHero: () => void
+  toggleNavbar: () => void
+  expanded: boolean
 }

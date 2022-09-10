@@ -1,4 +1,4 @@
-import { navigationItems } from '../../../../assets/data/navigation'
+import { navigationItems } from '../../../../assets/data'
 import useTheme from '../../../../hooks/useTheme'
 import NavigationItem from '../../NavigationItems/NavigationItemDesktop'
 import { NavigationDesktopMenu } from './styles'

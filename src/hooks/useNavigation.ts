@@ -1,34 +1,49 @@
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
+import { IUseNavigation } from '../types'
+import { getScrollPosition } from '../utils/getScrollPosition'
 
-interface IUseNavigation {
-  expanded: boolean
-  isTransparent: boolean
-  setExpanded: Dispatch<SetStateAction<boolean>>
-  toggleNavbar: () => void
-  clickHero: () => void
-}
-
-const useNavigation = (): IUseNavigation => {
+const useNavigation = (scrollColor?: string): IUseNavigation => {
   const [isTransparent, setTransparent] = useState(false)
   const [expanded, setExpanded] = useState(false)
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [isHidden, setHidden] = useState(false)
+
+  const progressBarStyle = {
+    width: `${scrollPosition}vw`,
+    background: scrollColor ?? ''
+  }
 
   const toggleNavbar = (): void => setExpanded(!expanded)
   const clickHero = (): void => setExpanded(false)
 
   useEffect(() => {
-    const onScroll = (): void => {
-      const { scrollY } = window
-      setTransparent(scrollY > 100)
+    const handleScroll = (): void => {
+      const scrolled = getScrollPosition()
+      const detectedScrollDown = scrolled > scrollPosition
+
+      if (detectedScrollDown) {
+        setExpanded(false)
+      }
+
+      setTransparent(window.scrollY < 100)
+      setHidden(detectedScrollDown)
+      setScrollPosition(scrolled)
     }
-    window.addEventListener('scroll', onScroll)
-  }, [])
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [scrollPosition])
 
   return {
-    expanded,
-    clickHero,
+    progressBarStyle,
+    isHidden,
     isTransparent,
-    setExpanded,
-    toggleNavbar
+    expanded,
+    toggleNavbar,
+    clickHero
   }
 }
 

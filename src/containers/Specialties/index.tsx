@@ -3,7 +3,7 @@ import { Divider, Header3 } from '../../components/Text'
 import { SpecialtiesSection, SpecialtiesContainer } from './styles'
 import useSpecialties from '../../hooks/useSpecialties'
 import { SpecialtyTabs, SpecialtyContent } from '../../components/Specialties'
-import { specialties } from '../../assets/data/text'
+import { specialties } from '../../assets/data'
 import useTheme from '../../hooks/useTheme'
 
 function Specialties (): JSX.Element {

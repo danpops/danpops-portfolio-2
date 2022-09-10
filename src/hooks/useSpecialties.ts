@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { specialties } from '../assets/data/specialties'
+import { specialties } from '../assets/data'
 import { toggleSpecialty } from '../redux/specialtiesSlice'
 import { RootState } from '../redux/store'
 import { IUseSpecialties } from '../types'
@@ -23,7 +23,7 @@ const useSpecialties = (): IUseSpecialties => {
   const dispatch = useDispatch()
 
   const setActiveSpecialty = (type: SpecialtiesType) => () =>
-    dispatch(toggleSpecialty({ ...specialties[type] }))
+    dispatch(toggleSpecialty({ ...specialties.data[type] }))
 
   return {
     activeSpecialty: title,

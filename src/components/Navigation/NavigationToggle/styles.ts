@@ -7,9 +7,8 @@ export const ToggleContainer = styled.div`
   display: flex;
   cursor: pointer;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   float: right;
-  padding: auto 2rem;
   -webkit-tap-highlight-color: transparent;
   position: relative;
 
@@ -19,7 +18,11 @@ export const ToggleContainer = styled.div`
 `
 
 export const DarkModeToggleContainer = styled(animated.span)`
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.3rem;
+  margin-right: 0.5rem;
 
   @media ${devices.lg} {
     display: none;
