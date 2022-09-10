@@ -136,9 +136,8 @@ export interface IScrollStyle {
 export interface IUseNavigation {
   progressBarStyle: IScrollStyle
   isHidden: boolean
+  isNavigationExpanded: boolean
   isTransparent: boolean
-  expanded: boolean
   clickHero: () => void
   toggleNavbar: () => void
-  expanded: boolean
 }

@@ -7,10 +7,10 @@ import useNavigation from '../../hooks/useNavigation'
 
 function Navigation (): JSX.Element {
   const {
-    isHidden,
-    isTransparent,
     clickHero,
-    expanded,
+    isHidden,
+    isNavigationExpanded,
+    isTransparent,
     toggleNavbar
   } = useNavigation()
   const { theme } = useTheme()
@@ -23,10 +23,16 @@ function Navigation (): JSX.Element {
         isHidden={isHidden}
       >
         <NavigationBrand clickHero={clickHero} />
-        <NavigationToggle toggleNavbar={toggleNavbar} expanded={expanded} />
+        <NavigationToggle
+          toggleNavbar={toggleNavbar}
+          expanded={isNavigationExpanded}
+        />
         <NavigationMenuDesktop />
       </NavigationContent>
-      <NavigationMenuMobile toggleNavbar={toggleNavbar} expanded={expanded} />
+      <NavigationMenuMobile
+        toggleNavbar={toggleNavbar}
+        expanded={isNavigationExpanded}
+      />
     </NavigationContainer>
   )
 }

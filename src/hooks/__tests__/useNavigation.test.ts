@@ -4,10 +4,10 @@ import useNavigation from '../useNavigation'
 describe('useNavigation', () => {
   it('should return default state', async () => {
     const { result } = renderHook(() => useNavigation())
-    const { expanded, isTransparent } = result.current
+    const { isNavigationExpanded, isTransparent } = result.current
 
-    const actual = { expanded, isTransparent }
-    const expected = { expanded: false, isTransparent: false }
+    const actual = { isNavigationExpanded, isTransparent }
+    const expected = { isNavigationExpanded: false, isTransparent: false }
 
     expect(actual).toEqual(expected)
   })
@@ -17,7 +17,7 @@ describe('useNavigation', () => {
 
     act(() => result.current.toggleNavbar())
 
-    const actual = result.current.expanded
+    const actual = result.current.isNavigationExpanded
     const expected = true
 
     expect(actual).toEqual(expected)
@@ -27,11 +27,11 @@ describe('useNavigation', () => {
     const { result } = renderHook(() => useNavigation())
 
     act(() => result.current.toggleNavbar())
-    expect(result.current.expanded).toBe(true)
+    expect(result.current.isNavigationExpanded).toBe(true)
 
     act(() => result.current.clickHero())
 
-    const actual = result.current.expanded
+    const actual = result.current.isNavigationExpanded
     const expected = false
 
     expect(actual).toEqual(expected)
