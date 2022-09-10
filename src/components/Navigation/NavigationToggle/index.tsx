@@ -8,6 +8,8 @@ import {
   DarkModeToggleIcon
 } from './styles'
 
+const DARK_MODE_ICON_SIZE = 30
+
 function NavigationToggle ({
   toggleNavbar,
   expanded
@@ -19,7 +21,7 @@ function NavigationToggle ({
     <ToggleContainer>
       <DarkModeToggleContainer {...darkModeAnimationProps}>
         <DarkModeToggleIcon
-          size={31.5}
+          size={DARK_MODE_ICON_SIZE}
           color={theme.tertiary}
           onClick={toggleColors}
         />

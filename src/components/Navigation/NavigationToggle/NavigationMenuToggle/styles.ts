@@ -35,17 +35,13 @@ const expandedNavStyle = `
 `
 
 export const NavigationWrapper = styled.div`
-  display: block;
-  /* margin-top: 0.2rem; */
-  /* margin-left: 0.8rem; */
+  width: 3rem;
+  height: 3rem;
   ${({ expanded }: INavigationExpand) =>
     expanded ? expandedNavStyle : closeNavStyle}
 `
 
-export const NavigationSVG = styled.svg`
-  width: 3rem;
-  height: 3rem;
-`
+export const NavigationSVG = styled.svg``
 
 export const BarPath = styled.path`
   fill: none;

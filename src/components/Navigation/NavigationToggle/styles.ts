@@ -5,12 +5,10 @@ import devices from '../../../utils/devices'
 
 export const ToggleContainer = styled.div`
   display: flex;
-  cursor: pointer;
   align-items: center;
   justify-content: center;
-  float: right;
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  position: relative;
 
   @media ${devices.lg} {
     display: none;
@@ -18,10 +16,6 @@ export const ToggleContainer = styled.div`
 `
 
 export const DarkModeToggleContainer = styled(animated.span)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0.3rem;
   margin-right: 0.5rem;
 
   @media ${devices.lg} {

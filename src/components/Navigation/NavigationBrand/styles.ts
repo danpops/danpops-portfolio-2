@@ -16,7 +16,7 @@ export const DarkModeToggleDesktop = styled(CgDarkMode)`
   display: none;
 
   @media ${devices.lg} {
-    display: block;
+    display: block
   }
 `
 
@@ -26,17 +26,12 @@ export const NavigationBrandContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
 `
 
 export const NavigationBrandLogo = styled(animated.div)`
   font-size: 1.25rem;
-  line-height: inherit;
   white-space: nowrap;
   font-weight: 700;
-  margin-right: 0.7rem;
 
   ${(props: IHoverColor) => `
   color: ${props.color};
@@ -44,4 +39,8 @@ export const NavigationBrandLogo = styled(animated.div)`
     color: ${props.hoverColor};
   }
   `}
+
+  @media ${devices.lg} {
+    margin-right: 1.2rem;
+  }
 `
