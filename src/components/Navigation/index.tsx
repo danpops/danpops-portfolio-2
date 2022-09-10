@@ -15,13 +15,12 @@ function Navigation (): JSX.Element {
   } = useNavigation()
   const { theme } = useTheme()
   return (
-    <NavigationContainer>
-      <NavigationContent
-        color={theme.tertiary}
-        bgColor={theme.secondary}
-        isTransparent={isTransparent}
-        isHidden={isHidden}
-      >
+    <NavigationContainer
+      isTransparent={isTransparent}
+      isExpanded={isNavigationExpanded}
+      bgColor={theme.secondary}
+    >
+      <NavigationContent color={theme.tertiary} isHidden={isHidden}>
         <NavigationBrand clickHero={clickHero} />
         <NavigationToggle
           toggleNavbar={toggleNavbar}

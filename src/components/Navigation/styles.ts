@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import devices from '../../utils/devices'
-import { INavigationContainer } from '../../types'
+import { INavigation, INavigationContainer } from '../../types'
 
 export const NavigationContainer = styled.div`
   top: 0.4rem;
@@ -10,6 +10,15 @@ export const NavigationContainer = styled.div`
   transition: opacity 0.01s ease-out;
   position: fixed;
   overflow: hidden;
+  ${({ bgColor, isTransparent }: INavigation) => `
+      background-color: ${bgColor};
+      box-shadow: ${
+        isTransparent ? 'none' : '0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)'
+      };
+      @media ${devices.lg} {
+        background-color: ${isTransparent ? 'transparent' : bgColor};
+      }
+  `};
 `
 
 export const NavigationContent = styled.div`
@@ -17,22 +26,19 @@ export const NavigationContent = styled.div`
   width: 100vw;
   align-items: center;
   justify-content: space-around;
-  margin: 0 auto;
   position: relative;
-  padding: 1.2rem 0;
+  margin: 1.2rem 0;
 
-  ${({ isTransparent, bgColor, color, isHidden }: INavigationContainer) =>
+  ${({ color, isHidden }: INavigationContainer) =>
     `
     height: ${isHidden ? '0' : '2.6rem'};
     opacity: ${isHidden ? '0' : '1'};
-    background-color: ${bgColor};
-    
+    margin: ${isHidden ? '0' : '1.2rem 0'};
     @media ${devices.lg} {
       height: 2.6rem;
       color: ${color};
-      background-color: ${isTransparent ? 'transparent' : bgColor};
       opacity: 1;
-      padding: 1.5rem 0;
+      margin: 1.5rem 0;
     }
   `}
 `

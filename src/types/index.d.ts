@@ -64,9 +64,7 @@ export interface INavigationExpand {
   onClick?: () => void
 }
 export interface INavigationContainer {
-  isTransparent: boolean
   isHidden: boolean
-  bgColor: string
   color: string
 }
 export interface INavigationContent {
@@ -121,6 +119,11 @@ export interface IHoverColor {
 }
 export interface IBackgroundColor {
   bgColor: string
+}
+export interface INavigation {
+  bgColor: string
+  isTransparent: boolean
+  isExpanded: boolean
 }
 export interface ISpecialtyProps {
   active: boolean
