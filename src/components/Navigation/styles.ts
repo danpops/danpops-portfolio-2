@@ -10,7 +10,6 @@ export const NavigationContainer = styled.div`
   transition: opacity 0.01s ease-out;
   position: fixed;
   overflow: hidden;
-  height: 100%;
 `
 
 export const NavigationContent = styled.div`
