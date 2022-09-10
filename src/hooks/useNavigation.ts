@@ -20,13 +20,14 @@ const useNavigation = (scrollColor?: string): IUseNavigation => {
     const handleScroll = (): void => {
       const scrolled = getScrollPosition()
       const detectedScrollDown = scrolled > scrollPosition
+      const isTopOfPage = window.scrollY < 100
 
       if (detectedScrollDown) {
         setExpanded(false)
       }
 
-      setTransparent(window.scrollY < 100)
-      setHidden(detectedScrollDown)
+      setTransparent(isTopOfPage)
+      setHidden(detectedScrollDown && !isTopOfPage)
       setScrollPosition(scrolled)
     }
 
