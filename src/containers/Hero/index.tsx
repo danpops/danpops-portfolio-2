@@ -10,6 +10,7 @@ import { hero } from '../../assets/data'
 import { Link } from 'react-scroll'
 import useTheme from '../../hooks/useTheme'
 import CustomButton from '../../components/Buttons'
+import Typewriter from '../../components/Typewriter'
 
 function Hero (): JSX.Element {
   const { theme } = useTheme()
@@ -22,7 +23,9 @@ function Hero (): JSX.Element {
         <Header1 color={theme.tertiary}>{hero.heading1}</Header1>
         <Header1 color={theme.tertiary}>{hero.heading2}</Header1>
         <Divider color={theme.primary} />
-        <HeroHeader5 color={theme.tertiary}>{hero.heading3}</HeroHeader5>
+        <HeroHeader5 color={theme.tertiary}>
+          <Typewriter content={hero.heading3} />
+        </HeroHeader5>
         <Link to='about' smooth duration={500}>
           <CustomButton
             label={hero.buttonText}

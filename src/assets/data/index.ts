@@ -10,7 +10,7 @@ export const navigationItems = [
 export const hero = {
   heading1: 'hello!',
   heading2: "i'm dan popovic",
-  heading3: 'nice to meet you :)',
+  heading3: 'nice to meet you :) ',
   buttonText: 'who am i?'
 }
 export const about = {

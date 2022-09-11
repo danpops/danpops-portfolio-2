@@ -145,3 +145,14 @@ export interface IUseNavigation {
   clickHero: () => void
   toggleNavbar: () => void
 }
+export interface ITypewriter {
+  content: string
+}
+export interface IUseTypewriterProps {
+  content: string
+  speed: number
+}
+export interface ITypewriterIndex {
+  timer: NodeJS.Timer
+  content: string
+}
