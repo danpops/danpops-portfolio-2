@@ -6,5 +6,5 @@ export const GithubIcon = styled(FaGithub)`
 `
 
 export const ButtonContainer = styled.a`
-  margin-top 3rem;
+  margin-top: 3rem;
 `
