@@ -3,14 +3,13 @@ import devices from '../../utils/devices'
 import { INavigation, INavigationContainer } from '../../types'
 
 export const NavigationContainer = styled.div`
-  top: 0.4rem;
   width: 100vw;
   z-index: 9;
   transition: height 0.02s ease-out;
   transition: opacity 0.01s ease-out;
   position: fixed;
   overflow: hidden;
-  ${({ bgColor, isTransparent, isExpanded }: INavigation) => `
+  ${({ bgColor, isTransparent, isExpanded, color }: INavigation) => `
       background-color: ${isTransparent && !isExpanded ? 'transparent' : bgColor};
       box-shadow: ${
         isTransparent ? 'none' : '0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)'

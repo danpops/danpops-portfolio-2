@@ -3,12 +3,14 @@ import useTheme from '../../hooks/useTheme'
 import { ProgressBarContainer, ProgressBar } from './styles'
 
 function ScrollProgress (): JSX.Element {
-  const { theme } = useTheme()
+  const { theme, isDarkTheme } = useTheme()
 
-  const { progressBarStyle } = useNavigation(theme.primary)
+  const { progressBarStyle } = useNavigation(
+    isDarkTheme ? theme.gray : theme.primary
+  )
 
   return (
-    <ProgressBarContainer bgColor={theme.shadow}>
+    <ProgressBarContainer bgColor={theme.secondary}>
       <ProgressBar style={progressBarStyle} />
     </ProgressBarContainer>
   )

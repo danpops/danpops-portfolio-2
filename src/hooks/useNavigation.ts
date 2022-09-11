@@ -21,7 +21,7 @@ const useNavigation = (scrollColor?: string): IUseNavigation => {
     const handleScroll = (): void => {
       const currentPosition = getScrollPosition()
       const detectedScrollDown = currentPosition > scrollPosition
-      const isTopOfPage = window.scrollY < 250
+      const isTopOfPage = window.scrollY < 100
       const isNavDropdownHidden = detectedScrollDown && !isTopOfPage
 
       if (detectedScrollDown) {

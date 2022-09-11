@@ -18,6 +18,7 @@ function Navigation (): JSX.Element {
     <NavigationContainer
       isTransparent={isTransparent}
       isExpanded={isNavigationExpanded}
+      color={theme.tertiary}
       bgColor={theme.secondary}
     >
       <NavigationContent color={theme.tertiary} isHidden={isHidden}>

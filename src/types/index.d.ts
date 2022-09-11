@@ -122,6 +122,7 @@ export interface IBackgroundColor {
 }
 export interface INavigation {
   bgColor: string
+  color: string
   isTransparent: boolean
   isExpanded: boolean
 }

@@ -6,14 +6,14 @@ const ProgressBarContainer = styled.div`
   top: 0;
   background-color: ${({ bgColor }: IBackgroundColor) => bgColor};
   left: 0;
-  height: 0.4rem;
+  height: 0.3rem;
   width: 100%;
   z-index: 99;
 `
 
 const ProgressBar = styled.div`
   position: fixed;
-  height: 0.4rem;
+  height: 0.3rem;
   z-index: 3;
   -webkit-transition: width ease;
   -moz-transition: width ease;
