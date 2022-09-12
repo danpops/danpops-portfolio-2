@@ -21,11 +21,7 @@ export const ContentContianer = styled.div`
   align-items: flex-start;
   padding: 0.2rem;
   flex-direction: column;
-
-  @media ${devices.lg} {
-    margin-right: auto;
-    margin-left: 17%;
-  }
+  z-index: 3;
 `
 
 export const ParticleContainer = styled.div`
@@ -59,6 +55,7 @@ export const TypewriterContainer = styled.div`
   z-index: 3;
   display: flex;
   flex-direction: column;
+  width: 100%;
   justify-content: start;
   align-items: flex-start;
   text-align: start;
@@ -67,7 +64,7 @@ export const TypewriterContainer = styled.div`
 export const HeroButton = styled(animated.button)`
   box-shadow: 0 0.125rem 0.25rem #00000055 !important;
   text-transform: lowercase !important;
-  border-radius: 1rem;
+  border-radius: 1.8rem;
   border: none;
   font-weight: 500;
   padding: 1rem 2rem;

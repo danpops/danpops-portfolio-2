@@ -13,6 +13,16 @@ import { Link } from 'react-scroll'
 import useTheme from '../../hooks/useTheme'
 import Typewriter from '../../components/Typewriter'
 import useBoopAnimation from '../../hooks/animations/useBoopAnimation'
+import styled from 'styled-components'
+import devices from '../../utils/devices'
+
+const CustomLink = styled(Link)`
+  margin-top: 0.5rem;
+
+  @media ${devices.md} {
+    margin: 0.5rem 0;
+  }
+`
 
 function Hero (): JSX.Element {
   const { theme } = useTheme()
@@ -29,16 +39,16 @@ function Hero (): JSX.Element {
         </HeroContainer>
         <TypewriterContainer>
           <Typewriter content={hero.typewriterText} />
-          <Link to='about' smooth duration={500}>
-            <HeroButton
-              color={theme.light}
-              bgColor={theme.primary}
-              {...animatedProps}
-            >
-              {hero.buttonText}
-            </HeroButton>
-          </Link>
         </TypewriterContainer>
+        <CustomLink to='about' smooth duration={500}>
+          <HeroButton
+            color={theme.light}
+            bgColor={theme.primary}
+            {...animatedProps}
+          >
+            {hero.buttonText}
+          </HeroButton>
+        </CustomLink>
       </ContentContianer>
     </HeroMasthead>
   )
