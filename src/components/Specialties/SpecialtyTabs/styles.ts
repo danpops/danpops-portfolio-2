@@ -32,14 +32,14 @@ const getButtonStyle = (theme: IThemeStyle): string => `
 `
 
 export const SpecialtyButton = styled(animated.button)`
-  /* box-shadow: 0 0.062rem 0.125rem #00000055 !important; */
+  box-shadow: 0 0.062rem 0.125rem #00000055 !important;
   text-transform: lowercase !important;
-  border-radius: 10rem;
+  border-radius: 1rem;
   border: none;
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   width: 8rem;
-  padding: 1.25rem 2.25rem;
+  padding: 1rem 2rem;
   cursor: pointer;
   transition: background-color 0.5s ease-out;
   ${({ activeBg, active, activeColor, bgColor, color }: ISpecialtyProps) => {

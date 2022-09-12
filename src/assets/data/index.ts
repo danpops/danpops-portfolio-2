@@ -8,13 +8,18 @@ export const navigationItems = [
   'contact'
 ]
 export const hero = {
-  heading1: 'hello!',
-  heading2: "i'm dan popovic",
-  heading3: 'nice to meet you :) ',
+  heading1: 'hello,',
+  heading2: "i'm dan popovic.",
+  typewriterText: [
+    'software developer.',
+    'javascript enthusiast.',
+    'functional programmer.',
+    'problem solver.'
+  ],
   buttonText: 'who am i?'
 }
 export const about = {
-  heading: 'who am i?',
+  heading: 'about me',
   content: `i'm a software engineer based in toronto, with experience working 
   on consumer level applications using frameworks such as react and react 
   native. i'm passionate about writing clean and concise code and test 
@@ -24,7 +29,7 @@ export const about = {
   tests using appium on react native.`
 }
 export const specialties = {
-  heading: 'what are my specialties?',
+  heading: 'my specialties',
   data: specialtiesData
 }
 export const experience = {
@@ -37,7 +42,7 @@ export const github = {
   url: 'https://github.com/danpops'
 }
 export const contact = {
-  heading: "let's get in touch!",
+  heading: "let's connect 😃 !",
   content: `i'm open to answering questions or providing advice. feel free to 
   contact me!`,
   linkedin: 'https://www.linkedin.com/in/danpops',

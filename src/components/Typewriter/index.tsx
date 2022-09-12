@@ -1,10 +1,20 @@
+import useTheme from '../../hooks/useTheme'
 import useTypewriter from '../../hooks/useTypewriter'
 import { ITypewriter } from '../../types'
-import { TypewriterText } from './styles'
+import { CustomTWText, CustomTWTypedText, TypewriterText } from './styles'
 
 function Typewriter ({ content }: ITypewriter): JSX.Element {
-  const displayedContent = useTypewriter({ content, speed: 200 })
-  return <TypewriterText>{displayedContent}</TypewriterText>
+  const { theme } = useTheme()
+  const typewriterText = useTypewriter(content)
+
+  return (
+    <TypewriterText>
+      <CustomTWText color={theme.tertiary}>i'm a</CustomTWText>
+      <CustomTWTypedText cursorColor={theme.tertiary} color={theme.gray}>
+        {typewriterText}
+      </CustomTWTypedText>
+    </TypewriterText>
+  )
 }
 
 export default Typewriter

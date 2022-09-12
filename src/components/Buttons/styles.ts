@@ -5,11 +5,11 @@ import { IThemeStyle } from '../../types'
 export const PrimaryButton = styled(animated.button)`
   box-shadow: 0 0.125rem 0.25rem #00000055 !important;
   text-transform: lowercase !important;
-  border-radius: 10rem;
+  border-radius: 1rem;
   border: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 1.25rem 2.25rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 1rem 2rem;
   cursor: pointer;
   ${(props: IThemeStyle) => `
     color: ${props.color};

@@ -146,7 +146,7 @@ export interface IUseNavigation {
   toggleNavbar: () => void
 }
 export interface ITypewriter {
-  content: string
+  content: string[]
 }
 export interface IUseTypewriterProps {
   content: string
