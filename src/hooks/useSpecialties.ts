@@ -5,17 +5,17 @@ import { RootState } from '../redux/store'
 import { IUseSpecialties } from '../types'
 
 export enum SpecialtiesType {
-  frontend = 'frontend',
-  backend = 'backend',
-  languages = 'languages',
-  more = 'more'
+  Frontend = 'Frontend',
+  Backend = 'Backend',
+  Languages = 'Languages',
+  Other = 'Other'
 }
 
 export const specialtyTabs = [
-  SpecialtiesType.languages,
-  SpecialtiesType.frontend,
-  SpecialtiesType.backend,
-  SpecialtiesType.more
+  SpecialtiesType.Frontend,
+  SpecialtiesType.Backend,
+  SpecialtiesType.Languages,
+  SpecialtiesType.Other
 ]
 
 const useSpecialties = (): IUseSpecialties => {

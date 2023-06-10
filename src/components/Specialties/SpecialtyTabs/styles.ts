@@ -33,7 +33,6 @@ const getButtonStyle = (theme: IThemeStyle): string => `
 
 export const SpecialtyButton = styled(animated.button)`
   box-shadow: 0 0.062rem 0.125rem #00000055 !important;
-  text-transform: lowercase !important;
   border-radius: 1.8rem;
   border: none;
   font-weight: 500;

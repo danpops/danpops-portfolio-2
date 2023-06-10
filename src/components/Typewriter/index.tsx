@@ -9,7 +9,7 @@ function Typewriter ({ content }: ITypewriter): JSX.Element {
 
   return (
     <TypewriterText>
-      <CustomTWText color={theme.tertiary}>i'm a</CustomTWText>
+      <CustomTWText color={theme.tertiary}>I'm a</CustomTWText>
       <CustomTWTypedText cursorColor={theme.tertiary} color={theme.gray}>
         {typewriterText}
       </CustomTWTypedText>

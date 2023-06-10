@@ -3,8 +3,8 @@ import { specialties } from '../assets/data'
 import { SpecialtyState } from '../types'
 
 const initialState: SpecialtyState = {
-  title: specialties.data.languages.title,
-  data: specialties.data.languages.data
+  title: specialties.data.Languages.title,
+  data: specialties.data.Languages.data
 }
 
 export const specialtiesSlice = createSlice({

@@ -63,7 +63,6 @@ export const TypewriterContainer = styled.div`
 
 export const HeroButton = styled(animated.button)`
   box-shadow: 0 0.125rem 0.25rem #00000055 !important;
-  text-transform: lowercase !important;
   border-radius: 1.8rem;
   border: none;
   font-weight: 500;

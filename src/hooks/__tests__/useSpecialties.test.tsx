@@ -17,50 +17,50 @@ describe('useSpecialties', () => {
 
     const actual = { activeSpecialty, activeData }
     const expected = {
-      activeSpecialty: specialties.data.languages.title,
-      activeData: specialties.data.languages.data
+      activeSpecialty: specialties.data.Languages.title,
+      activeData: specialties.data.Languages.data
     }
     expect(actual).toEqual(expected)
   })
 
-  it('should set backend specialty data', async () => {
+  it('should set Backend specialty data', async () => {
     const { result } = renderHook(() => useSpecialties(), { wrapper: Wrapper })
 
-    act(() => result.current.setActiveSpecialty(SpecialtiesType.backend)())
+    act(() => result.current.setActiveSpecialty(SpecialtiesType.Backend)())
 
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
     const expected = {
-      activeSpecialty: specialties.data.backend.title,
-      activeData: specialties.data.backend.data
+      activeSpecialty: specialties.data.Backend.title,
+      activeData: specialties.data.Backend.data
     }
     expect(actual).toEqual(expected)
   })
 
-  it('should set frontend specialty data', async () => {
+  it('should set Frontend specialty data', async () => {
     const { result } = renderHook(() => useSpecialties(), { wrapper: Wrapper })
 
-    act(() => result.current.setActiveSpecialty(SpecialtiesType.frontend)())
+    act(() => result.current.setActiveSpecialty(SpecialtiesType.Frontend)())
 
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
     const expected = {
-      activeSpecialty: specialties.data.frontend.title,
-      activeData: specialties.data.frontend.data
+      activeSpecialty: specialties.data.Frontend.title,
+      activeData: specialties.data.Frontend.data
     }
     expect(actual).toEqual(expected)
   })
 
-  it('should set more specialty data', async () => {
+  it('should set Other specialty data', async () => {
     const { result } = renderHook(() => useSpecialties(), { wrapper: Wrapper })
 
-    act(() => result.current.setActiveSpecialty(SpecialtiesType.more)())
+    act(() => result.current.setActiveSpecialty(SpecialtiesType.Other)())
 
     const { activeSpecialty, activeData } = result.current
     const actual = { activeSpecialty, activeData }
     const expected = {
-      activeSpecialty: specialties.data.more.title,
-      activeData: specialties.data.more.data
+      activeSpecialty: specialties.data.Other.title,
+      activeData: specialties.data.Other.data
     }
     expect(actual).toEqual(expected)
   })

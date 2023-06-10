@@ -1,49 +1,47 @@
 import { experienceData } from './experience'
 import { specialtiesData } from './specialties'
 export const navigationItems = [
-  'about',
-  'specialties',
-  'experience',
-  'github',
-  'contact'
+  'About',
+  'Specialties',
+  'Experience',
+  'Github',
+  'Contact'
 ]
 export const hero = {
-  heading1: 'hello,',
-  heading2: "i'm dan popovic.",
+  heading1: 'Hello,',
+  heading2: "I'm Dan Popovic.",
   typewriterText: [
-    'software developer.',
-    'javascript enthusiast.',
-    'functional programmer.',
-    'problem solver.'
+    'Software Developer.',
+    'JavaScript Enthusiast.',
+    'Functional Programmer.',
+    'Problem Solver.'
   ],
-  buttonText: 'who am i?'
+  buttonText: 'About me'
 }
 export const about = {
-  heading: 'about me',
-  content: `i'm a software engineer based in toronto, with experience working 
-  on consumer level applications using frameworks such as react and react 
-  native. i'm passionate about writing clean and concise code and test 
-  driven development using tools such as jest and appium. furthermore, i have 
-  experience building backend applications using the serverless framework and have 
-  recently worked with gopuff, leading the implementation of integration
-  tests using appium on react native.`
+  heading: 'About me',
+  content: `I'm a Software Engineer based out of Toronto, with experience working 
+  in consumer level and manufacturing applications using JavaScript and Cloud Technologies. 
+  I'm passionate about writing clean and concise code and test driven development. I also have 
+  experience building backend applications using the Serverless Framework and have 
+  recently worked with McCain Foods on their digital transformation initiative.`
 }
 export const specialties = {
-  heading: 'my specialties',
+  heading: 'My specialties',
   data: specialtiesData
 }
 export const experience = {
-  heading: 'who have i worked with?',
+  heading: 'Who have I worked with?',
   data: experienceData
 }
 export const github = {
-  heading: 'check out my work on github!',
+  heading: 'Check out my work on Github!',
   buttonText: 'danpops/github',
   url: 'https://github.com/danpops'
 }
 export const contact = {
-  heading: "let's connect 😃 !",
-  content: `i'm open to answering questions or providing advice. feel free to 
+  heading: "Let's connect 😃 !",
+  content: `I'm open to answering questions or providing advice. feel free to 
   contact me!`,
   linkedin: 'https://www.linkedin.com/in/danpops',
   email: 'mailto:dan-popovic@hotmail.com'

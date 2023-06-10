@@ -124,20 +124,20 @@ const moreData = [
 ]
 
 export const specialtiesData = {
-  languages: {
-    title: 'languages',
+  Languages: {
+    title: 'Languages',
     data: languagesData
   },
-  frontend: {
-    title: 'frontend',
+  Frontend: {
+    title: 'Frontend',
     data: frontendData
   },
-  backend: {
-    title: 'backend',
+  Backend: {
+    title: 'Backend',
     data: backendData
   },
-  more: {
-    title: 'more',
+  Other: {
+    title: 'Other',
     data: moreData
   }
 }
