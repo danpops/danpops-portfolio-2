@@ -1,14 +1,14 @@
 import me from '../../assets/images/me.png'
 import { ImageCircle } from './styles'
 import { Divider, Header3, Text } from '../../components/Text'
-import { about } from '../../assets/data'
+import { about, sections } from '../../assets/data'
 import { Section, HeaderContainer } from '../../components/Layout/styles'
 import useTheme from '../../hooks/useTheme'
 
 function About (): JSX.Element {
   const { theme } = useTheme()
   return (
-    <Section id='about' bgColor={theme.primary}>
+    <Section id={sections.ABOUT} bgColor={theme.primary}>
       <HeaderContainer>
         <ImageCircle src={me} />
         <Header3 color={theme.light}>{about.heading}</Header3>

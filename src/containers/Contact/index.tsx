@@ -1,7 +1,7 @@
 import { HeaderContainer, Section } from '../../components/Layout/styles'
 import { Divider, Header3, Text } from '../../components/Text'
 import { ContactOptionsContainer, LinkedInIcon, MailIcon } from './styles'
-import { contact } from '../../assets/data'
+import { contact, sections } from '../../assets/data'
 import ContactOption from '../../components/ContactOption'
 import useTheme from '../../hooks/useTheme'
 
@@ -10,7 +10,7 @@ const ICON_SIZE = 46
 function Contact (): JSX.Element {
   const { theme } = useTheme()
   return (
-    <Section id='contact' bgColor={theme.shadow}>
+    <Section id={sections.CONTACT} bgColor={theme.shadow}>
       <HeaderContainer>
         <Header3 color={theme.gray}>{contact.heading}</Header3>
         <Divider color={theme.primary} />

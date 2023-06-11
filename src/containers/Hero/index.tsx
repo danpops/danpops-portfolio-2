@@ -8,7 +8,7 @@ import {
   ParticleContainer,
   TypewriterContainer
 } from './styles'
-import { hero } from '../../assets/data'
+import { hero, sections } from '../../assets/data'
 import { Link } from 'react-scroll'
 import useTheme from '../../hooks/useTheme'
 import Typewriter from '../../components/Typewriter'
@@ -40,7 +40,7 @@ function Hero (): JSX.Element {
         <TypewriterContainer>
           <Typewriter content={hero.typewriterText} />
         </TypewriterContainer>
-        <CustomLink to='about' smooth duration={500}>
+        <CustomLink to={sections.ABOUT} smooth duration={500}>
           <HeroButton
             color={theme.light}
             bgColor={theme.primary}

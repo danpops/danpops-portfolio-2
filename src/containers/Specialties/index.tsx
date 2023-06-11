@@ -3,7 +3,7 @@ import { Divider, Header3 } from '../../components/Text'
 import { SpecialtiesSection, SpecialtiesContainer } from './styles'
 import useSpecialties from '../../hooks/useSpecialties'
 import { SpecialtyTabs, SpecialtyContent } from '../../components/Specialties'
-import { specialties } from '../../assets/data'
+import { sections, specialties } from '../../assets/data'
 import useTheme from '../../hooks/useTheme'
 
 function Specialties (): JSX.Element {
@@ -11,7 +11,7 @@ function Specialties (): JSX.Element {
   const { theme } = useTheme()
 
   return (
-    <SpecialtiesSection id='specialties' bgColor={theme.secondary}>
+    <SpecialtiesSection id={sections.SPECIALTIES} bgColor={theme.secondary}>
       <HeaderContainer>
         <Header3 color={theme.tertiary}>{specialties.heading}</Header3>
         <Divider color={theme.primary} />

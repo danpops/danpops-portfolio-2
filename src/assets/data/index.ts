@@ -1,11 +1,18 @@
 import { experienceData } from './experience'
 import { specialtiesData } from './specialties'
+export const sections = {
+  ABOUT: 'About',
+  SPECIALTIES: 'Specialties',
+  EXPERIENCE: 'Experience',
+  GITHUB: 'Github',
+  CONTACT: 'Contact'
+}
 export const navigationItems = [
-  'About',
-  'Specialties',
-  'Experience',
-  'Github',
-  'Contact'
+  sections.ABOUT,
+  sections.SPECIALTIES,
+  sections.EXPERIENCE,
+  sections.GITHUB,
+  sections.CONTACT
 ]
 export const hero = {
   heading1: 'Hello,',
