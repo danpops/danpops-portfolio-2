@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import devices from '../../utils/devices'
 
-export const CarouselContainer = styled.div`
-  padding: 2rem 0;
-
-  @media ${devices.lg} {
-    padding: 3rem 14rem;
-  }
+export const ExperienceContainer = styled.div`
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-flow: row;
+  width: 100%;
+  row-gap: 2rem;
 `

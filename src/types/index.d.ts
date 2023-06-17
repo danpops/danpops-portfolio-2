@@ -156,3 +156,12 @@ export interface ITypewriterIndex {
   timer: NodeJS.Timer
   content: string
 }
+export interface IExperience {
+  company: string
+  title: string
+  date: string
+  notes: string[]
+}
+export interface IExperienceCard {
+  experience: IExperience
+}
