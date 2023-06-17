@@ -27,11 +27,8 @@ export const hero = {
 }
 export const about = {
   heading: 'About me',
-  content: `I'm a Software Engineer based out of Toronto, with experience working 
-  in consumer level and manufacturing applications using JavaScript and Cloud Technologies. 
-  I'm passionate about writing clean and concise code and test driven development. I also have 
-  experience building backend applications using the Serverless Framework and have 
-  recently worked with McCain Foods on their digital transformation initiative.`
+  content:
+    "I'm Dan Popovic, a highly skilled and motivated Senior Full Stack Engineer with a deep passion for functional programming and JavaScript. With a strong belief in the power of functional composition, I specialize in building robust web applications and backend servers using JavaScript and TypeScript. Leveraging my expertise in functional programming concepts, I strive to write clean and concise code that follows best practices. With extensive experience in serverless technology, Azure Cloud Services, and comprehensive integration testing, I have successfully delivered innovative solutions that prioritize user needs. If you're looking for a dedicated Senior Engineer well-versed in functional programming and JavaScript, let's connect and create exceptional web applications together."
 }
 export const specialties = {
   heading: 'My specialties',
