@@ -165,3 +165,9 @@ export interface IExperience {
 export interface IExperienceCard {
   experience: IExperience
 }
+export interface ISpecialItem {
+  name: string
+  icon: JSX.Element
+  href: string
+  theme: IColors
+}

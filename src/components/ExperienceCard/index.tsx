@@ -13,17 +13,21 @@ import {
 export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
   const { theme } = useTheme()
   return (
-    <ExperienceCardContainer bgColor={theme.secondary} color={theme.tertiary}>
+    <ExperienceCardContainer bgColor={theme.shadow} color={theme.tertiary}>
       <ExperienceHeader>
         <ExperiencePosition>{experience.title}</ExperiencePosition>
-        <ExperienceCompany color={theme.primary}>
-          {experience.company}
-        </ExperienceCompany>
-        <ExperienceDate>{experience.date}</ExperienceDate>
+        <ExperienceCompany>{experience.company}</ExperienceCompany>
+        <ExperienceDate color={theme.primary}>{experience.date}</ExperienceDate>
       </ExperienceHeader>
       <ExperienceList>
         {experience.notes.map((item, i) => (
-          <ExperienceListItem key={i}>{item}</ExperienceListItem>
+          <ExperienceListItem
+            textColor={theme.tertiary}
+            color={theme.primary}
+            key={i}
+          >
+            {item}
+          </ExperienceListItem>
         ))}
       </ExperienceList>
     </ExperienceCardContainer>

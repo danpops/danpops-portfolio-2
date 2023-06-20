@@ -18,7 +18,7 @@ export const experienceCards: IExperience[] = [
   {
     company: 'McCain Foods - TribalScale',
     title: 'Backend Engineer',
-    date: 'Oct 2022 - Present',
+    date: "Oct '22 - Present",
     notes: [
       'Anchor backend engineer on the digital transformation project for McCain, a global leader in manufacturing, successfully revolutionizing their backend systems and enhancing operational efficiency.',
       'Developed a sensor-triggered solution using Azure Functions to automate the tracking of equipment sensors, resulting in real-time updates and eliminating manual intervention.',
@@ -30,8 +30,8 @@ export const experienceCards: IExperience[] = [
   },
   {
     company: 'GoPuff - TribalScale',
-    title: 'React Native Engineer',
-    date: 'Oct 2021 - May 2022',
+    title: 'Frontend Engineer',
+    date: "Oct '21 - May '22",
     notes: [
       'Worked on the GoPuff project, focusing on user registration/login functionality, utilizing React Native for frontend development and implementing GraphQL APIs on the backend.',
       'Implemented end-to-end integration tests using Appium, ensuring high-quality software delivery.',
