@@ -14,7 +14,7 @@ export const LIGHT_THEME = {
 
 export const DARK_THEME = {
   ...defaultColors,
-  primary: '#27445C',
+  primary: '#365e80',
   secondary: '#212121',
   tertiary: '#f8f9fa',
   shadow: '#212529',
