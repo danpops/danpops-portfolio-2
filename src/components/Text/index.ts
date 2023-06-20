@@ -2,11 +2,10 @@ import styled from 'styled-components'
 import devices from '../../utils/devices'
 
 export const Divider = styled.hr`
-  width: 3.25rem;
+  width: 10rem;
   border-width: 0.1rem;
   border-color: ${({ color }) => color};
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 `
 export const Header1 = styled.h1`
   font-weight: 500;

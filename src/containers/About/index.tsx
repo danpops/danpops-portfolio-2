@@ -1,5 +1,3 @@
-import me from '../../assets/images/me.png'
-import { ImageCircle } from './styles'
 import { Divider, Header3, Text } from '../../components/Text'
 import { about, sections } from '../../assets/data'
 import { Section, HeaderContainer } from '../../components/Layout/styles'
@@ -10,7 +8,6 @@ function About (): JSX.Element {
   return (
     <Section id={sections.ABOUT} bgColor={theme.primary}>
       <HeaderContainer>
-        <ImageCircle src={me} />
         <Header3 color={theme.light}>{about.heading}</Header3>
         <Divider color={theme.light} />
         <Text color={theme.light}>{about.content}</Text>

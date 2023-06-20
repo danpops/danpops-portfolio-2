@@ -24,18 +24,15 @@ export const Section = styled.section`
   }
 `
 export const HeaderContainer = styled.div`
-  margin: 0 auto;
+  margin: 0;
+  text-align: start;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-
   @media ${devices.md} {
-    padding-left: 6.5rem;
-    padding-right: 6.5rem;
+    padding: 0 6.5rem;
   }
-
   @media ${devices.lg} {
+    padding: 0 19.5rem;
     max-width: 53rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
   }
 `

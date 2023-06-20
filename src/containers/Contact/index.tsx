@@ -1,11 +1,11 @@
 import { HeaderContainer, Section } from '../../components/Layout/styles'
 import { Divider, Header3, Text } from '../../components/Text'
-import { ContactOptionsContainer, LinkedInIcon, MailIcon } from './styles'
+import { ContactOptionsContainer, GitHubIcon, LinkedInIcon, MailIcon } from './styles'
 import { contact, sections } from '../../assets/data'
 import ContactOption from '../../components/ContactOption'
 import useTheme from '../../hooks/useTheme'
 
-const ICON_SIZE = 46
+const ICON_SIZE = 40
 
 function Contact (): JSX.Element {
   const { theme } = useTheme()
@@ -18,12 +18,16 @@ function Contact (): JSX.Element {
       </HeaderContainer>
       <ContactOptionsContainer>
         <ContactOption
-          icon={<LinkedInIcon size={ICON_SIZE} color={theme.gray} />}
+          icon={<LinkedInIcon size={ICON_SIZE} color={theme.tertiary} />}
           href={contact.linkedin}
         />
         <ContactOption
-          icon={<MailIcon size={ICON_SIZE} color={theme.gray} />}
+          icon={<MailIcon size={ICON_SIZE} color={theme.tertiary} />}
           href={contact.email}
+        />
+        <ContactOption
+          icon={<GitHubIcon size={ICON_SIZE} color={theme.tertiary} />}
+          href={contact.github}
         />
       </ContactOptionsContainer>
     </Section>

@@ -7,7 +7,6 @@ import { animated } from 'react-spring'
 export const HeroMasthead = styled.header`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100vh;
@@ -19,9 +18,16 @@ export const ContentContianer = styled.div`
   display: flex;
   justify-content: start;
   align-items: flex-start;
-  padding: 0.2rem;
   flex-direction: column;
   z-index: 3;
+   margin: 0;
+  padding: 0 2.5rem;
+  @media ${devices.md} {
+    padding: 0 6.5rem;
+  }
+  @media ${devices.lg} {
+    padding: 0 19.5rem;
+  }
 `
 
 export const ParticleContainer = styled.div`
