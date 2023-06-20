@@ -15,8 +15,8 @@ function Experience (): JSX.Element {
       <HeaderContainer>
         <Header3 color={theme.light}>{experience.heading}</Header3>
         <Divider color={theme.light} />
+        <ExperienceContainer>{cards}</ExperienceContainer>
       </HeaderContainer>
-      <ExperienceContainer>{cards}</ExperienceContainer>
     </Section>
   )
 }

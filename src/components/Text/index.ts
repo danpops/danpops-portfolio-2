@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import devices from '../../utils/devices'
 
 export const Divider = styled.hr`
-  width: 10rem;
+  width: 100%;
   border-width: 0.1rem;
   border-color: ${({ color }) => color};
   margin: 2rem 0;

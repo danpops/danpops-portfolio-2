@@ -33,6 +33,5 @@ export const HeaderContainer = styled.div`
   }
   @media ${devices.lg} {
     padding: 0 19.5rem;
-    max-width: 53rem;
   }
 `
