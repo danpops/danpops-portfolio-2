@@ -15,18 +15,22 @@ export const HeroMasthead = styled.header`
 `
 
 export const ContentContianer = styled.div`
-  display: flex;
+  display: grid;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: column;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto;
   z-index: 3;
   margin: 0;
   padding: 0 2.5rem;
   @media ${devices.md} {
-    padding: 0 6.5rem;
+    width: 40rem;
+    justify-content: flex-start;
+    margin: 0 auto;
+    align-items: flex-start;
   }
   @media ${devices.lg} {
-    padding: 0 19.5rem;
+    width: 60rem;
   }
 `
 
@@ -94,5 +98,4 @@ export const HeroButton = styled(animated.button)`
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
 `

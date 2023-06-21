@@ -2,11 +2,15 @@ import styled from 'styled-components'
 import { IColor } from '../../types'
 import { animated } from 'react-spring'
 
-export const SpecialtyItemContainer = styled(animated.div)``
+export const SpecialtyItemContainer = styled(animated.div)`
+  width: 100%;
+`
 export const SpecialtyItemGrid = styled.a`
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr 2rem;
   grid-template-columns: 1fr;
+  justify-items: center;
+  align-self: center;
   row-gap: 1.5rem;
   cursor: pointer;
   text-decoration: none;

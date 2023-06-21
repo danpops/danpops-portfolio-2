@@ -1,6 +1,12 @@
 import { HeaderContainer, Section } from '../../components/Layout/styles'
-import { Divider, Header3, Text } from '../../components/Text'
-import { ContactOptionsContainer, GitHubIcon, LinkedInIcon, MailIcon } from './styles'
+import {
+  ContactHeader,
+  ContactOptionsContainer,
+  ContactText,
+  GitHubIcon,
+  LinkedInIcon,
+  MailIcon
+} from './styles'
 import { contact, sections } from '../../assets/data'
 import ContactOption from '../../components/ContactOption'
 import useTheme from '../../hooks/useTheme'
@@ -12,24 +18,24 @@ function Contact (): JSX.Element {
   return (
     <Section id={sections.CONTACT} bgColor={theme.primary}>
       <HeaderContainer>
-        <Header3 color={theme.light}>{contact.heading}</Header3>
-        <Divider color={theme.light} />
-        <Text color={theme.light}>{contact.content}</Text>
+        <ContactHeader color={theme.light}>{contact.heading}</ContactHeader>
+        <ContactText color={theme.light}>{contact.text1}</ContactText>
+        <ContactText color={theme.light}>{contact.text2}</ContactText>
+        <ContactOptionsContainer>
+          <ContactOption
+            icon={<LinkedInIcon size={ICON_SIZE} color={theme.light} />}
+            href={contact.linkedin}
+          />
+          <ContactOption
+            icon={<MailIcon size={ICON_SIZE} color={theme.light} />}
+            href={contact.email}
+          />
+          <ContactOption
+            icon={<GitHubIcon size={ICON_SIZE} color={theme.light} />}
+            href={contact.github}
+          />
+        </ContactOptionsContainer>
       </HeaderContainer>
-      <ContactOptionsContainer>
-        <ContactOption
-          icon={<LinkedInIcon size={ICON_SIZE} color={theme.light} />}
-          href={contact.linkedin}
-        />
-        <ContactOption
-          icon={<MailIcon size={ICON_SIZE} color={theme.light} />}
-          href={contact.email}
-        />
-        <ContactOption
-          icon={<GitHubIcon size={ICON_SIZE} color={theme.light} />}
-          href={contact.github}
-        />
-      </ContactOptionsContainer>
     </Section>
   )
 }

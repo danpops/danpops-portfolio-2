@@ -38,8 +38,9 @@ export const github = {
 }
 export const contact = {
   heading: 'Contact',
-  content:
-    "I'm more than happy to answer any questions you may have or provide advice. Please feel free to reach out to me anytime—I'm here to help!",
+  text1:
+    "I'm more than happy to answer any questions you may have or provide advice.",
+  text2: 'Please feel free to reach out to me anytime!',
   linkedin: 'https://www.linkedin.com/in/danpops',
   email: 'mailto:dan-popovic@hotmail.com',
   github: 'https://www.github.com/danpops'

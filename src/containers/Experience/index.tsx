@@ -1,8 +1,7 @@
-import { Divider, Header3 } from '../../components/Text'
 import { Section, HeaderContainer } from '../../components/Layout/styles'
 import { experience, sections } from '../../assets/data'
 import useTheme from '../../hooks/useTheme'
-import { ExperienceContainer } from './styles'
+import { ExperienceContainer, ExperienceHeader } from './styles'
 import { ExperienceCard } from '../../components/ExperienceCard'
 
 function Experience (): JSX.Element {
@@ -13,8 +12,9 @@ function Experience (): JSX.Element {
   return (
     <Section id={sections.EXPERIENCE} bgColor={theme.shadow}>
       <HeaderContainer>
-        <Header3 color={theme.tertiary}>{experience.heading}</Header3>
-        <Divider color={theme.primary} />
+        <ExperienceHeader color={theme.tertiary}>
+          {experience.heading}
+        </ExperienceHeader>
         <ExperienceContainer>{cards}</ExperienceContainer>
       </HeaderContainer>
     </Section>

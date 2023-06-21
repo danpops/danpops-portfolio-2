@@ -41,9 +41,9 @@ export const NavigationContent = styled.div`
   ${(props: INavigationContainer) => contentStlye(props)}
   @media ${devices.lg} {
     height: 2.6rem;
-    max-width: 65rem;
+    width: 60rem;
     column-gap: 20rem;
-    justify-content: center;
+    justify-content: space-between;
     grid-template-areas: 'brand-container menu-items';
     opacity: 1;
     margin: 1.5rem auto;

@@ -1,6 +1,9 @@
 import { HeaderContainer } from '../../components/Layout/styles'
-import { Divider, Header3 } from '../../components/Text'
-import { SpecialtiesContainer, SpecialtiesSection } from './styles'
+import {
+  SpecialtiesContainer,
+  SpecialtiesSection,
+  SpecialtyHeader
+} from './styles'
 import { sections, specialties } from '../../assets/data'
 import useTheme from '../../hooks/useTheme'
 import { SpecialtyItem } from '../../components/SpecialtyItem'
@@ -13,10 +16,11 @@ function Specialties (): JSX.Element {
   return (
     <SpecialtiesSection id={sections.SPECIALTIES} bgColor={theme.primary}>
       <HeaderContainer>
-        <Header3 color={theme.light}>{specialties.heading}</Header3>
-        <Divider color={theme.light} />
+        <SpecialtyHeader color={theme.light}>
+          {specialties.heading}
+        </SpecialtyHeader>
+        <SpecialtiesContainer>{renderSpecialties}</SpecialtiesContainer>
       </HeaderContainer>
-      <SpecialtiesContainer>{renderSpecialties}</SpecialtiesContainer>
     </SpecialtiesSection>
   )
 }

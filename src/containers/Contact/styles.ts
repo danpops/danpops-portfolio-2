@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import devices from '../../utils/devices'
+import { Header3, Text } from '../../components/Text'
 
 export const LinkedInIcon = styled(FaLinkedin)`
   color: ${({ color }) => color};
@@ -18,19 +19,31 @@ export const GitHubIcon = styled(FaGithub)`
 
 export const ContactOptionsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 5rem));
   align-items: center;
-  justify-items: center;
-  margin-top: 2rem;
-  padding: 0 2.5rem;
+  justify-content: start;
+  margin: 2rem 0;
+  padding: 0;
   column-gap: 1rem;
   @media ${devices.md} {
     grid-template-columns: repeat(3, minmax(0, 4rem));
-    justify-items: flex-start;
-    max-width: 30rem;
-    padding: 0 6.5rem;
+    max-width: 40rem;
   }
   @media ${devices.lg} {
-    padding: 0 19.5rem;
+    justify-items: center;
+    max-width: 60rem;
+    margin: 2rem auto;
+    justify-content: center;
+  }
+`
+export const ContactHeader = styled(Header3)`
+  @media ${devices.lg} {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+`
+export const ContactText = styled(Text)`
+  @media ${devices.lg} {
+    text-align: center;
   }
 `

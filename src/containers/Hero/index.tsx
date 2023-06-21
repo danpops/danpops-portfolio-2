@@ -18,7 +18,6 @@ import devices from '../../utils/devices'
 
 const CustomLink = styled(Link)`
   margin-top: 0.5rem;
-
   @media ${devices.md} {
     margin: 0.5rem 0;
   }

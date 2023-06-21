@@ -38,20 +38,19 @@ export const ExperienceHeader = styled.div`
 export const ExperienceList = styled.ul`
   text-align: start;
   padding: 0;
-  line-height: 1.4rem;
+  line-height: 100%;
   margin-top: 1.5rem;
   list-style: none;
   color: ${(props: IColor) => props.color};
 `
 export const ExperienceListItem = styled.li`
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: 150%;
   text-align: start;
   margin-bottom: 1rem;
   @media ${devices.lg} {
     font-size: 1.2rem;
     text-align: justify;
-    line-height: 2.6rem;
   }
 `
 export const ExperienceText = styled.div`

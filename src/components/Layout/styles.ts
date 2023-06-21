@@ -12,7 +12,7 @@ export const Section = styled.section`
   background-color: ${({ bgColor }: ISection) => bgColor};
   text-align: center;
   width: 100%;
-  padding: 5.6rem 0rem;
+  padding: 4rem 0rem;
   @media ${devices.md} {
     padding: 8rem 0rem;
   }
@@ -26,9 +26,11 @@ export const HeaderContainer = styled.div`
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   @media ${devices.md} {
-    padding: 0 6.5rem;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 40rem;
   }
   @media ${devices.lg} {
-    padding: 0 19.5rem;
+    max-width: 60rem;
   }
 `

@@ -9,13 +9,13 @@ export const NavigationDesktopMenu = styled.div`
     display: grid;
     grid-template-rows: repeat(1, 1fr);
     grid-auto-flow: column;
+    justify-content: flex-end;
   }
 `
 export const NavigationMenuItem = styled.div`
   font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
-  /* padding: 0 1rem; */
   justify-content: center;
   align-items: center;
   cursor: pointer;
