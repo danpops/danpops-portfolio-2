@@ -8,25 +8,23 @@ const expandedMenuStyle = `
   padding-bottom: 1rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 `
-
 export const NavigationMobileContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(0, 3.5rem));
   -webkit-tap-highlight-color: transparent;
   clear: both;
   width: 100%;
   height: 0;
   position: relative;
   overflow: hidden;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   opacity: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
-
   ${({ expanded, bgColor }: INavigationMobileContainer) => `
     background-color: ${bgColor};
   ${expanded ? expandedMenuStyle : ''}`}
-  
   @media ${devices.lg} {
     display: none;
   }

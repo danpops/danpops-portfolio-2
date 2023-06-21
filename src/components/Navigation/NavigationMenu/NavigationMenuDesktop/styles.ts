@@ -4,16 +4,20 @@ import devices from '../../../../utils/devices'
 
 export const NavigationDesktopMenu = styled.div`
   display: none;
-
+  grid-area: menu-items;
   @media ${devices.lg} {
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-auto-flow: column;
   }
 `
 export const NavigationMenuItem = styled.div`
   font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   ${(props: IHoverColor) => `
   color: ${props.color};

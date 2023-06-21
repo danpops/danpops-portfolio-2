@@ -6,7 +6,7 @@ import { IHoverColor } from '../../../types'
 
 export const DarkModeToggleDesktopContainer = styled(animated.div)`
   display: none;
-
+  grid-area: desktop-theme;
   @media ${devices.lg} {
     display: block;
   }
@@ -14,7 +14,6 @@ export const DarkModeToggleDesktopContainer = styled(animated.div)`
 
 export const DarkModeToggleDesktop = styled(CgDarkMode)`
   display: none;
-
   @media ${devices.lg} {
     display: block;
   }
@@ -23,9 +22,12 @@ export const DarkModeToggleDesktop = styled(CgDarkMode)`
 export const NavigationBrandContainer = styled.div`
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-area: brand-container;
+  grid-template-areas: 'brand-name';
+  @media ${devices.lg} {
+    grid-template-areas: 'brand-name desktop-theme';
+  }
 `
 
 export const NavigationBrandLogo = styled(animated.div)`

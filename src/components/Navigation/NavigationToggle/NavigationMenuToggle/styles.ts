@@ -37,6 +37,7 @@ const expandedNavStyle = `
 export const NavigationWrapper = styled.div`
   width: 3rem;
   height: 3rem;
+  grid-area: mobile-menu;
   ${({ expanded }: INavigationExpand) =>
     expanded ? expandedNavStyle : closeNavStyle}
 `

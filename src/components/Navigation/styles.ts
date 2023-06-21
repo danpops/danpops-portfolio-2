@@ -2,6 +2,25 @@ import styled from 'styled-components'
 import devices from '../../utils/devices'
 import { INavigation, INavigationContainer } from '../../types'
 
+const colorNav = (props: INavigation): string => `
+  background-color: ${
+    props.isTransparent && !props.isExpanded ? 'transparent' : props.bgColor
+  };
+  box-shadow: ${
+    props.isTransparent ? 'none' : '0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)'
+  };
+  @media ${devices.lg} {
+    background-color: ${props.isTransparent ? 'transparent' : props.bgColor};
+  };
+`
+const contentStlye = ({ color, isHidden }: INavigationContainer): string => `
+  height: ${isHidden ? '0' : '2.6rem'};
+  opacity: ${isHidden ? '0' : '1'};
+  margin: ${isHidden ? '0' : '1.2rem 0'};
+  @media ${devices.lg} {
+    color: ${color};
+  }
+`
 export const NavigationContainer = styled.div`
   width: 100vw;
   z-index: 9;
@@ -9,35 +28,24 @@ export const NavigationContainer = styled.div`
   transition: opacity 0.01s ease-out;
   position: fixed;
   overflow: hidden;
-  ${({ bgColor, isTransparent, isExpanded, color }: INavigation) => `
-      background-color: ${isTransparent && !isExpanded ? 'transparent' : bgColor};
-      box-shadow: ${
-        isTransparent ? 'none' : '0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)'
-      };
-      @media ${devices.lg} {
-        background-color: ${isTransparent ? 'transparent' : bgColor};
-      }
-  `};
+  ${(props: INavigation) => colorNav(props)};
 `
-
 export const NavigationContent = styled.div`
-  display: flex;
+  display: grid;
   width: 100vw;
   align-items: center;
+  grid-template-areas: 'brand-container toggle-mobile';
   justify-content: space-around;
   position: relative;
   margin: 1.2rem 0;
-
-  ${({ color, isHidden }: INavigationContainer) =>
-    `
-    height: ${isHidden ? '0' : '2.6rem'};
-    opacity: ${isHidden ? '0' : '1'};
-    margin: ${isHidden ? '0' : '1.2rem 0'};
-    @media ${devices.lg} {
-      height: 2.6rem;
-      color: ${color};
-      opacity: 1;
-      margin: 1.5rem 0;
-    }
-  `}
+  ${(props: INavigationContainer) => contentStlye(props)}
+  @media ${devices.lg} {
+    height: 2.6rem;
+    max-width: 65rem;
+    column-gap: 20rem;
+    justify-content: center;
+    grid-template-areas: 'brand-container menu-items';
+    opacity: 1;
+    margin: 1.5rem auto;
+  }
 `
