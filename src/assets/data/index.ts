@@ -15,12 +15,7 @@ export const navigationItems = [
 export const hero = {
   heading1: 'Hello,',
   heading2: "I'm Dan Popovic.",
-  typewriterText: [
-    'Software Developer.',
-    'JavaScript Enthusiast.',
-    'Functional Programmer.',
-    'Problem Solver.'
-  ],
+  typewriterText: ['software developer.'],
   buttonText: 'About me'
 }
 export const about = {
