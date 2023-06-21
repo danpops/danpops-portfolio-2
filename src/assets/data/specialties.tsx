@@ -8,7 +8,7 @@ import {
 export const specialtiesData = [
   {
     name: 'AWS',
-    icon: <SiAmazonaws size={50} />,
+    icon: <SiAmazonaws size={45} />,
     href: 'https://aws.amazon.com'
   },
   {
@@ -23,7 +23,7 @@ export const specialtiesData = [
   },
   {
     name: 'JavaScript',
-    icon: <SiJavascript size={43} />,
+    icon: <SiJavascript size={45} />,
     href: 'https://www.javascript.com/'
   }
 ]

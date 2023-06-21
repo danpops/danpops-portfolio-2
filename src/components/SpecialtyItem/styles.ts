@@ -7,7 +7,9 @@ export const SpecialtyItemContainer = styled(animated.div)`
 `
 export const SpecialtyItemGrid = styled.a`
   display: grid;
-  grid-template-rows: 1fr 2rem;
+  justify-items: center;
+  grid-template-rows: auto auto;
+  padding: 1rem;
   grid-template-columns: 1fr;
   justify-items: center;
   align-self: center;
