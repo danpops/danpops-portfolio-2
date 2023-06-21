@@ -12,14 +12,13 @@ export const ExperienceCardContainer = styled.div`
     'logo    header  header'
     'technology technology .'
     'content content content';
-  grid-template-columns: 5rem 1fr 1fr;
-  grid-template-rows: repeat(minmax(0, auto));
-  row-gap: 1rem;
-  column-gap: 0.5rem;
+  grid-template-columns: 4rem 1fr 1fr;
+  grid-template-rows: repeat(minmax(0, 6rem));
+  row-gap: 1.5rem;
   justify-content: flex-start;
   color: ${(props: IColor) => props.color};
   @media ${devices.md} {
-    row-gap: 1.5rem;
+    column-gap: 1rem;
     align-items: center;
   }
 `
@@ -30,11 +29,11 @@ export const ExperienceHeader = styled.div`
     'date'
     'position'
     'company';
+  height: 100%;
   row-gap: 0.5rem;
   column-gap: 0;
-  align-items: center;
+  align-items: flex-start;
   @media ${devices.lg} {
-    row-gap: 1rem;
     column-gap: 0.5rem;
     grid-template-areas:
       'position date'
@@ -43,16 +42,20 @@ export const ExperienceHeader = styled.div`
 `
 export const CompanyLogo = styled.img`
   object-fit: fill;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15) !important;
   border-radius: 5%;
+  @media ${devices.md} {
+    width: 4rem;
+    height: 4rem;
+  }
 `
 export const ExperienceList = styled.ul`
   text-align: start;
   grid-area: content;
   padding: 0;
-  line-height: 100%;
+  margin: 0;
   list-style: none;
   color: ${(props: IColor) => props.color};
 `
@@ -117,7 +120,5 @@ export const TechnologyPill = styled.div`
 `
 export const ImageContainer = styled.div`
   grid-area: logo;
-  width: 3rem;
-  height: 3rem;
   align-self: flex-start;
 `
