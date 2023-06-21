@@ -6,11 +6,11 @@ import useTheme from '../../hooks/useTheme'
 function About (): JSX.Element {
   const { theme } = useTheme()
   return (
-    <Section id={sections.ABOUT} bgColor={theme.primary}>
+    <Section id={sections.ABOUT} bgColor={theme.shadow}>
       <HeaderContainer>
-        <Header3 color={theme.light}>{about.heading}</Header3>
-        <Divider color={theme.light} />
-        <Text color={theme.light}>{about.content}</Text>
+        <Header3 color={theme.tertiary}>{about.heading}</Header3>
+        <Divider color={theme.primary} />
+        <Text color={theme.tertiary}>{about.content}</Text>
       </HeaderContainer>
     </Section>
   )

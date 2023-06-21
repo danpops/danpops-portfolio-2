@@ -16,10 +16,10 @@ export function SpecialtyItem (props: ISpecialItem): JSX.Element {
         target='_blank'
         rel='noopener noreferrer'
       >
-        <SpecialtiesIcon color={props.theme.tertiary}>
+        <SpecialtiesIcon color={props.theme.light}>
           {props.icon}
         </SpecialtiesIcon>
-        <SpecialtiesItemLabel color={props.theme.tertiary}>
+        <SpecialtiesItemLabel color={props.theme.light}>
           {props.name}
         </SpecialtiesItemLabel>
       </SpecialtyItemGrid>

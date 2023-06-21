@@ -22,7 +22,8 @@ export const SpecialtiesContainer = styled.div`
   @media ${devices.lg} {
     margin: 5rem 0;
     padding: 0 19.5rem;
-    max-width: 53rem;
+    width: 100%;
+    justify-content: center;
   }
 `
 export const SpecialtiesSection = styled.div`

@@ -11,10 +11,10 @@ function Experience (): JSX.Element {
     <ExperienceCard key={i} experience={item} />
   ))
   return (
-    <Section id={sections.EXPERIENCE} bgColor={theme.primary}>
+    <Section id={sections.EXPERIENCE} bgColor={theme.shadow}>
       <HeaderContainer>
-        <Header3 color={theme.light}>{experience.heading}</Header3>
-        <Divider color={theme.light} />
+        <Header3 color={theme.tertiary}>{experience.heading}</Header3>
+        <Divider color={theme.primary} />
         <ExperienceContainer>{cards}</ExperienceContainer>
       </HeaderContainer>
     </Section>

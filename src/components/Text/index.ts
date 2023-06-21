@@ -12,7 +12,6 @@ export const Header1 = styled.h1`
   line-height: 1.2;
   font-size: 2rem;
   color: ${({ color }) => color};
-
   @media ${devices.md} {
     font-size: 2.5rem;
   }

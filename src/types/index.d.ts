@@ -160,6 +160,7 @@ export interface IExperience {
   company: string
   title: string
   date: string
+  technologies: string[]
   notes: string[]
 }
 export interface IExperienceCard {

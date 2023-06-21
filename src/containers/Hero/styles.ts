@@ -16,7 +16,7 @@ export const HeroMasthead = styled.header`
 
 export const ContentContianer = styled.div`
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   z-index: 3;
@@ -65,17 +65,34 @@ export const TypewriterContainer = styled.div`
   align-items: flex-start;
   text-align: start;
 `
-
 export const HeroButton = styled(animated.button)`
-  box-shadow: 0 0.125rem 0.25rem #00000055 !important;
-  border-radius: 0.5rem;
-  border: none;
-  font-weight: 500;
-  padding: 0.8rem 1.2rem;
-  font-size: 0.9rem;
+  appearance: button;
+  backface-visibility: hidden;
+  border-radius: 0.38rem;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 0.06rem inset,
+    rgba(50, 50, 93, 0.1) 0 0.13rem 0.31rem 0,
+    rgba(0, 0, 0, 0.07) 0 0.06rem 0.06rem 0;
+  box-sizing: border-box;
   cursor: pointer;
   ${(props: IThemeStyle) => `
     color: ${props.color};
     background-color: ${props.bgColor};
   `}
+  font-size: 100%;
+  height: 2.75rem;
+  line-height: 1.15;
+  margin: 1rem 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 1rem;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all 0.2s, box-shadow 0.08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
 `

@@ -11,10 +11,10 @@ function Specialties (): JSX.Element {
     <SpecialtyItem key={i} {...item} theme={theme} />
   ))
   return (
-    <SpecialtiesSection id={sections.SPECIALTIES} bgColor={theme.shadow}>
+    <SpecialtiesSection id={sections.SPECIALTIES} bgColor={theme.primary}>
       <HeaderContainer>
-        <Header3 color={theme.tertiary}>{specialties.heading}</Header3>
-        <Divider color={theme.primary} />
+        <Header3 color={theme.light}>{specialties.heading}</Header3>
+        <Divider color={theme.light} />
       </HeaderContainer>
       <SpecialtiesContainer>{renderSpecialties}</SpecialtiesContainer>
     </SpecialtiesSection>
