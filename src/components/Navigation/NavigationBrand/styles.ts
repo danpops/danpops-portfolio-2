@@ -16,7 +16,7 @@ export const DarkModeToggleDesktop = styled(CgDarkMode)`
   display: none;
 
   @media ${devices.lg} {
-    display: block
+    display: block;
   }
 `
 
@@ -29,18 +29,17 @@ export const NavigationBrandContainer = styled.div`
 `
 
 export const NavigationBrandLogo = styled(animated.div)`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   white-space: nowrap;
   font-weight: 700;
-
   ${(props: IHoverColor) => `
   color: ${props.color};
   &:hover {
     color: ${props.hoverColor};
   }
   `}
-
   @media ${devices.lg} {
+    font-size: 1.2rem;
     margin-right: 1.2rem;
   }
 `

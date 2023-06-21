@@ -5,7 +5,7 @@ import { contact, sections } from '../../assets/data'
 import ContactOption from '../../components/ContactOption'
 import useTheme from '../../hooks/useTheme'
 
-const ICON_SIZE = 40
+const ICON_SIZE = 30
 
 function Contact (): JSX.Element {
   const { theme } = useTheme()

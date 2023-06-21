@@ -20,7 +20,7 @@ export const ContentContianer = styled.div`
   align-items: flex-start;
   flex-direction: column;
   z-index: 3;
-   margin: 0;
+  margin: 0;
   padding: 0 2.5rem;
   @media ${devices.md} {
     padding: 0 6.5rem;
@@ -48,10 +48,9 @@ export const HeroHeader5 = styled(Header5)`
 
 export const HeroHeader1 = styled(Header1)`
   margin: 0.4rem 0;
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   align-self: start;
   text-align: start;
-
   @media ${devices.md} {
     font-size: 4.4rem;
   }
@@ -69,10 +68,10 @@ export const TypewriterContainer = styled.div`
 
 export const HeroButton = styled(animated.button)`
   box-shadow: 0 0.125rem 0.25rem #00000055 !important;
-  border-radius: 1.8rem;
+  border-radius: 0.5rem;
   border: none;
   font-weight: 500;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.2rem;
   font-size: 0.9rem;
   cursor: pointer;
   ${(props: IThemeStyle) => `

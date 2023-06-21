@@ -18,12 +18,13 @@ export const GitHubIcon = styled(FaGithub)`
 
 export const ContactOptionsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 7rem);
+  grid-template-columns: repeat(3, minmax(0, 4rem));
   align-items: center;
   justify-items: flex-start;
   max-width: 30rem;
   margin-top: 2rem;
   padding: 0 2.5rem;
+  column-gap: 1rem;
   @media ${devices.md} {
     padding: 0 6.5rem;
   }
