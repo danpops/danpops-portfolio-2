@@ -158,6 +158,7 @@ export interface ITypewriterIndex {
 }
 export interface IExperience {
   company: string
+  logo: string
   title: string
   date: string
   technologies: string[]

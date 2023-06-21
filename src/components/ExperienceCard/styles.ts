@@ -9,10 +9,17 @@ const pillColor = (props: IThemeStyle): string => `
 export const ExperienceCardContainer = styled.div`
   display: grid;
   grid-template-areas:
-    'header'
-    'content';
+    'logo    header  header'
+    'technology technology .'
+    'content content content';
+  grid-template-columns: 5rem 1fr 1fr;
+  grid-template-rows: repeat(minmax(0, auto));
+  row-gap: 1rem;
+  column-gap: 0.5rem;
+  justify-content: flex-start;
   color: ${(props: IColor) => props.color};
   @media ${devices.md} {
+    row-gap: 1.5rem;
     align-items: center;
   }
 `
@@ -22,24 +29,30 @@ export const ExperienceHeader = styled.div`
   grid-template-areas:
     'date'
     'position'
-    'company'
-    'technology';
-  row-gap: 1rem;
+    'company';
+  row-gap: 0.5rem;
   column-gap: 0;
   align-items: center;
   @media ${devices.lg} {
-    row-gap: 1.5rem;
+    row-gap: 1rem;
+    column-gap: 0.5rem;
     grid-template-areas:
       'position date'
-      'company .'
-      'technology .';
+      'company .';
   }
+`
+export const CompanyLogo = styled.img`
+  object-fit: fill;
+  width: 4rem;
+  height: 4rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15) !important;
+  border-radius: 5%;
 `
 export const ExperienceList = styled.ul`
   text-align: start;
+  grid-area: content;
   padding: 0;
   line-height: 100%;
-  margin-top: 1.5rem;
   list-style: none;
   color: ${(props: IColor) => props.color};
 `
@@ -101,4 +114,10 @@ export const TechnologyPill = styled.div`
     font-size: 0.85rem;
     padding: 0.5rem 0.8rem;
   }
+`
+export const ImageContainer = styled.div`
+  grid-area: logo;
+  width: 3rem;
+  height: 3rem;
+  align-self: flex-start;
 `

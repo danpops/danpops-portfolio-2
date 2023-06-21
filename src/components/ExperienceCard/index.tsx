@@ -9,7 +9,9 @@ import {
   ExperienceList,
   ExperienceListItem,
   TechnologyPill,
-  TechnologyContainer
+  TechnologyContainer,
+  CompanyLogo,
+  ImageContainer
 } from './styles'
 
 export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
@@ -24,12 +26,15 @@ export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
   ))
   return (
     <ExperienceCardContainer color={theme.tertiary}>
+      <ImageContainer>
+        <CompanyLogo alt={experience.company} src={experience.logo} />
+      </ImageContainer>
       <ExperienceHeader>
         <ExperiencePosition>{experience.title}</ExperiencePosition>
-        <ExperienceCompany>{experience.company}</ExperienceCompany>
         <ExperienceDate>{experience.date}</ExperienceDate>
-        <TechnologyContainer>{renderTechPills}</TechnologyContainer>
+        <ExperienceCompany>{experience.company}</ExperienceCompany>
       </ExperienceHeader>
+      <TechnologyContainer>{renderTechPills}</TechnologyContainer>
       <ExperienceList color={theme.gray}>{renderList}</ExperienceList>
     </ExperienceCardContainer>
   )

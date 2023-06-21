@@ -25,7 +25,6 @@ export const Header3 = styled.div`
     font-size: 2.1rem;
   }
   @media ${devices.lg} {
-    text-align: center;
     margin-bottom: 3rem;
   }
 `
@@ -46,8 +45,5 @@ export const Text = styled.div`
   color: ${({ color }) => color};
   @media ${devices.md} {
     font-size: 1.2rem;
-  }
-  @media ${devices.lg} {
-    text-align: center;
   }
 `

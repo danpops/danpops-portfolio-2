@@ -1,8 +1,11 @@
 import { IExperience } from '../../types'
+import gopuff from '../images/gopuff.png'
+import mccain from '../images/mccain.png'
 
 export const experienceCards: IExperience[] = [
   {
     company: 'McCain Foods - TribalScale',
+    logo: mccain,
     title: 'Backend Engineer',
     date: "Oct '22 - Present",
     technologies: ['TypeScript', 'NodeJS', 'Azure', 'Cucumber'],
@@ -16,6 +19,7 @@ export const experienceCards: IExperience[] = [
   },
   {
     company: 'GoPuff - TribalScale',
+    logo: gopuff,
     title: 'Frontend Engineer',
     date: "Oct '21 - May '22",
     technologies: ['TypeScript', 'React Native', 'GraphQL', 'Appium'],
