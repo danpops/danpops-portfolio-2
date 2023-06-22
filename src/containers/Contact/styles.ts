@@ -30,20 +30,8 @@ export const ContactOptionsContainer = styled.div`
     max-width: 40rem;
   }
   @media ${devices.lg} {
-    justify-items: center;
     max-width: 60rem;
-    margin: 2rem auto;
-    justify-content: center;
   }
 `
-export const ContactHeader = styled(Header3)`
-  @media ${devices.lg} {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-`
-export const ContactText = styled(Text)`
-  @media ${devices.lg} {
-    text-align: center;
-  }
-`
+export const ContactHeader = styled(Header3)``
+export const ContactText = styled(Text)``

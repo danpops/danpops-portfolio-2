@@ -17,11 +17,9 @@ export const ExperienceCardContainer = styled.div`
   row-gap: 1.5rem;
   justify-content: flex-start;
   color: ${(props: IColor) => props.color};
-  @media ${devices.md} {
-    column-gap: 1rem;
-    align-items: center;
-  }
+  column-gap: 0.1rem;
   @media ${devices.lg} {
+    column-gap: 1.5rem;
     grid-template-areas:
       'logo header'
       '.    technology'
@@ -37,7 +35,7 @@ export const ExperienceHeader = styled.div`
     'company';
   height: 100%;
   column-gap: 0;
-  align-items: center;
+  align-items: flex-start;
   row-gap: 0.25rem;
   @media ${devices.md} {
     row-gap: 0.5rem;
@@ -49,11 +47,11 @@ export const ExperienceHeader = styled.div`
 `
 export const CompanyLogo = styled.img`
   object-fit: contain;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15) !important;
   border-radius: 8%;
-  @media ${devices.md} {
+  @media ${devices.lg} {
     width: 4rem;
     height: 4rem;
   }

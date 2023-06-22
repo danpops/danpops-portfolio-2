@@ -6,24 +6,22 @@ import { Section } from '../../components/Layout/styles'
 
 export const SpecialtiesContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
   margin: 0;
   align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
+  grid-template-columns: repeat(4, minmax(0, 6rem));
+  grid-template-rows: minmax(0, 6rem);
   row-gap: 3rem;
+  column-gap: 1rem;
   @media ${devices.md} {
-    margin: 2rem auto;
-    column-gap: 3rem;
+    margin-top: 3rem;
     grid-template-columns: repeat(4, minmax(0, 8rem));
     grid-template-rows: minmax(0, 8rem);
     justify-items: flex-start;
   }
   @media ${devices.lg} {
-    margin: 2rem auto;
+    margin: 2rem 0;
     padding: 0;
-    justify-content: center;
+    justify-content: flex-start;
   }
 `
 export const SpecialtiesSection = styled(Section)`
@@ -31,6 +29,4 @@ export const SpecialtiesSection = styled(Section)`
   width: 100%;
   text-align: center;
 `
-export const SpecialtyHeader = styled(Header3)`
-  text-align: center;
-`
+export const SpecialtyHeader = styled(Header3)``

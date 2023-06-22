@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { IColor } from '../../types'
 import { animated } from 'react-spring'
+import devices from '../../utils/devices'
 
 export const SpecialtyItemContainer = styled(animated.div)`
   width: 100%;
@@ -8,22 +9,30 @@ export const SpecialtyItemContainer = styled(animated.div)`
 export const SpecialtyItemGrid = styled.a`
   display: grid;
   justify-items: center;
-  grid-template-rows: auto auto;
-  padding: 1rem;
+  grid-template-rows: auto;
   grid-template-columns: 1fr;
-  justify-items: center;
   align-self: center;
   row-gap: 1.5rem;
   cursor: pointer;
   text-decoration: none;
+  @media ${devices.md} {
+    grid-template-rows: auto auto;
+  }
+  @media ${devices.lg} {
+    justify-items: flex-start;
+  }
 `
 export const SpecialtiesIcon = styled.div`
   color: ${(props: IColor) => props.color};
 `
 export const SpecialtiesItemLabel = styled.p`
-  font-weight: 500;
-  font-size: 1rem;
-  margin: 0;
-  color: ${({ color }) => color};
-  text-decoration: none;
+  display: none;
+  @media ${devices.md} {
+    display: block;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+    color: ${({ color }) => color};
+    text-decoration: none;
+  }
 `
