@@ -3,20 +3,26 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import devices from '../../utils/devices'
 import { Header3, Text } from '../../components/Text'
-
-export const LinkedInIcon = styled(FaLinkedin)`
-  color: ${({ color }) => color};
+import { iconStyle } from '../../design/icons'
+import { IColor } from '../../types'
+const contactIconStyle = (props: IColor): string => `
+  ${iconStyle}
+  color: ${props.color};
   margin: 1.4rem 0;
+  @media ${devices.lg} {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+`
+export const LinkedInIcon = styled(FaLinkedin)`
+  ${({ color }: IColor) => contactIconStyle({ color })};
 `
 export const MailIcon = styled(IoMdMail)`
-  color: ${({ color }) => color};
-  margin: 1.4rem 0;
+  ${({ color }: IColor) => contactIconStyle({ color })};
 `
 export const GitHubIcon = styled(FaGithub)`
-  color: ${({ color }) => color};
-  margin: 1.4rem 0;
+  ${({ color }: IColor) => contactIconStyle({ color })};
 `
-
 export const ContactOptionsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 5rem));

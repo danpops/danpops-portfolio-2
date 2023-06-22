@@ -13,10 +13,11 @@ export const SpecialtyItemGrid = styled.a`
   grid-template-columns: auto;
   align-self: center;
   margin: 0;
-  row-gap: 1.5rem;
+  row-gap: 0.75rem;
   cursor: pointer;
   text-decoration: none;
   @media ${devices.md} {
+    row-gap: 1.5rem;
     grid-template-rows: auto auto;
   }
 `
@@ -24,13 +25,12 @@ export const SpecialtiesIcon = styled.div`
   color: ${(props: IColor) => props.color};
 `
 export const SpecialtiesItemLabel = styled.p`
-  display: none;
+  font-weight: 500;
+  margin: 0;
+  color: ${({ color }) => color};
+  text-decoration: none;
+  font-size: 0.6rem;
   @media ${devices.md} {
-    display: block;
-    font-weight: 500;
     font-size: 0.85rem;
-    margin: 0;
-    color: ${({ color }) => color};
-    text-decoration: none;
   }
 `

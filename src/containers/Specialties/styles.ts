@@ -8,14 +8,14 @@ export const SpecialtiesContainer = styled.div`
   display: grid;
   margin: 0;
   align-items: center;
-  grid-template-columns: repeat(4, minmax(0, 6rem));
+  grid-template-columns: repeat(5, minmax(0, 6rem));
   grid-template-rows: minmax(0, 6rem);
   row-gap: 3rem;
   justify-content: center;
   column-gap: 0.5rem;
   @media ${devices.md} {
     margin-top: 3rem;
-    grid-template-columns: repeat(4, minmax(0, auto));
+    grid-template-columns: repeat(5, minmax(0, auto));
     grid-template-rows: minmax(0, 8rem);
     justify-content: flex-start;
     column-gap: 3rem;
