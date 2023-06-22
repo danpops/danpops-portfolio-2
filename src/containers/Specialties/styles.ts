@@ -11,7 +11,8 @@ export const SpecialtiesContainer = styled.div`
   grid-template-columns: repeat(4, minmax(0, 6rem));
   grid-template-rows: minmax(0, 6rem);
   row-gap: 3rem;
-  column-gap: 1rem;
+  justify-items: center;
+  column-gap: 0.5rem;
   @media ${devices.md} {
     margin-top: 3rem;
     grid-template-columns: repeat(4, minmax(0, 8rem));
@@ -21,7 +22,6 @@ export const SpecialtiesContainer = styled.div`
   @media ${devices.lg} {
     margin: 2rem 0;
     padding: 0;
-    justify-content: flex-start;
   }
 `
 export const SpecialtiesSection = styled(Section)`

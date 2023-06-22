@@ -10,16 +10,14 @@ export const SpecialtyItemGrid = styled.a`
   display: grid;
   justify-items: center;
   grid-template-rows: auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   align-self: center;
+  margin: 0;
   row-gap: 1.5rem;
   cursor: pointer;
   text-decoration: none;
   @media ${devices.md} {
     grid-template-rows: auto auto;
-  }
-  @media ${devices.lg} {
-    justify-items: flex-start;
   }
 `
 export const SpecialtiesIcon = styled.div`
@@ -30,7 +28,7 @@ export const SpecialtiesItemLabel = styled.p`
   @media ${devices.md} {
     display: block;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.85rem;
     margin: 0;
     color: ${({ color }) => color};
     text-decoration: none;
