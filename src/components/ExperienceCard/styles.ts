@@ -1,7 +1,12 @@
 import styled from 'styled-components'
-import { IColor, IThemeStyle } from '../../types'
+import { IColor, IExpExpand, IThemeStyle } from '../../types'
 import devices from '../../utils/devices'
 
+const expandedMenuStyle = `
+  opacity: 1;
+  max-height: 50rem;
+  transition: max-height 0.75s ease-out;
+`
 const pillColor = (props: IThemeStyle): string => `  
   background-color: ${props.bgColor};
   color: ${props.color};
@@ -14,11 +19,12 @@ export const ExperienceCardContainer = styled.div`
     'content    content';
   grid-template-columns: 4rem 1fr;
   grid-template-rows: repeat(minmax(0, 6rem));
-  row-gap: 1.5rem;
+  row-gap: 1rem;
   justify-content: flex-start;
   color: ${(props: IColor) => props.color};
   column-gap: 0.1rem;
   @media ${devices.lg} {
+    row-gap: 0.75rem;
     column-gap: 1.5rem;
     grid-template-areas:
       'logo header'
@@ -30,19 +36,21 @@ export const ExperienceHeader = styled.div`
   display: grid;
   grid-area: header;
   grid-template-areas:
-    'date'
-    'position'
-    'company';
+    'date .'
+    'position chevron'
+    'company .';
   height: 100%;
   column-gap: 0;
-  align-items: flex-start;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  grid-template-rows: repeat(3, minmax(0, auto));
   row-gap: 0.25rem;
-  @media ${devices.md} {
+  @media ${devices.lg} {
     row-gap: 0.5rem;
     column-gap: 0.5rem;
     grid-template-areas:
       'position date'
-      'company .';
+      'company  .';
   }
 `
 export const CompanyLogo = styled.img`
@@ -58,7 +66,6 @@ export const CompanyLogo = styled.img`
 `
 export const ExperienceList = styled.ul`
   text-align: start;
-  grid-area: content;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -81,6 +88,15 @@ export const ExperienceText = styled.div`
     font-size: 1.2rem;
   }
 `
+export const ExperienceChevron = styled.div`
+  grid-area: chevron;
+  display: block;
+  align-self: flex-start;
+  justify-self: flex-end;
+  @media ${devices.lg} {
+    display: none;
+  }
+`
 export const ExperiencePosition = styled(ExperienceText)`
   grid-area: position;
   text-align: start;
@@ -98,9 +114,9 @@ export const ExperienceDate = styled(ExperienceText)`
   font-size: 0.85rem;
   @media ${devices.md} {
     font-size: 1rem;
-    text-align: end;
   }
   @media ${devices.lg} {
+    text-align: end;
     font-size: 1.1rem;
   }
 `
@@ -131,4 +147,27 @@ export const ImageContainer = styled.div`
   display: grid;
   justify-content: flex-start;
   align-items: center;
+`
+export const ExperienceExpanded = styled.div`
+  display: grid;
+  grid-area: content;
+  -webkit-tap-highlight-color: transparent;
+  clear: both;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.75s ease;
+  opacity: 0;
+  ${({ expanded }: IExpExpand) => `
+  ${expanded ? expandedMenuStyle : ''}`}
+  @media ${devices.lg} {
+    display: none;
+  }
+`
+export const ExperienceListDesktop = styled(ExperienceList)`
+  display: none;
+  grid-area: content;
+  @media ${devices.lg} {
+    display: block;
+  }
 `

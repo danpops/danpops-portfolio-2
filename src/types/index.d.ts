@@ -59,6 +59,9 @@ export interface INavigationMobileContainer {
   expanded: boolean
   bgColor: string
 }
+export interface IExpExpand {
+  expanded: boolean
+}
 export interface INavigationExpand {
   expanded: boolean
   onClick?: () => void
@@ -172,4 +175,8 @@ export interface ISpecialItem {
   icon: JSX.Element
   href: string
   theme: IColors
+}
+export interface IChevron {
+  color: string
+  expanded: boolean
 }
