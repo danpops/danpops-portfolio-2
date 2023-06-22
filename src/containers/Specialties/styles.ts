@@ -11,17 +11,19 @@ export const SpecialtiesContainer = styled.div`
   grid-template-columns: repeat(4, minmax(0, 6rem));
   grid-template-rows: minmax(0, 6rem);
   row-gap: 3rem;
-  justify-items: center;
+  justify-content: center;
   column-gap: 0.5rem;
   @media ${devices.md} {
     margin-top: 3rem;
-    grid-template-columns: repeat(4, minmax(0, 8rem));
+    grid-template-columns: repeat(4, minmax(0, auto));
     grid-template-rows: minmax(0, 8rem);
-    justify-items: flex-start;
+    justify-content: flex-start;
+    column-gap: 3rem;
   }
   @media ${devices.lg} {
     margin: 2rem 0;
     padding: 0;
+    column-gap: 5rem;
   }
 `
 export const SpecialtiesSection = styled(Section)`
