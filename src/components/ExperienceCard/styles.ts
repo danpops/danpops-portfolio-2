@@ -9,10 +9,10 @@ const pillColor = (props: IThemeStyle): string => `
 export const ExperienceCardContainer = styled.div`
   display: grid;
   grid-template-areas:
-    'logo    header  header'
-    'technology technology .'
-    'content content content';
-  grid-template-columns: 4rem 1fr 1fr;
+    'logo       header'
+    'technology technology'
+    'content    content';
+  grid-template-columns: 4rem 1fr;
   grid-template-rows: repeat(minmax(0, 6rem));
   row-gap: 1.5rem;
   justify-content: flex-start;
@@ -20,6 +20,12 @@ export const ExperienceCardContainer = styled.div`
   @media ${devices.md} {
     column-gap: 1rem;
     align-items: center;
+  }
+  @media ${devices.lg} {
+    grid-template-areas:
+      'logo header'
+      '.    technology'
+      '.    content';
   }
 `
 export const ExperienceHeader = styled.div`
@@ -30,10 +36,11 @@ export const ExperienceHeader = styled.div`
     'position'
     'company';
   height: 100%;
-  row-gap: 0.5rem;
   column-gap: 0;
-  align-items: flex-start;
-  @media ${devices.lg} {
+  align-items: center;
+  row-gap: 0.25rem;
+  @media ${devices.md} {
+    row-gap: 0.5rem;
     column-gap: 0.5rem;
     grid-template-areas:
       'position date'
@@ -41,11 +48,11 @@ export const ExperienceHeader = styled.div`
   }
 `
 export const CompanyLogo = styled.img`
-  object-fit: fill;
-  width: 3rem;
-  height: 3rem;
+  object-fit: contain;
+  width: 3.5rem;
+  height: 3.5rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15) !important;
-  border-radius: 5%;
+  border-radius: 8%;
   @media ${devices.md} {
     width: 4rem;
     height: 4rem;
@@ -90,9 +97,12 @@ export const ExperienceDate = styled(ExperienceText)`
   grid-area: date;
   text-align: start;
   font-weight: 300;
-  font-size: 1rem;
-  @media ${devices.lg} {
+  font-size: 0.85rem;
+  @media ${devices.md} {
+    font-size: 1rem;
     text-align: end;
+  }
+  @media ${devices.lg} {
     font-size: 1.1rem;
   }
 `
@@ -120,5 +130,7 @@ export const TechnologyPill = styled.div`
 `
 export const ImageContainer = styled.div`
   grid-area: logo;
-  align-self: flex-start;
+  display: grid;
+  justify-content: flex-start;
+  align-items: center;
 `
