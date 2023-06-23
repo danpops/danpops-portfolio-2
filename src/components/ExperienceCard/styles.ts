@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { IColor, IExpExpand, IThemeStyle } from '../../types'
 import devices from '../../utils/devices'
+import { animated } from 'react-spring'
+import { FiChevronUp } from 'react-icons/fi'
 
 const expandedMenuStyle = `
   opacity: 1;
@@ -88,7 +90,7 @@ export const ExperienceText = styled.div`
     font-size: 1.2rem;
   }
 `
-export const ExperienceChevron = styled.div`
+export const ExperienceChevron = styled(animated.div)`
   grid-area: chevron;
   display: block;
   align-self: flex-start;
@@ -158,8 +160,7 @@ export const ExperienceExpanded = styled.div`
   overflow: hidden;
   transition: all 0.75s ease;
   opacity: 0;
-  ${({ expanded }: IExpExpand) => `
-  ${expanded ? expandedMenuStyle : ''}`}
+  ${({ expanded }: IExpExpand) => `${expanded ? expandedMenuStyle : ''}`}
   @media ${devices.lg} {
     display: none;
   }
@@ -169,5 +170,11 @@ export const ExperienceListDesktop = styled(ExperienceList)`
   grid-area: content;
   @media ${devices.lg} {
     display: block;
+  }
+`
+export const ChevronIcon = styled(FiChevronUp)`
+  display: block;
+  @media ${devices.lg} {
+    display: none;
   }
 `

@@ -15,12 +15,15 @@ import {
   ImageContainer,
   ExperienceExpanded,
   ExperienceChevron,
-  ExperienceListDesktop
+  ExperienceListDesktop,
+  ChevronIcon
 } from './styles'
-import { Chevron } from '../Chevron'
+import Markdown from 'react-markdown'
+import useChevronAnimation from '../../hooks/animations/useChevronAnimation'
 
 export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
   const [expanded, setExpanded] = useState(false)
+  const chevronAnimation = useChevronAnimation(expanded)
   const toggleExperience = (): void => setExpanded(!expanded)
   const { theme } = useTheme()
   const renderTechPills = experience.technologies.map((item, i) => (
@@ -29,7 +32,9 @@ export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
     </TechnologyPill>
   ))
   const renderList = experience.notes.map((item, i) => (
-    <ExperienceListItem key={i}>{item}</ExperienceListItem>
+    <ExperienceListItem key={i}>
+      <Markdown>{item}</Markdown>
+    </ExperienceListItem>
   ))
   return (
     <ExperienceCardContainer color={theme.tertiary}>
@@ -40,8 +45,8 @@ export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
         <ExperiencePosition>{experience.title}</ExperiencePosition>
         <ExperienceDate>{experience.date}</ExperienceDate>
         <ExperienceCompany>{experience.company}</ExperienceCompany>
-        <ExperienceChevron onClick={toggleExperience}>
-          <Chevron color={theme.primary} expanded={expanded} />
+        <ExperienceChevron {...chevronAnimation} onClick={toggleExperience}>
+          <ChevronIcon color={theme.primary} size={25} />
         </ExperienceChevron>
       </ExperienceHeader>
       <TechnologyContainer>{renderTechPills}</TechnologyContainer>
