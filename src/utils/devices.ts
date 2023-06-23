@@ -6,7 +6,7 @@ const breakpoints = {
 }
 
 const devices = {
-  xs: `(max-width: ${breakpoints.xs}px)`,
+  mobile: `(max-width: ${breakpoints.md}px)`,
   md: `(min-width: ${breakpoints.md}px)`,
   lg: `(min-width: ${breakpoints.lg}px)`
 }

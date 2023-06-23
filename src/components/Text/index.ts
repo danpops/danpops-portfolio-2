@@ -19,13 +19,11 @@ export const Header1 = styled.h1`
 export const Header3 = styled.div`
   font-size: 1.85rem;
   font-weight: 400;
-  margin-bottom: 2rem;
+  text-align: start;
+  margin: 0;
   color: ${({ color }) => color};
-  @media ${devices.md} {
-    font-size: 2.1rem;
-  }
   @media ${devices.lg} {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
 `
 export const Header5 = styled.h1`

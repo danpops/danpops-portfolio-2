@@ -14,11 +14,13 @@ export interface IColors {
 export interface IColorsState {
   theme: IColors
   isDarkTheme: boolean
+  activeItem: string
 }
 
 const initialState: IColorsState = {
   theme: LIGHT_THEME,
-  isDarkTheme: false
+  isDarkTheme: false,
+  activeItem: 'danpops'
 }
 
 export const themeSlice = createSlice({
@@ -28,10 +30,18 @@ export const themeSlice = createSlice({
     toggleTheme: state => {
       state.theme = state.isDarkTheme ? LIGHT_THEME : DARK_THEME
       state.isDarkTheme = !state.isDarkTheme
+    },
+    toggleActiveItem: (state, payload) => {
+      const activeItem = payload.payload.section
+      if (state.activeItem === activeItem) {
+        state.activeItem = 'danpops'
+        return
+      }
+      state.activeItem = activeItem
     }
   }
 })
 
-export const { toggleTheme } = themeSlice.actions
+export const { toggleTheme, toggleActiveItem } = themeSlice.actions
 
 export default themeSlice.reducer

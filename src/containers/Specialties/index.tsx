@@ -1,12 +1,8 @@
-import { HeaderContainer } from '../../components/Layout/styles'
-import {
-  SpecialtiesContainer,
-  SpecialtiesSection,
-  SpecialtyHeader
-} from './styles'
+import { SpecialtiesContainer } from './styles'
 import { sections, specialties } from '../../assets/data'
 import useTheme from '../../hooks/useTheme'
 import { SpecialtyItem } from '../../components/SpecialtyItem'
+import { ExpandSectionCustom } from '../../components/ExpandedSection'
 
 function Specialties (): JSX.Element {
   const { theme } = useTheme()
@@ -14,14 +10,14 @@ function Specialties (): JSX.Element {
     <SpecialtyItem key={i} {...item} theme={theme} />
   ))
   return (
-    <SpecialtiesSection id={sections.SPECIALTIES} bgColor={theme.primary}>
-      <HeaderContainer>
-        <SpecialtyHeader color={theme.light}>
-          {specialties.heading}
-        </SpecialtyHeader>
-        <SpecialtiesContainer>{renderSpecialties}</SpecialtiesContainer>
-      </HeaderContainer>
-    </SpecialtiesSection>
+    <ExpandSectionCustom
+      section={sections.SPECIALTIES}
+      heading={specialties.heading}
+      bgColor={theme.primary}
+      color={theme.light}
+    >
+      <SpecialtiesContainer>{renderSpecialties}</SpecialtiesContainer>
+    </ExpandSectionCustom>
   )
 }
 

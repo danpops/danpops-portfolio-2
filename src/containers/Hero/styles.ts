@@ -12,6 +12,9 @@ export const HeroMasthead = styled.header`
   height: 100vh;
   z-index: 1;
   ${(props: IBackgroundColor) => `background-color: ${props.bgColor};`}
+  @media ${devices.mobile} {
+    max-height: 70vh;
+  }
 `
 
 export const ContentContianer = styled.div`
@@ -35,11 +38,11 @@ export const ContentContianer = styled.div`
 `
 
 export const ParticleContainer = styled.div`
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   position: absolute;
   ${(props: IBackgroundColor) => `background-color: ${props.bgColor};`}
-  z-index: 2;
+  z-index: 0;
 `
 export const HeroContainer = styled.div`
   text-align: center;

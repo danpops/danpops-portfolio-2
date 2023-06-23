@@ -22,6 +22,10 @@ const contentStlye = ({ color, isHidden }: INavigationContainer): string => `
   }
 `
 export const NavigationContainer = styled.div`
+  @media ${devices.mobile} {
+    display: none;
+  }
+  display: block;
   width: 100vw;
   z-index: 9;
   transition: height 0.02s ease-out;

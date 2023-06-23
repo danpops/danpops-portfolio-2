@@ -28,7 +28,7 @@ export const ContactOptionsContainer = styled.div`
   grid-template-columns: repeat(3, minmax(0, 5rem));
   align-items: center;
   justify-content: start;
-  margin: 2rem 0;
+  margin-top: 1rem;
   padding: 0;
   column-gap: 1rem;
   @media ${devices.md} {

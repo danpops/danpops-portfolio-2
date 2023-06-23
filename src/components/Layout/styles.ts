@@ -4,7 +4,13 @@ import devices from '../../utils/devices'
 
 export const MetaTag = styled.meta``
 
-export const Main = styled.main``
+export const Main = styled.main`
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: auto;
+  grid-template-columns: minmax(0, 1fr);
+  height: 100vh;
+`
 export const Section = styled.section`
   align-items: center;
   justify-content: center;
@@ -12,12 +18,9 @@ export const Section = styled.section`
   background-color: ${({ bgColor }: ISection) => bgColor};
   text-align: center;
   width: 100%;
-  padding: 4rem 0rem;
-  @media ${devices.md} {
-    padding: 8rem 0rem;
-  }
+  padding: 2rem 0rem;
   @media ${devices.lg} {
-    padding: 8rem 0rem;
+    padding: 4rem 0rem;
   }
 `
 export const HeaderContainer = styled.div`

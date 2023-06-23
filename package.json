@@ -26,6 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "ts-standard | snazzy",
+    "fix": "ts-standard | snazzy --fix",
     "test": "jest"
   },
   "eslintConfig": {

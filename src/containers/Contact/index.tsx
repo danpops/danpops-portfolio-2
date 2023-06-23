@@ -1,6 +1,4 @@
-import { HeaderContainer, Section } from '../../components/Layout/styles'
 import {
-  ContactHeader,
   ContactOptionsContainer,
   ContactText,
   GitHubIcon,
@@ -10,15 +8,25 @@ import {
 import { contact, sections } from '../../assets/data'
 import ContactOption from '../../components/ContactOption'
 import useTheme from '../../hooks/useTheme'
+import { ExpandSectionCustom } from '../../components/ExpandedSection'
+import styled from 'styled-components'
 
 const ICON_SIZE = 30
-
+const ContactContent = styled.div`
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, auto));
+  grid-template-columns: 1fr;
+`
 function Contact (): JSX.Element {
   const { theme } = useTheme()
   return (
-    <Section id={sections.CONTACT} bgColor={theme.primary}>
-      <HeaderContainer>
-        <ContactHeader color={theme.light}>{contact.heading}</ContactHeader>
+    <ExpandSectionCustom
+      section={sections.CONTACT}
+      heading={contact.heading}
+      bgColor={theme.primary}
+      color={theme.light}
+    >
+      <ContactContent>
         <ContactText color={theme.light}>{contact.text1}</ContactText>
         <ContactText color={theme.light}>{contact.text2}</ContactText>
         <ContactOptionsContainer>
@@ -35,8 +43,8 @@ function Contact (): JSX.Element {
             href={contact.github}
           />
         </ContactOptionsContainer>
-      </HeaderContainer>
-    </Section>
+      </ContactContent>
+    </ExpandSectionCustom>
   )
 }
 

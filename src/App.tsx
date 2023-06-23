@@ -1,4 +1,4 @@
-import { About, Hero, Specialties, Experience, Contact } from './containers'
+import { Hero, Specialties, Experience, Contact, About } from './containers'
 import Layout from './components/Layout'
 import GlobalStyle from './design/global'
 
