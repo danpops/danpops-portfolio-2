@@ -7,11 +7,11 @@ import { Section } from '../../components/Layout/styles'
 export const SpecialtiesContainer = styled.div`
   display: grid;
   margin: 0;
-  align-items: center;
-  grid-template-columns: repeat(5, minmax(0, 6rem));
-  grid-template-rows: minmax(0, 6rem);
+  align-items: flex-start;
+  grid-template-columns: repeat(3, minmax(0, 6rem));
+  grid-template-rows: minmax(2, 6rem);
   row-gap: 3rem;
-  justify-content: center;
+  justify-items: flex-start;
   column-gap: 0.5rem;
   @media ${devices.md} {
     margin-top: 3rem;
