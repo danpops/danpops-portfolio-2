@@ -12,7 +12,9 @@ export const experienceCards: IExperience[] = [
     notes: [
       `Anchor backend engineer on the digital transformation project for McCain, 
       a global leader in manufacturing, successfully revolutionizing their backend 
-      systems and enhancing operational efficiency.`,
+      systems by implementing and leveraging various **Azure** resources, including 
+      **Application Insights**, **Container Applications**, **CosmosDB**, and **Azure 
+      Functions**, to drive efficient and scalable solutions.`,
       `Conducted **Domain Discovery** and **Event Storming** sessions to align project goals
       and requirements, contributing to the successful delivery of a tailored solution.`,
       `Developed a sensor-triggered solution using **Azure Functions** to automate the 
