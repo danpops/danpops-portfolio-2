@@ -21,7 +21,7 @@ export const hero = {
 export const about = {
   heading: 'About',
   content:
-    'I am a highly skilled and motivated Senior Full Stack Engineer with a deep passion for functional programming and JavaScript. With a strong belief in the power of functional composition, I specialize in building robust web applications and backend servers using JavaScript and TypeScript. Leveraging my expertise in functional programming concepts, I strive to write clean and concise code that follows best practices. With extensive experience in serverless technology, Azure Cloud Services, and comprehensive integration testing, I have successfully delivered innovative solutions that prioritize user needs.'
+    "I am Dan Popovic, a highly skilled and motivated Full Stack Engineer, driven by a passion for functional programming and JavaScript. I take pride in my dedication to delivering top-notch products that prioritize business value and address clients' primary pain points. I take a comprehensive approach to testing by employing both TDD and BDD methodologies to ensure the highest quality standards. My specialization lies in building robust web applications, leveraging JavaScript's dynamic and multiparadigmatic capabilities, with a particular emphasis on functional composition."
 }
 export const specialties = {
   heading: 'Specialties',
