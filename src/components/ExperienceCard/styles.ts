@@ -20,13 +20,13 @@ export const ExperienceCardContainer = styled.div`
     'technology technology'
     'content    content';
   grid-template-columns: 4rem 1fr;
-  grid-template-rows: repeat(minmax(0, 6rem));
+  grid-template-rows: repeat(minmax(0, 4rem));
   row-gap: 1rem;
   justify-content: flex-start;
   color: ${(props: IColor) => props.color};
   column-gap: 0.1rem;
   @media ${devices.lg} {
-    row-gap: 0.75rem;
+    row-gap: 0.5rem;
     column-gap: 1.5rem;
     grid-template-areas:
       'logo header'
@@ -125,23 +125,32 @@ export const ExperienceDate = styled(ExperienceText)`
 export const TechnologyContainer = styled.div`
   display: grid;
   grid-area: technology;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(4, minmax(0, 4.4rem));
+  row-gap: 0.5rem;
+  grid-auto-rows: auto;
   align-items: center;
-  justify-self: start;
+  justify-content: start;
   column-gap: 0.5rem;
+  @media ${devices.md} {
+    grid-template-columns: repeat(4, minmax(0, 5.3rem));
+  }
+  @media ${devices.lg} {
+    column-gap: 1rem;
+  }
 `
 export const TechnologyPill = styled.div`
-  padding: 0.35rem 0.6rem;
-  font-size: 0.7rem;
+  padding: 0.35rem 0;
+  font-size: 0.6rem;
   border-radius: 1.8rem;
   font-weight: 600;
   white-space: nowrap;
   align-items: center;
-  justify-self: start;
+  text-align: center;
+  width: 100%;
   ${(props: IThemeStyle) => pillColor(props)}
   @media ${devices.lg} {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.3rem;
   }
 `
 export const ImageContainer = styled.div`
