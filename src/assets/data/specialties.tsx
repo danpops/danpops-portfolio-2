@@ -44,5 +44,10 @@ export const specialtiesData = [
     name: 'React',
     icon: <ReactIcon />,
     href: 'https://react.dev/'
+  },
+  {
+    name: 'React Native',
+    icon: <ReactIcon />,
+    href: 'https://reactnative.dev'
   }
 ]
