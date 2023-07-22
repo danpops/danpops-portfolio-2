@@ -4,7 +4,7 @@ import mccain from '../images/mccain.png'
 
 export const experienceCards: IExperience[] = [
   {
-    company: 'McCain Foods - TribalScale',
+    company: 'McCain Foods Limited - TribalScale',
     logo: mccain,
     title: 'Backend Engineer',
     date: "Oct '22 - Present",
@@ -31,7 +31,7 @@ export const experienceCards: IExperience[] = [
     company: 'GoPuff - TribalScale',
     logo: gopuff,
     title: 'Frontend Engineer',
-    date: "Oct '21 - May '22",
+    date: "Sep '21 - Sep '22",
     technologies: ['TypeScript', 'React Native', 'GraphQL', 'Appium'],
     notes: [
       `Worked on the GoPuff project, focusing on user registration/login functionality, 
