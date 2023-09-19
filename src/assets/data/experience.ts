@@ -17,14 +17,14 @@ export const experienceCards: IExperience[] = [
       Functions**, to drive efficient and scalable solutions.`,
       `Conducted **Domain Discovery** and **Event Storming** sessions to align project goals
       and requirements, contributing to the successful delivery of a tailored solution.`,
-      `Developed a sensor-triggered solution using **Azure Functions** to automate the 
-      tracking of equipment sensors, resulting in real-time updates and eliminating 
-      manual intervention.`,
       `Spearheaded the transition to paperless documentation in the manufacturing plant.
       Designed dynamic shift handoff forms for operators and supervisors using **React** and 
       **Node.js** on **Azure Container App**. These forms now serve as integral tools for data 
       collection in manufacturing metrics, eliminating paper-based processes and boosting 
       operational efficiency.`,
+      `Developed a sensor-triggered solution using **Azure Functions** to automate the 
+      tracking of equipment sensors, resulting in real-time updates and eliminating 
+      manual intervention.`,
       `Implemented comprehensive integration tests using **Cucumber Gherkin**, ensuring
       the high quality and reliability of the APIs.`,
       `Received exceptional feedback from stakeholders, paving the way for the global 
