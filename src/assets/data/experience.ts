@@ -8,7 +8,7 @@ export const experienceCards: IExperience[] = [
     logo: mccain,
     title: 'Backend Engineer',
     date: "Oct '22 - Present",
-    technologies: ['TypeScript', 'NodeJS', 'Azure', 'Cucumber'],
+    technologies: ['React', 'NodeJS', 'Azure', 'Cucumber'],
     notes: [
       `Anchor backend engineer on the digital transformation project for McCain, 
       a global leader in manufacturing, successfully revolutionizing their backend 
@@ -37,7 +37,7 @@ export const experienceCards: IExperience[] = [
     logo: gopuff,
     title: 'Frontend Engineer',
     date: "Sep '21 - Sep '22",
-    technologies: ['TypeScript', 'React Native', 'GraphQL', 'Appium'],
+    technologies: ['React Native', 'GraphQL', 'AWS', 'Appium'],
     notes: [
       `Worked on the GoPuff project, focusing on user registration/login functionality, 
       utilizing **React Native** for frontend development and implementing **GraphQL** 
