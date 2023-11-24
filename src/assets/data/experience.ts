@@ -6,7 +6,7 @@ export const experienceCards: IExperience[] = [
   {
     company: 'McCain Foods Limited - TribalScale',
     logo: mccain,
-    title: 'Backend Engineer',
+    title: 'Full Stack Engineer',
     date: "Oct '22 - Present",
     technologies: ['React', 'NodeJS', 'Azure', 'Cucumber'],
     notes: [
