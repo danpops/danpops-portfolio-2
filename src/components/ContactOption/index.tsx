@@ -6,6 +6,7 @@ function ContactOption ({ icon, href }: IContactOption): JSX.Element {
   const animationProps = useBoopAnimation()
   return (
     <ContactOptionContainer
+      id='contact-option'
       {...animationProps}
       target='_blank'
       rel='noopener noreferrer'

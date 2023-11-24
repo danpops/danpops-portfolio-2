@@ -11,7 +11,7 @@ function NavigationItemDesktop ({
   const animatedProps = useBoopAnimation()
   return (
     <Link to={item} smooth duration={500}>
-      <NavigationLink {...animatedProps} hoverColor={hoverColor} color={color}>
+      <NavigationLink id='navigation-item' {...animatedProps} hoverColor={hoverColor} color={color}>
         {item}
       </NavigationLink>
     </Link>

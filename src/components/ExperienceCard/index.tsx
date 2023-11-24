@@ -37,7 +37,7 @@ export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
     </ExperienceListItem>
   ))
   return (
-    <ExperienceCardContainer color={theme.tertiary}>
+    <ExperienceCardContainer id='experience-card' color={theme.tertiary}>
       <ImageContainer>
         <CompanyLogo alt={experience.company} src={experience.logo} />
       </ImageContainer>

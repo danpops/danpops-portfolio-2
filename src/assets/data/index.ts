@@ -1,10 +1,11 @@
 import { experienceCards } from './experience'
 import { specialtiesData } from './specialties'
 export const sections = {
-  ABOUT: 'About',
-  SPECIALTIES: 'Specialties',
-  EXPERIENCE: 'Experience',
-  CONTACT: 'Contact'
+  HERO: 'hero',
+  ABOUT: 'about',
+  SPECIALTIES: 'specialties',
+  EXPERIENCE: 'experience',
+  CONTACT: 'contact'
 }
 export const navigationItems = [
   sections.ABOUT,

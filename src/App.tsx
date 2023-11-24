@@ -4,7 +4,7 @@ import GlobalStyle from './design/global'
 
 function App (): JSX.Element {
   return (
-    <Layout>
+    <Layout id='landing'>
       <GlobalStyle />
       <Hero />
       <About />

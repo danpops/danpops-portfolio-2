@@ -1,0 +1,20 @@
+module.exports = {
+  pageName: '#landing',
+  NAVIGATION_BRAND: '#navigation-brand',
+  NAVIGATION_TOGGLE: '#navigation-toggle',
+  NAVIGATION_MENU: '#navigation-menu',
+  NAVIGATION_ITEMS: '#navigation-item',
+  HERO_SECTION: '#hero',
+  ABOUT_SECTION: '#about',
+  SPECIALTIES_SECTION: '#specialties',
+  EXPERIENCE_SECTION: '#experience',
+  CONTACT_SECTION: '#contact',
+  FOOTER: '#footer',
+  HERO_TEXT: '#hero-text',
+  TYPEWRITER_TEXT: '#typewriter-text',
+  ABOUT_BUTTON: '#about-button',
+  ABOUT_CONTENT: '#about-content',
+  SPECIALTY_ITEMS: '#specialty-item',
+  EXPERIENCE_CARDS: '#experience-card',
+  CONTACT_OPTIONS: '#contact-option'
+}

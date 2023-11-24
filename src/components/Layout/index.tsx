@@ -5,7 +5,7 @@ import Navigation from '../Navigation'
 import ScrollProgress from '../ScrollProgress'
 import { Main, MetaTag } from './styles'
 
-function Layout ({ children }: LayoutProps): JSX.Element {
+function Layout ({ id, children }: LayoutProps): JSX.Element {
   const { theme } = useTheme()
   return (
     <>
@@ -16,7 +16,7 @@ function Layout ({ children }: LayoutProps): JSX.Element {
       />
       <ScrollProgress />
       <Navigation />
-      <Main>{children}</Main>
+      <Main id={id}>{children}</Main>
       <Footer />
     </>
   )

@@ -10,7 +10,7 @@ import {
 export function SpecialtyItem (props: ISpecialItem): JSX.Element {
   const animationProps = useBoopAnimation()
   return (
-    <SpecialtyItemContainer {...animationProps}>
+    <SpecialtyItemContainer id='specialty-item' {...animationProps}>
       <SpecialtyItemGrid
         href={props.href}
         target='_blank'

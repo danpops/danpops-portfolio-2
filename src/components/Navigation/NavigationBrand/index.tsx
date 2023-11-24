@@ -9,6 +9,7 @@ import {
   NavigationBrandContainer,
   NavigationBrandLogo
 } from './styles'
+import { sections } from '../../../assets/data'
 
 function NavigationBrand ({ clickHero }: INavigationBrand): JSX.Element {
   const { theme, toggleColors } = useTheme()
@@ -16,8 +17,8 @@ function NavigationBrand ({ clickHero }: INavigationBrand): JSX.Element {
   const darkToggleAnimation = useDarkToggleAnimation()
 
   return (
-    <NavigationBrandContainer>
-      <Link to='hero' smooth duration={500} onClick={clickHero}>
+    <NavigationBrandContainer id='navigation-brand'>
+      <Link to={sections.HERO} smooth duration={500} onClick={clickHero}>
         <NavigationBrandLogo
           {...boopAnimation}
           color={theme.tertiary}

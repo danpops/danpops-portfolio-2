@@ -22,7 +22,7 @@ function NavigationMenuMobile ({
   }
 
   return (
-    <NavigationMobileContainer bgColor={theme.secondary} expanded={expanded}>
+    <NavigationMobileContainer id='naviation-menu' bgColor={theme.secondary} expanded={expanded}>
       {navigationItems.map(composeNavigationItems)}
     </NavigationMobileContainer>
   )

@@ -17,7 +17,7 @@ function NavigationMenuDesktop (): JSX.Element {
   }
 
   return (
-    <NavigationDesktopMenu>
+    <NavigationDesktopMenu id='navigation-menu'>
       {navigationItems.map(composeNavigationItems)}
     </NavigationDesktopMenu>
   )

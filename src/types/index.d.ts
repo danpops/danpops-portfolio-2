@@ -1,4 +1,5 @@
 export interface LayoutProps {
+  id: string
   children: JSX.Element | JSX.Element[]
 }
 export interface SpecialtyData {

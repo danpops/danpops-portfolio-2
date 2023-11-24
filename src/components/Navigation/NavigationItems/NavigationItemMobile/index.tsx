@@ -9,7 +9,7 @@ function NavigationItemMobile ({
 }: INavigationItem): JSX.Element {
   return (
     <NavigationLink to={item} onClick={onClick} smooth duration={500}>
-      <NavigationMobileItem color={color} hoverColor={hoverColor}>
+      <NavigationMobileItem id='navigation-item' color={color} hoverColor={hoverColor}>
         {item}
       </NavigationMobileItem>
     </NavigationLink>

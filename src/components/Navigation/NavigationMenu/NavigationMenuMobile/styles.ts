@@ -21,6 +21,7 @@ export const NavigationMobileContainer = styled.div`
   transition: all 0.5s ease;
   opacity: 0;
   justify-items: center;
+  z-index: 1;
   align-items: center;
   ${({ expanded, bgColor }: INavigationMobileContainer) => `
     background-color: ${bgColor};

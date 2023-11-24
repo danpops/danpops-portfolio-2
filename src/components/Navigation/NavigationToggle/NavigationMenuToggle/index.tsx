@@ -9,7 +9,7 @@ function NavigationMenuToggle ({
 }: INavigationExpand): JSX.Element {
   const { theme } = useTheme()
   return (
-    <NavigationWrapper onClick={onClick} expanded={expanded}>
+    <NavigationWrapper id='navigation-toggle' onClick={onClick} expanded={expanded}>
       <NavigationSVG viewBox='0 0 100 100'>
         <BarPath
           stroke={theme.tertiary}
