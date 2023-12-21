@@ -7,6 +7,7 @@ import {
 import { sections, specialties } from '../../assets/data'
 import useTheme from '../../hooks/useTheme'
 import { SpecialtyItem } from '../../components/SpecialtyItem'
+import RevealAnimation from '../../components/RevealAnimation'
 
 function Specialties (): JSX.Element {
   const { theme } = useTheme()
@@ -15,12 +16,14 @@ function Specialties (): JSX.Element {
   ))
   return (
     <SpecialtiesSection id={sections.SPECIALTIES} $bgcolor={theme.primary}>
-      <HeaderContainer>
-        <SpecialtyHeader color={theme.light}>
-          {specialties.heading}
-        </SpecialtyHeader>
-        <SpecialtiesContainer>{renderSpecialties}</SpecialtiesContainer>
-      </HeaderContainer>
+      <RevealAnimation>
+        <HeaderContainer>
+          <SpecialtyHeader color={theme.light}>
+            {specialties.heading}
+          </SpecialtyHeader>
+          <SpecialtiesContainer>{renderSpecialties}</SpecialtiesContainer>
+        </HeaderContainer>
+      </RevealAnimation>
     </SpecialtiesSection>
   )
 }
