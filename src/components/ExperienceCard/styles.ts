@@ -6,11 +6,11 @@ import { FiChevronUp } from 'react-icons/fi'
 
 const expandedMenuStyle = `
   opacity: 1;
-  max-height: 50rem;
+  max-height: 100rem;
   transition: max-height 0.75s ease-out;
 `
 const pillColor = (props: IThemeStyle): string => `  
-  background-color: ${props.bgColor};
+  background-color: ${props.$bgcolor};
   color: ${props.color};
 `
 export const ExperienceCardContainer = styled.div`
@@ -25,7 +25,9 @@ export const ExperienceCardContainer = styled.div`
   justify-content: flex-start;
   color: ${(props: IColor) => props.color};
   column-gap: 0.1rem;
+  cursor: pointer;
   @media ${devices.lg} {
+    cursor: auto;
     row-gap: 0.5rem;
     column-gap: 1.5rem;
     grid-template-areas:
@@ -158,6 +160,10 @@ export const ImageContainer = styled.div`
   display: grid;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
+  @media ${devices.lg} {
+    cursor: auto;
+  }
 `
 export const ExperienceExpanded = styled.div`
   display: grid;

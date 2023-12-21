@@ -6,15 +6,11 @@ const useChevronAnimation = (expanded: boolean): ISpringAnimationItems => {
     display: 'inline-block',
     backfaceVisibility: 'hidden',
     transform: expanded
-      ? `rotate(0deg)
-         scale(1)
-         scaleX(-1)`
-      : `rotate(-180deg)
-         scale(1)
-         scaleX(-1)`,
+      ? 'rotate(0deg)'
+      : 'rotate(-180deg)',
     config: {
-      tension: 50,
-      friction: 2
+      tension: 180,
+      friction: 12
     }
   })
 

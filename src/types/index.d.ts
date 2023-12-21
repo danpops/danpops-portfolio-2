@@ -53,11 +53,11 @@ export interface ICompanyImage {
   src: string
 }
 export interface ISection {
-  bgColor: string
+  $bgcolor: string
 }
 export interface INavigationMobileContainer {
   expanded: boolean
-  bgColor: string
+  $bgcolor: string
 }
 export interface IExpExpand {
   expanded: boolean
@@ -76,14 +76,14 @@ export interface INavigationContent {
 export interface INavigationItem {
   item: string
   active?: boolean
-  hoverColor: string
+  $hovercolor: string
   color: string
   onClick?: () => void
 }
 export interface ICustomButton {
   label: string
   color: string
-  bgColor: string
+  $bgcolor: string
 }
 export interface ICarouselItem {
   exp: IExperienceData
@@ -110,21 +110,21 @@ export interface ISpringAnimationItems {
 }
 export interface IThemeStyle {
   color: string
-  bgColor: string
+  $bgcolor: string
 }
 export interface IColor {
   color: string
 }
 export interface IHoverColor {
   color: string
-  hoverColor: string
+  $hovercolor: string
   active?: boolean
 }
 export interface IBackgroundColor {
-  bgColor: string
+  $bgcolor: string
 }
 export interface INavigation {
-  bgColor: string
+  $bgcolor: string
   color: string
   isTransparent: boolean
   isExpanded: boolean
@@ -134,7 +134,7 @@ export interface ISpecialtyProps {
   activeBg: string
   activeColor: string
   color: string
-  bgColor: string
+  $bgcolor: string
 }
 export interface IScrollStyle {
   width: string

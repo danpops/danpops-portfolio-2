@@ -9,7 +9,7 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: ${({ bgColor }: ISection) => bgColor};
+  background-color: ${({ $bgcolor }: ISection) => $bgcolor};
   text-align: center;
   width: 100%;
   padding: 4rem 0rem;

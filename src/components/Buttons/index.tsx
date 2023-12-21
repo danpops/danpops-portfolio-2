@@ -4,13 +4,13 @@ import { PrimaryButton } from './styles'
 
 const CustomButton = ({
   color,
-  bgColor,
+  $bgcolor,
   label
 }: ICustomButton): JSX.Element => {
   const animatedProps = useBoopAnimation()
 
   return (
-    <PrimaryButton color={color} bgColor={bgColor} {...animatedProps}>
+    <PrimaryButton color={color} $bgcolor={$bgcolor} {...animatedProps}>
       {label}
     </PrimaryButton>
   )

@@ -5,13 +5,13 @@ import { NavigationLink } from './styles'
 
 function NavigationItemDesktop ({
   item,
-  hoverColor,
+  $hovercolor,
   color
 }: INavigationItem): JSX.Element {
   const animatedProps = useBoopAnimation()
   return (
     <Link to={item} smooth duration={500}>
-      <NavigationLink {...animatedProps} hoverColor={hoverColor} color={color}>
+      <NavigationLink {...animatedProps} $hovercolor={$hovercolor} color={color}>
         {item}
       </NavigationLink>
     </Link>

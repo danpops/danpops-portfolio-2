@@ -11,7 +11,7 @@ export const NavigationLink = styled(animated.div)`
   ${(props: IHoverColor) => `
   color: ${props.color};
   &:hover {
-    color: ${props.hoverColor};
+    color: ${props.$hovercolor};
   }
 `}
 `

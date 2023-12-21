@@ -27,7 +27,7 @@ export const SpecialtiesContainer = styled.div`
   }
 `
 export const SpecialtiesSection = styled(Section)`
-  background-color: ${({ bgColor }: ISection) => bgColor};
+  background-color: ${({ $bgcolor }: ISection) => $bgcolor};
   width: 100%;
   text-align: center;
 `

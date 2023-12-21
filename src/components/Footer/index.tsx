@@ -5,7 +5,7 @@ function Footer (): JSX.Element {
   const { theme } = useTheme()
   const year = new Date().getFullYear()
   return (
-    <FooterContainer bgColor={theme.secondary}>
+    <FooterContainer $bgcolor={theme.secondary}>
       <FooterText color={theme.tertiary}>© {year} - danpops.ca</FooterText>
     </FooterContainer>
   )

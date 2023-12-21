@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
   padding: 0.6rem 0rem;
   
   ${(props: IBackgroundColor) => `
-  background-color: ${props.bgColor};
+  background-color: ${props.$bgcolor};
   `}
   
   @media ${devices.md} {

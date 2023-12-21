@@ -21,7 +21,7 @@ function NavigationBrand ({ clickHero }: INavigationBrand): JSX.Element {
         <NavigationBrandLogo
           {...boopAnimation}
           color={theme.tertiary}
-          hoverColor={theme.primary}
+          $hovercolor={theme.primary}
         >
           danpops_
         </NavigationBrandLogo>

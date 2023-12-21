@@ -10,7 +10,7 @@ function ScrollProgress (): JSX.Element {
   )
 
   return (
-    <ProgressBarContainer bgColor={theme.secondary}>
+    <ProgressBarContainer $bgcolor={theme.secondary}>
       <ProgressBar style={progressBarStyle} />
     </ProgressBarContainer>
   )

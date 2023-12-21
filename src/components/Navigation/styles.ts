@@ -4,13 +4,13 @@ import { INavigation, INavigationContainer } from '../../types'
 
 const colorNav = (props: INavigation): string => `
   background-color: ${
-    props.isTransparent && !props.isExpanded ? 'transparent' : props.bgColor
+    props.isTransparent && !props.isExpanded ? 'transparent' : props.$bgcolor
   };
   box-shadow: ${
     props.isTransparent ? 'none' : '0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)'
   };
   @media ${devices.lg} {
-    background-color: ${props.isTransparent ? 'transparent' : props.bgColor};
+    background-color: ${props.isTransparent ? 'transparent' : props.$bgcolor};
   };
 `
 const contentStlye = ({ color, isHidden }: INavigationContainer): string => `

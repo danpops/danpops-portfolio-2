@@ -15,14 +15,14 @@ function NavigationMenuMobile ({
         key={index}
         item={item}
         color={theme.tertiary}
-        hoverColor={theme.primary}
+        $hovercolor={theme.primary}
         onClick={toggleNavbar}
       />
     )
   }
 
   return (
-    <NavigationMobileContainer bgColor={theme.secondary} expanded={expanded}>
+    <NavigationMobileContainer $bgcolor={theme.secondary} expanded={expanded}>
       {navigationItems.map(composeNavigationItems)}
     </NavigationMobileContainer>
   )

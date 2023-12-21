@@ -12,6 +12,6 @@ export const PrimaryButton = styled(animated.button)`
   cursor: pointer;
   ${(props: IThemeStyle) => `
     color: ${props.color};
-    background-color: ${props.bgColor};
+    background-color: ${props.$bgcolor};
   `}
 `

@@ -22,8 +22,8 @@ export const NavigationMobileContainer = styled.div`
   opacity: 0;
   justify-items: center;
   align-items: center;
-  ${({ expanded, bgColor }: INavigationMobileContainer) => `
-    background-color: ${bgColor};
+  ${({ expanded, $bgcolor }: INavigationMobileContainer) => `
+    background-color: ${$bgcolor};
   ${expanded ? expandedMenuStyle : ''}`}
   @media ${devices.lg} {
     display: none;

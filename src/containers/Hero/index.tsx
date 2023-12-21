@@ -27,8 +27,8 @@ function Hero (): JSX.Element {
   const { theme } = useTheme()
   const animatedProps = useBoopAnimation()
   return (
-    <HeroMasthead bgColor={theme.secondary} id='hero'>
-      <ParticleContainer bgColor={theme.secondary}>
+    <HeroMasthead $bgcolor={theme.secondary} id='hero'>
+      <ParticleContainer $bgcolor={theme.secondary}>
         <ParticlesBg num={60} type='cobweb' color={theme.primary} />
       </ParticleContainer>
       <ContentContianer>
@@ -42,7 +42,7 @@ function Hero (): JSX.Element {
         <CustomLink to={sections.ABOUT} smooth duration={500}>
           <HeroButton
             color={theme.light}
-            bgColor={theme.primary}
+            $bgcolor={theme.primary}
             {...animatedProps}
           >
             {hero.buttonText}

@@ -22,7 +22,7 @@ export const NavigationMenuItem = styled.div`
   ${(props: IHoverColor) => `
   color: ${props.color};
   &:hover {
-    color: ${props.hoverColor};
+    color: ${props.$hovercolor};
   }
 `}
 `

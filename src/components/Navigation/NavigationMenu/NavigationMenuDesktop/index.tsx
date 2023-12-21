@@ -10,7 +10,7 @@ function NavigationMenuDesktop (): JSX.Element {
       <NavigationItem
         key={index}
         item={item}
-        hoverColor={theme.primary}
+        $hovercolor={theme.primary}
         color={theme.tertiary}
       />
     )

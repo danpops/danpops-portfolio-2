@@ -37,7 +37,7 @@ export const NavigationBrandLogo = styled(animated.div)`
   ${(props: IHoverColor) => `
   color: ${props.color};
   &:hover {
-    color: ${props.hoverColor};
+    color: ${props.$hovercolor};
   }
   `}
   @media ${devices.lg} {

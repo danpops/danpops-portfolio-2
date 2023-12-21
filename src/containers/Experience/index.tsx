@@ -10,7 +10,7 @@ function Experience (): JSX.Element {
     <ExperienceCard key={i} experience={item} />
   ))
   return (
-    <Section id={sections.EXPERIENCE} bgColor={theme.shadow}>
+    <Section id={sections.EXPERIENCE} $bgcolor={theme.shadow}>
       <HeaderContainer>
         <ExperienceHeader color={theme.tertiary}>
           {experience.heading}

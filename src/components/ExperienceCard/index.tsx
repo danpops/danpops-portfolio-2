@@ -27,7 +27,7 @@ export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
   const toggleExperience = (): void => setExpanded(!expanded)
   const { theme } = useTheme()
   const renderTechPills = experience.technologies.map((item, i) => (
-    <TechnologyPill bgColor={theme.primary} color={theme.light} key={i}>
+    <TechnologyPill $bgcolor={theme.primary} color={theme.light} key={i}>
       {item}
     </TechnologyPill>
   ))
@@ -38,14 +38,14 @@ export function ExperienceCard ({ experience }: IExperienceCard): JSX.Element {
   ))
   return (
     <ExperienceCardContainer color={theme.tertiary}>
-      <ImageContainer>
+      <ImageContainer onClick={toggleExperience}>
         <CompanyLogo alt={experience.company} src={experience.logo} />
       </ImageContainer>
-      <ExperienceHeader>
+      <ExperienceHeader onClick={toggleExperience}>
         <ExperiencePosition>{experience.title}</ExperiencePosition>
         <ExperienceDate>{experience.date}</ExperienceDate>
         <ExperienceCompany>{experience.company}</ExperienceCompany>
-        <ExperienceChevron {...chevronAnimation} onClick={toggleExperience}>
+        <ExperienceChevron {...chevronAnimation}>
           <ChevronIcon color={theme.primary} size={25} />
         </ExperienceChevron>
       </ExperienceHeader>

@@ -4,7 +4,7 @@ import { IBackgroundColor } from '../../types'
 const ProgressBarContainer = styled.div`
   position: fixed;
   top: 0;
-  background-color: ${({ bgColor }: IBackgroundColor) => bgColor};
+  background-color: ${({ $bgcolor }: IBackgroundColor) => $bgcolor};
   left: 0;
   height: 0.3rem;
   width: 100%;

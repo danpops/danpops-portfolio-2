@@ -19,7 +19,7 @@ function Navigation (): JSX.Element {
       isTransparent={isTransparent}
       isExpanded={isNavigationExpanded}
       color={theme.tertiary}
-      bgColor={theme.secondary}
+      $bgcolor={theme.secondary}
     >
       <NavigationContent color={theme.tertiary} isHidden={isHidden}>
         <NavigationBrand clickHero={clickHero} />

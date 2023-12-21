@@ -11,7 +11,7 @@ export const HeroMasthead = styled.header`
   width: 100%;
   height: 100vh;
   z-index: 1;
-  ${(props: IBackgroundColor) => `background-color: ${props.bgColor};`}
+  ${(props: IBackgroundColor) => `background-color: ${props.$bgcolor};`}
 `
 
 export const ContentContianer = styled.div`
@@ -38,7 +38,7 @@ export const ParticleContainer = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  ${(props: IBackgroundColor) => `background-color: ${props.bgColor};`}
+  ${(props: IBackgroundColor) => `background-color: ${props.$bgcolor};`}
   z-index: 2;
 `
 export const HeroContainer = styled.div`
@@ -81,7 +81,7 @@ export const HeroButton = styled(animated.button)`
   cursor: pointer;
   ${(props: IThemeStyle) => `
     color: ${props.color};
-    background-color: ${props.bgColor};
+    background-color: ${props.$bgcolor};
   `}
   font-size: 100%;
   height: 2.75rem;

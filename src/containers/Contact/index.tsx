@@ -16,7 +16,7 @@ const ICON_SIZE = 30
 function Contact (): JSX.Element {
   const { theme } = useTheme()
   return (
-    <Section id={sections.CONTACT} bgColor={theme.primary}>
+    <Section id={sections.CONTACT} $bgcolor={theme.primary}>
       <HeaderContainer>
         <ContactHeader color={theme.light}>{contact.heading}</ContactHeader>
         <ContactText color={theme.light}>{contact.text1}</ContactText>

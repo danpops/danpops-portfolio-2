@@ -3,13 +3,13 @@ import { NavigationLink, NavigationMobileItem } from './styles'
 
 function NavigationItemMobile ({
   item,
-  hoverColor,
+  $hovercolor,
   color,
   onClick
 }: INavigationItem): JSX.Element {
   return (
     <NavigationLink to={item} onClick={onClick} smooth duration={500}>
-      <NavigationMobileItem color={color} hoverColor={hoverColor}>
+      <NavigationMobileItem color={color} $hovercolor={$hovercolor}>
         {item}
       </NavigationMobileItem>
     </NavigationLink>
